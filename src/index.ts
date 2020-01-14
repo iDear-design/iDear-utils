@@ -1,9 +1,8 @@
-import {isToday} from "./date/isToday";
-import {formart} from "./date/formart";
+import format from "./date/formart";
+
 
 const dateUtils = {
-  isToday,
-  formart
+  format
 }
 
 const iuUtils = {

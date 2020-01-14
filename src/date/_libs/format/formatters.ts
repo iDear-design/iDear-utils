@@ -690,7 +690,7 @@ function formatTimezoneShort(offset, dirtyDelimiter) {
   return sign + String(hours) + delimiter + addLeadingZeros(minutes, 2)
 }
 
-function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
+function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter?) {
   if (offset % 60 === 0) {
     var sign = offset > 0 ? '-' : '+'
     return sign + addLeadingZeros(Math.abs(offset) / 60, 2)
@@ -698,7 +698,7 @@ function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
   return formatTimezone(offset, dirtyDelimiter)
 }
 
-function formatTimezone(offset, dirtyDelimiter) {
+function formatTimezone(offset, dirtyDelimiter?) {
   var delimiter = dirtyDelimiter || ''
   var sign = offset > 0 ? '-' : '+'
   var absOffset = Math.abs(offset)
