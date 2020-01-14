@@ -2,7 +2,7 @@ import toDate from "../toDate";
 import startOfUTCISOWeek from "./startOfUTCISOWeek";
 import requiredArgs from "./requiredArgs";
 
-export default function getUTCISOWeekYear(dirtyDate: Date | number) {
+export default function getUTCISOWeekYear(dirtyDate: Date | number): any {
   requiredArgs(1, arguments)
 
   var date = toDate(dirtyDate)

@@ -100,7 +100,8 @@ export default function format(dirtyDate, dirtyFormatStr, dirtyOptions) {
       var firstCharacter = substring[0]
       if (firstCharacter === 'p' || firstCharacter === 'P') {
         var longFormatter = longFormatters[firstCharacter]
-        return longFormatter(substring, locale.formatLong, formatterOptions)
+        return longFormatter(substring, locale.formatLong)
+        //return longFormatter(substring, locale.formatLong, formatterOptions)
       }
       return substring
     })
