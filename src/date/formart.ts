@@ -1,3 +1,3 @@
-export const isToday = (data: Date | number) => {
-  return data
+export const formart = (num: number) => {
+  return num + 1
 }

@@ -1,3 +1,3 @@
-export const farmat = (num: number) => {
-  return num + 1
+export const isToday = (data: Date | number) => {
+  return data
 }
