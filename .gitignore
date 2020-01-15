@@ -1,6 +1,7 @@
 index.*
 types/*
 date/*
+data/*
 
 *.iml
 *.log
