@@ -28,7 +28,7 @@ var escapedStringRegExp = /^'([^]*?)'?$/
 var doubleQuoteRegExp = /''/g
 var unescapedLatinCharacterRegExp = /[a-zA-Z]/
 
-export default function format(dirtyDate, dirtyFormatStr, dirtyOptions) {
+export default function format(dirtyDate, dirtyFormatStr, dirtyOptions): any {
   requiredArgs(2, arguments)
 
   var formatStr = String(dirtyFormatStr)

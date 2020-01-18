@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     // 打包到的目录
-    "outDir": "./",
+    "outDir": "./dist",
     // 是否生成sourceMap（用于浏览器调试）
     "sourceMap": true,
     "noImplicitAny": false,
@@ -11,7 +11,7 @@
     // 是否生成声明文件
     "declaration": true,
     // 声明文件打包的位置
-    "declarationDir": "./types/",
+    "declarationDir": "./dist/types/",
     // 是否生成声明文件map文件（便于调试）
     "declarationMap": true,
     "moduleResolution": "node",
@@ -24,7 +24,7 @@
       "jest"
     ],
     "typeRoots": [
-      "../node_modules/@types"
+      "./node_modules/@types"
     ],
     "lib": [
       "dom",
@@ -34,11 +34,11 @@
     "allowJs": false
   },
   "include": [
-    "date/src/**/*.ts"
+    "src/**/*.ts"
   ],
   // 要打包的文件
   "exclude": [
-    "../node_modules",
+    "node_modules",
     "*.test.ts"
   ]
 }
