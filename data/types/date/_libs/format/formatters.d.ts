@@ -1,0 +1,37 @@
+declare var formatters: {
+    G: (date: any, token: any, localize: any) => any;
+    y: (date: any, token: any, localize: any) => any;
+    Y: (date: any, token: any, localize: any, options: any) => any;
+    R: (date: any, token: any) => string;
+    u: (date: any, token: any) => string;
+    Q: (date: any, token: any, localize: any) => any;
+    q: (date: any, token: any, localize: any) => any;
+    M: (date: any, token: any, localize: any) => any;
+    L: (date: any, token: any, localize: any) => any;
+    w: (date: any, token: any, localize: any, options: any) => any;
+    I: (date: any, token: any, localize: any) => any;
+    d: (date: any, token: any, localize: any) => any;
+    D: (date: any, token: any, localize: any) => any;
+    E: (date: any, token: any, localize: any) => any;
+    e: (date: any, token: any, localize: any, options: any) => any;
+    c: (date: any, token: any, localize: any, options: any) => any;
+    i: (date: any, token: any, localize: any) => any;
+    a: (date: any, token: any, localize: any) => any;
+    b: (date: any, token: any, localize: any) => any;
+    B: (date: any, token: any, localize: any) => any;
+    h: (date: any, token: any, localize: any) => any;
+    H: (date: any, token: any, localize: any) => any;
+    K: (date: any, token: any, localize: any) => any;
+    k: (date: any, token: any, localize: any) => any;
+    m: (date: any, token: any, localize: any) => any;
+    s: (date: any, token: any, localize: any) => any;
+    S: (date: any, token: any) => string;
+    X: (date: any, token: any, _localize: any, options: any) => string;
+    x: (date: any, token: any, _localize: any, options: any) => string;
+    O: (date: any, token: any, _localize: any, options: any) => string;
+    z: (date: any, token: any, _localize: any, options: any) => string;
+    t: (date: any, token: any, _localize: any, options: any) => string;
+    T: (date: any, token: any, _localize: any, options: any) => string;
+};
+export default formatters;
+//# sourceMappingURL=formatters.d.ts.map
