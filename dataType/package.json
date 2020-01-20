@@ -1,5 +1,5 @@
 {
-  "name": "timi-utils",
+  "name": "@timi-utils/dataType",
   "version": "1.0.0",
   "description": "",
   "main": "./index.js",
@@ -9,7 +9,7 @@
   "publisher": "maxiaoqu@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "../node_modules/.bin/tsc ",
+    "build": "../node_modules/.bin/tsc",
     "test": "../node_modules/.bin/jest"
   },
   "files": [
