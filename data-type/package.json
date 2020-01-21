@@ -1,17 +1,17 @@
 {
   "name": "@timi-utils/data-type",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
-  "main": "./libs/index.js",
+  "main": "./index.js",
   "types": "./types/index.d.ts",
   "private": false,
   "author": "maxiaoqu",
   "publisher": "maxiaoqu@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "./node_modules/.bin/tsc",
-    "publish": "timi-serve rewritePackage --outdir=dist && npm run build",
-    "test": "./node_modules/.bin/jest"
+    "build": "tsc",
+    "test": "jest",
+    "publish": "timi-serve rewritePackage --outdir=dist && npm run build"
   },
   "repository": {
     "type": "",
