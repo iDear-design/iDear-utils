@@ -1,4 +1,4 @@
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 import differenceInMilliseconds from "./differenceInMilliseconds";
 
 export default function differenceInSeconds(dirtyDateLeft, dirtyDateRight) {

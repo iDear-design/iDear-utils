@@ -2,10 +2,10 @@ import {cloneObject} from "@timi-utils/data-type";
 import toDate from "./toDate";
 import differenceInMonths from "./differenceInMonths";
 import differenceInSeconds from "./differenceInSeconds";
-import defaultLocale from "./locale/en-US"
+import defaultLocale from "../locale/en-US"
 import compareAsc from "./compareAsc";
-import getTimezoneOffsetInMilliseconds from "./_libs/getTimezoneOffsetInMilliseconds";
-import requiredArgs from "./_libs/requiredArgs";
+import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
+import requiredArgs from "../utils/requiredArgs";
 
 var MINUTES_IN_DAY = 1440
 var MINUTES_IN_ALMOST_TWO_DAYS = 2520

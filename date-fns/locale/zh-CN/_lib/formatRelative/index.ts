@@ -1,4 +1,4 @@
-import isSameUTCWeek from '../../../../_libs/isSameUTCWeek'
+import isSameUTCWeek from '../../../../utils/isSameUTCWeek'
 
 function checkWeek(_date, _baseDate, _options, baseFormat) {
   if (isSameUTCWeek(_date, _baseDate, _options)) {

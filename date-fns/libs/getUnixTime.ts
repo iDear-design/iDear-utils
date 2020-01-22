@@ -1,5 +1,5 @@
 import getTime from "./getTime";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function getUnixTime(dirtyDate) {
   requiredArgs(1, arguments)

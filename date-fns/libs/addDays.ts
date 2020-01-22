@@ -1,6 +1,6 @@
 import toDate from "./toDate";
-import toInteger from "./_libs/toInteger";
-import requiredArgs from "./_libs/requiredArgs";
+import toInteger from "../utils/toInteger";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function addDays(dirtyDate: Date | number, dirtyAmount: number): Date {
   requiredArgs(2, arguments)

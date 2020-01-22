@@ -1,5 +1,5 @@
 import toDate from "./toDate";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function startOfYear(dirtyDate: Date | number): Date {
   requiredArgs(1, arguments)

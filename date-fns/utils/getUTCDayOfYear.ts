@@ -1,4 +1,4 @@
-import toDate from "../toDate";
+import toDate from "../libs/toDate";
 import requiredArgs from "./requiredArgs";
 
 var MILLISECONDS_IN_DAY = 86400000

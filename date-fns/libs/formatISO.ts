@@ -1,6 +1,6 @@
 import toDate from "./toDate";
 import isValid from "./isValid";
-import addLeadingZeros from "./_libs/addLeadingZeros";
+import addLeadingZeros from "../utils/addLeadingZeros";
 
 export default function formatISO(dirtyDate, dirtyOptions) {
   if (arguments.length < 1) {

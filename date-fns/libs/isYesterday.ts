@@ -1,6 +1,6 @@
 import isSameDay from "./isSameDay";
 import subDays from "./subDays";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function isYesterday(dirtyDate) {
   requiredArgs(1, arguments)

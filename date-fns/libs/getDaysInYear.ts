@@ -1,5 +1,5 @@
 import toDate from "./toDate";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 import isLeapYear from "./isLeapYear";
 
 export default function getDaysInYear(dirtyDate: Date | number): number {

@@ -1,7 +1,7 @@
 import getWeekYear from "./getWeekYear";
 import startOfWeek from "./startOfWeek";
-import toInteger from "./_libs/toInteger";
-import requiredArgs from "./_libs/requiredArgs";
+import toInteger from "../utils/toInteger";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function startOfWeekYear(dirtyDate, dirtyOptions) {
   requiredArgs(1, arguments)

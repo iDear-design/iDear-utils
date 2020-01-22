@@ -1,5 +1,5 @@
 import toDate from "./toDate";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 import startOfYear from "./startOfYear";
 import differenceInCalendarDays from "./differenceInCalendarDays";
 

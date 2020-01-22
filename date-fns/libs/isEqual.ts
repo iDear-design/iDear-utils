@@ -1,5 +1,5 @@
 import toDate from "./toDate";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function isEqual(dirtyLeftDate, dirtyRightDate) {
   requiredArgs(2, arguments)

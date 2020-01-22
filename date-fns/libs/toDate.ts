@@ -1,4 +1,4 @@
-import requiredArgs from './_libs/requiredArgs'
+import requiredArgs from '../utils/requiredArgs'
 
 export default function toDate(argument: Date | number): Date {
   requiredArgs(1, arguments)

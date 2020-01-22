@@ -1,4 +1,4 @@
-import format from "./date/formart";
+import format from "./libs/formart";
 
 
 const dateUtils: any = {

@@ -1,7 +1,7 @@
 import startOfWeek from "./startOfWeek";
 import startOfWeekYear from "./startOfWeekYear";
 import toDate from "./toDate";
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 
 var MILLISECONDS_IN_WEEK = 604800000
 

@@ -1,4 +1,4 @@
-import toDate from "../toDate";
+import toDate from "../libs/toDate";
 import requiredArgs from "./requiredArgs";
 
 export default function startOfUTCISOWeek(dirtyDate) {

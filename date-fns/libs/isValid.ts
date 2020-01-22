@@ -1,4 +1,4 @@
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 import toDate from "./toDate";
 
 export default function isValid(dirtyDate: any): boolean {

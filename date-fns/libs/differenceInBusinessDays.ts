@@ -4,8 +4,8 @@ import isWeekend from "./isWeekend";
 import differenceInCalendarDays from "./differenceInCalendarDays";
 import addDays from "./addDays";
 import isSameDay from "./isSameDay";
-import toInteger from "./_libs/toInteger";
-import requiredArgs from "./_libs/requiredArgs";
+import toInteger from "../utils/toInteger";
+import requiredArgs from "../utils/requiredArgs";
 
 export default function differenceInBusinessDays(dirtyDateLeft: Date | number, dirtyDateRight: Date | number) {
   requiredArgs(2, arguments)

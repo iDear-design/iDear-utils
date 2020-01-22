@@ -1,6 +1,6 @@
 import startOfDay from "./startOfDay";
-import requiredArgs from "./_libs/requiredArgs";
-import getTimezoneOffsetInMilliseconds from "./_libs/getTimezoneOffsetInMilliseconds";
+import requiredArgs from "../utils/requiredArgs";
+import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
 
 var MILLISECONDS_IN_DAY = 86400000
 

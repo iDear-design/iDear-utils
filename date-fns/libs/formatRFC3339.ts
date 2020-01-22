@@ -1,7 +1,7 @@
 import toDate from "./toDate";
 import isValid from "./isValid";
-import addLeadingZeros from "./_libs/addLeadingZeros";
-import toInteger from "./_libs/toInteger";
+import addLeadingZeros from "../utils/addLeadingZeros";
+import toInteger from "../utils/toInteger";
 
 export default function formatRFC3339(dirtyDate, dirtyOptions) {
   if (arguments.length < 1) {

@@ -1,4 +1,4 @@
-import toDate from "../toDate";
+import toDate from "../libs/toDate";
 import startOfUTCISOWeek from "./startOfUTCISOWeek";
 import startOfUTCISOWeekYear from "./startOfUTCISOWeekYear";
 import requiredArgs from "./requiredArgs";

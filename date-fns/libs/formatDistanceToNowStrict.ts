@@ -1,4 +1,4 @@
-import requiredArgs from "./_libs/requiredArgs";
+import requiredArgs from "../utils/requiredArgs";
 import formatDistanceStrict from "./formatDistanceStrict";
 
 export default function formatDistanceToNowStrict(dirtyDate, dirtyOptions) {

@@ -1,5 +1,5 @@
-import toInteger from "./_libs/toInteger";
-import requiredArgs from "./_libs/requiredArgs";
+import toInteger from "../utils/toInteger";
+import requiredArgs from "../utils/requiredArgs";
 import addMilliseconds from "./addMilliseconds";
 
 export default function subMilliseconds(dirtyDate: Date | number, dirtyAmount: number): Date {
