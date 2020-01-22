@@ -1,4 +1,4 @@
-import buildLocalizeFn from '../../../_lib/buildLocalizeFn/index'
+import buildLocalizeFn from '../../../_lib/buildLocalizeFn'
 
 var eraValues = {
   narrow: ['前', '公元'],

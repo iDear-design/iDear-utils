@@ -1,5 +1,5 @@
-import buildMatchPatternFn from '../../../_lib/buildMatchPatternFn/index'
-import buildMatchFn from '../../../_lib/buildMatchFn/index'
+import buildMatchPatternFn from '../../../_lib/buildMatchPatternFn'
+import buildMatchFn from '../../../_lib/buildMatchFn'
 
 var matchOrdinalNumberPattern = /^(第\s*)?\d+(日|时|分|秒)?/i
 var parseOrdinalNumberPattern = /\d+/i

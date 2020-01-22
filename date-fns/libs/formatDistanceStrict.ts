@@ -1,8 +1,8 @@
+import {cloneObject} from "@timi-utils/data-type";
 import toDate from "./toDate";
 import compareAsc from "./compareAsc";
 import getTimezoneOffsetInMilliseconds from "./_libs/getTimezoneOffsetInMilliseconds";
 import differenceInSeconds from "./differenceInSeconds";
-import cloneObject from "../data/cloneObject";
 import defaultLocale from "./locale/en-US"
 import requiredArgs from "./_libs/requiredArgs";
 

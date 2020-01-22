@@ -1,4 +1,4 @@
-import buildFormatLongFn from '../../../_lib/buildFormatLongFn/index'
+import buildFormatLongFn from '../../../_lib/buildFormatLongFn'
 
 var dateFormats = {
   full: "y'年'M'月'd'日' EEEE",

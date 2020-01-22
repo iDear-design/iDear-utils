@@ -1,5 +1,5 @@
-import buildMatchPatternFn from '../../../_lib/buildMatchPatternFn/index'
-import buildMatchFn from '../../../_lib/buildMatchFn/index'
+import buildMatchPatternFn from '../../../_lib/buildMatchPatternFn'
+import buildMatchFn from '../../../_lib/buildMatchFn'
 
 var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i
 var parseOrdinalNumberPattern = /\d+/i
