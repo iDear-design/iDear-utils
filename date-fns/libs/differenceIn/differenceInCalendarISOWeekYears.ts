@@ -1,5 +1,5 @@
-import getISOWeekYear from "./getISOWeekYear";
-import requiredArgs from "../utils/requiredArgs";
+import getISOWeekYear from "../get/getISOWeekYear";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function differenceInCalendarISOWeekYears(
   dirtyDateLeft,

@@ -1,6 +1,6 @@
-import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
-import startOfISOWeek from "./startOfISOWeeek";
-import requiredArgs from "../utils/requiredArgs";
+import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
+import startOfISOWeek from "../startOf/startOfISOWeeek";
+import requiredArgs from "../../utils/requiredArgs";
 
 var MILLISECONDS_IN_WEEK = 604800000
 export default function differenceInCalendarISOWeeks(

@@ -1,4 +1,4 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 import differenceInDays from "./differenceInDays";
 
 export default function differenceInWeeks(dirtyDateLeft, dirtyDateRight) {

@@ -1,4 +1,4 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 import differenceInMonths from "./differenceInMonths";
 
 export default function differenceInQuarters(dirtyDateLeft, dirtyDateRight) {

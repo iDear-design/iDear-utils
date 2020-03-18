@@ -1,6 +1,6 @@
-import getQuarter from "./getQuarter";
-import toDate from "./toDate";
-import requiredArgs from "../utils/requiredArgs";
+import getQuarter from "../get/getQuarter";
+import toDate from "../toDate";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function differenceInCalendarQuarters(
   dirtyDateLeft,

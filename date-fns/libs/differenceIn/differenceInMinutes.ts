@@ -1,5 +1,5 @@
 import differenceInMilliseconds from "./differenceInMilliseconds";
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 
 var MILLISECONDS_IN_MINUTE = 60000
 

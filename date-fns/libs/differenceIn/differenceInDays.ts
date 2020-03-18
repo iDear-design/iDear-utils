@@ -1,6 +1,6 @@
-import toDate from "./toDate";
+import toDate from "../toDate";
 import differenceInCalendarDays from "./differenceInCalendarDays";
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 
 function compareLocalAsc(dateLeft, dateRight) {
   var diff =

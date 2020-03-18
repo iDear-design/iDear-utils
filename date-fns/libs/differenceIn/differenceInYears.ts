@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import compareAsc from "./compareAsc";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import compareAsc from "../compareAsc";
 import differenceInCalendarYears from "./differenceInCalendarYears";
 
 export default function differenceInYears(dirtyDateLeft, dirtyDateRight) {

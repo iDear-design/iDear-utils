@@ -1,6 +1,6 @@
-import startOfWeek from "./startOfWeek";
-import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
-import requiredArgs from "../utils/requiredArgs";
+import startOfWeek from "../startOf/startOfWeek";
+import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
+import requiredArgs from "../../utils/requiredArgs";
 
 var MILLISECONDS_IN_WEEK = 604800000
 

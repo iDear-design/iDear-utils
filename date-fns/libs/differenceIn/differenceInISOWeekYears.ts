@@ -1,8 +1,8 @@
-import toDate from "./toDate";
+import toDate from "../toDate";
 import differenceInCalendarISOWeekYears from "./differenceInCalendarISOWeekYears";
-import compareAsc from "./compareAsc";
-import subISOWeekYears from "./subISOWeekYears";
-import requiredArgs from "../utils/requiredArgs";
+import compareAsc from "../compareAsc";
+import subISOWeekYears from "../sub/subISOWeekYears";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function differenceInISOWeekYears(
   dirtyDateLeft,

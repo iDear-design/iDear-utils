@@ -1,7 +1,7 @@
-import toDate from "./toDate";
+import toDate from "../toDate";
 import differenceInCalendarMonths from "./differenceInCalendarMonths";
-import compareAsc from "./compareAsc";
-import requiredArgs from "../utils/requiredArgs";
+import compareAsc from "../compareAsc";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function differenceInMonths(dirtyDateLeft, dirtyDateRight) {
   requiredArgs(2, arguments)
