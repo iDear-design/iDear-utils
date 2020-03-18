@@ -1,6 +1,6 @@
-import toInteger from "../utils/toInteger";
+import toInteger from "../../utils/toInteger";
 import addDays from "./addDays";
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function addWeeks(
   dirtyDate: Date | number,

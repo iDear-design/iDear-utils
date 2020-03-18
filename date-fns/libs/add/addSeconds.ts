@@ -1,6 +1,6 @@
-import toInteger from "../utils/toInteger";
+import toInteger from "../../utils/toInteger";
 import addMilliseconds from "./addMilliseconds";
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function addSeconds(
   dirtyDate: Date | number,

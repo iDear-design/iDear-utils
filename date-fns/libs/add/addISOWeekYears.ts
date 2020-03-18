@@ -1,7 +1,7 @@
-import toInteger from "../utils/toInteger";
-import getISOWeekYear from "./getISOWeekYear";
-import setISOWeekYear from "./setISOWeekYear";
-import requiredArgs from "../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import getISOWeekYear from "../get/getISOWeekYear";
+import setISOWeekYear from "../set/setISOWeekYear";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function addISOWeekYears(
   dirtyDate: Date | number,

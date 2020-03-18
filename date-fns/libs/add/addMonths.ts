@@ -1,6 +1,6 @@
-import toInteger from "../utils/toInteger";
-import toDate from "./toDate";
-import requiredArgs from "../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import toDate from "../toDate";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function addMonths(
   dirtyDate: Date | number,

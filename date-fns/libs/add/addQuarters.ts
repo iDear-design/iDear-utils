@@ -1,6 +1,6 @@
-import toInteger from "../utils/toInteger";
+import toInteger from "../../utils/toInteger";
 import addMonths from "./addMonths";
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function addQuarters(
   dirtyDate: Date | number,

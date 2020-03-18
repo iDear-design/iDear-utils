@@ -1,9 +1,9 @@
 import addDays from "./addDays";
 import addMonths from "./addMonths";
-import toDate from "./toDate";
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
-import {Duration} from "./types";
+import toDate from "../toDate";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import {Duration} from "../types";
 
 export default function add(
   dirtyDate: Date | number,

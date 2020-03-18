@@ -1,9 +1,9 @@
-import isWeekend from "./isWeekend";
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger";
-import requiredArgs from "../utils/requiredArgs";
-import isSunday from "./isSunday";
-import isSaturday from "./isSaturday";
+import isWeekend from "../is/isWeekend";
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger";
+import requiredArgs from "../../utils/requiredArgs";
+import isSunday from "../is/isSunday";
+import isSaturday from "../is/isSaturday";
 
 export default function addBusinessDays(
   dirtyDate: Date | number,
