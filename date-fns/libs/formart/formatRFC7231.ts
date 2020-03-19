@@ -1,6 +1,6 @@
-import toDate from "./toDate";
-import isValid from "./isValid";
-import addLeadingZeros from "../utils/addLeadingZeros";
+import toDate from "../toDate";
+import isValid from "../is/isValid";
+import addLeadingZeros from "../../utils/addLeadingZeros";
 
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const months = [

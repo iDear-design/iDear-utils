@@ -1,4 +1,4 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function formatISODuration(duration) {
   requiredArgs(1, arguments)

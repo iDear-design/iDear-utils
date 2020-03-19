@@ -1,10 +1,10 @@
 import {cloneObject} from "@timi-utils/data-type";
-import toDate from "./toDate";
-import compareAsc from "./compareAsc";
-import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
-import differenceInSeconds from "./differenceInSeconds";
-import defaultLocale from "../locale/en-US"
-import requiredArgs from "../utils/requiredArgs";
+import toDate from "../toDate";
+import compareAsc from "../compareAsc";
+import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
+import differenceInSeconds from "../differenceIn/differenceInSeconds";
+import defaultLocale from "../../locale/en-US"
+import requiredArgs from "../../utils/requiredArgs";
 
 var MINUTES_IN_DAY = 1440
 var MINUTES_IN_MONTH = 43200

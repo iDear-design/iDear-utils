@@ -1,4 +1,4 @@
-import defaultLocale from "../locale/en-US"
+import defaultLocale from "../../locale/en-US"
 
 const defaultFormat = [
   'years',

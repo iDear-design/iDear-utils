@@ -1,10 +1,10 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import defaultLocale from "../locale/en-US/index"
-import differenceInCalendarDays from "./differenceInCalendarDays";
-import subMilliseconds from "./subMilliseconds";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import defaultLocale from "../../locale/en-US"
+import differenceInCalendarDays from "../differenceIn/differenceInCalendarDays";
+import subMilliseconds from "../sub/subMilliseconds";
 import format from "./formart";
-import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
+import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
 
 
 export default function formatRelative(dirtyDate, dirtyBaseDate, dirtyOptions) {
