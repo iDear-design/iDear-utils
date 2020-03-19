@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import startOfQuarter from "./startOfQuarter";
-import addQuarters from "./addQuarters";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import startOfQuarter from "../startOf/startOfQuarter";
+import addQuarters from "../add/addQuarters";
 
 export default function eachQuarterOfInterval(dirtyInterval) {
   requiredArgs(1, arguments)

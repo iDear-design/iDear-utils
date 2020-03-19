@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import startOfYear from "./startOfYear";
-import endOfYear from "./endOfYear";
+import requiredArgs from "../../utils/requiredArgs";
+import startOfYear from "../startOf/startOfYear";
+import endOfYear from "../endOf/endOfYear";
 import eachWeekendOfInterval from "./eachWeekendOfInterval";
 
 export default function eachWeekendOfYear(dirtyDate) {

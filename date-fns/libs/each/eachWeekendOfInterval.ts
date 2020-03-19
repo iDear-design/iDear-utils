@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 import eachDayOfInterval from "./eachDayOfInterval";
-import isWeekend from "./isWeekend";
-import isSunday from "./isSunday";
+import isWeekend from "../is/isWeekend";
+import isSunday from "../is/isSunday";
 
 export default function eachWeekendOfInterval(interval) {
   requiredArgs(1, arguments)

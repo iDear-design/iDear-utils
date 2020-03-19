@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import addHours from "./addHours";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import addHours from "../add/addHours";
 
 export default function eachHourOfInterval(dirtyInterval, options) {
   requiredArgs(1, arguments)

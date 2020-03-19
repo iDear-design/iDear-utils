@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
 
 export default function eachYearOfInterval(dirtyInterval) {
   requiredArgs(1, arguments)

@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import startOfWeek from "./startOfWeek";
-import addWeeks from "./addWeeks";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import startOfWeek from "../startOf/startOfWeek";
+import addWeeks from "../add/addWeeks";
 
 export default function eachWeekOfInterval(dirtyInterval, options) {
   requiredArgs(1, arguments)
