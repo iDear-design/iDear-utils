@@ -1,5 +1,5 @@
-import startOfWeek from "../startOfWeek";
-import startOfWeekYear from "../startOfWeekYear";
+import startOfWeek from "../startOf/startOfWeek";
+import startOfWeekYear from "../startOf/startOfWeekYear";
 import toDate from "../toDate";
 import requiredArgs from "../../utils/requiredArgs";
 

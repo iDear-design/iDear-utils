@@ -1,4 +1,4 @@
-import startOfWeek from "../startOfWeek";
+import startOfWeek from "../startOf/startOfWeek";
 import toDate from "../toDate";
 import toInteger from "../../utils/toInteger";
 import requiredArgs from "../../utils/requiredArgs";

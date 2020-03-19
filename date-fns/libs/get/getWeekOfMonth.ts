@@ -1,7 +1,7 @@
 import requiredArgs from "../../utils/requiredArgs";
 import toInteger from "../../utils/toInteger";
 import getDate from "./getDate";
-import startOfMonth from "../startOfMonth";
+import startOfMonth from "../startOf/startOfMonth";
 import getDay from "./getDay";
 
 export default function getWeekOfMonth(date, dirtyOptions) {

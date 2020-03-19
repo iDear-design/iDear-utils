@@ -1,5 +1,5 @@
 import requiredArgs from "../../utils/requiredArgs";
-import startOfISOWeekYear from "../startOfISOWeekYear";
+import startOfISOWeekYear from "../startOf/startOfISOWeekYear";
 import addWeeks from "../add/addWeeks";
 
 var MILLISECONDS_IN_WEEK = 604800000

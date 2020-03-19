@@ -1,5 +1,5 @@
 import requiredArgs from "../../utils/requiredArgs";
-import startOfISOWeek from "../startOfISOWeeek";
+import startOfISOWeek from "../startOf/startOfISOWeeek";
 import toDate from "../toDate";
 
 

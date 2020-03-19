@@ -1,6 +1,6 @@
 import toDate from "../toDate";
 import requiredArgs from "../../utils/requiredArgs";
-import startOfYear from "../startOfYear";
+import startOfYear from "../startOf/startOfYear";
 import differenceInCalendarDays from "../differenceIn/differenceInCalendarDays";
 
 export default function getDayOfYear(dirtyDate: Date | number): number {
