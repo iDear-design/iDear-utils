@@ -1,6 +1,6 @@
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger";
-import requiredArgs from "../utils/requiredArgs";
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function endOfWeek(dirtyDate, dirtyOptions) {
   requiredArgs(1, arguments)

@@ -1,5 +1,5 @@
-import toDate from "./toDate";
-import requiredArgs from "../utils/requiredArgs";
+import toDate from "../toDate";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function endOfDay(dirtyDate: Date | number): Date {
   requiredArgs(1, arguments)

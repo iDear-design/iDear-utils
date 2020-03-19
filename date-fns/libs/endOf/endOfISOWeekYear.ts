@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import getISOWeekYear from "./getISOWeekYear";
-import startOfISOWeek from "./startOfISOWeeek";
+import requiredArgs from "../../utils/requiredArgs";
+import getISOWeekYear from "../get/getISOWeekYear";
+import startOfISOWeek from "../startOf/startOfISOWeeek";
 
 export default function endOfISOWeekYear(dirtyDate: Date | number): Date {
   requiredArgs(1, arguments)
