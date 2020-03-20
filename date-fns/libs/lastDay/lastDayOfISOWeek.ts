@@ -1,4 +1,4 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 import lastDayOfWeek from "./lastDayOfWeek";
 
 export default function lastDayOfISOWeek(dirtyDate) {

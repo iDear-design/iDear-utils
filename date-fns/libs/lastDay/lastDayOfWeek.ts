@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
-import toDate from "./toDate";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import toDate from "../toDate";
 
 export default function lastDayOfWeek(dirtyDate, dirtyOptions) {
   requiredArgs(1, arguments)
