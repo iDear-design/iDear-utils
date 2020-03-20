@@ -1,5 +1,5 @@
-import toDate from "./toDate";
-import requiredArgs from "../utils/requiredArgs";
+import toDate from "../toDate";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function isBefore(dirtyDate, dirtyDateToCompare) {
   requiredArgs(2, arguments)
