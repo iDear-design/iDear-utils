@@ -1,14 +1,14 @@
 import requiredArgs from "../utils/requiredArgs";
 import toDate from "./toDate";
-import isValid from "./isValid";
+import isValid from "./is/isValid";
 import compareAsc from "./compareAsc";
-import differenceInYears from "./differenceInYears";
-import differenceInMonths from "./differenceInMonths";
-import sub from "./sub";
-import differenceInDays from "./differenceInDays";
-import differenceInHours from "./differenceInHours";
-import differenceInMinutes from "./differenceInMinutes";
-import differenceInSeconds from "./differenceInSeconds";
+import differenceInYears from "./differenceIn/differenceInYears";
+import differenceInMonths from "./differenceIn/differenceInMonths";
+import sub from "./sub/sub";
+import differenceInDays from "./differenceIn/differenceInDays";
+import differenceInHours from "./differenceIn/differenceInHours";
+import differenceInMinutes from "./differenceIn/differenceInMinutes";
+import differenceInSeconds from "./differenceIn/differenceInSeconds";
 
 export default function intervalToDuration({ start, end }) {
   requiredArgs(1, arguments)
