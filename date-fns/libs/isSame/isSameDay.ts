@@ -1,5 +1,5 @@
-import startOfDay from "./startOfDay";
-import requiredArgs from "../utils/requiredArgs";
+import startOfDay from "../startOf/startOfDay";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function isSameDay(dirtyDateLeft: Date | number, dirtyDateRight: Date | number): boolean {
   requiredArgs(2, arguments)

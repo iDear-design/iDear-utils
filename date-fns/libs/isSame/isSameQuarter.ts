@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import startOfQuarter from "./startOfQuarter";
+import requiredArgs from "../../utils/requiredArgs";
+import startOfQuarter from "../startOf/startOfQuarter";
 
 export default function isSameQuarter(dirtyDateLeft, dirtyDateRight) {
   requiredArgs(2, arguments)

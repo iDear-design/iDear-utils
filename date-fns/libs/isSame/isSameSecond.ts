@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import startOfSecond from "./startOfSecond";
+import requiredArgs from "../../utils/requiredArgs";
+import startOfSecond from "../startOf/startOfSecond";
 
 export default function isSameSecond(dirtyDateLeft, dirtyDateRight) {
   requiredArgs(2, arguments)

@@ -1,4 +1,4 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 import isSameWeek from "./isSameWeek";
 
 export default function isSameISOWeek(dirtyDateLeft, dirtyDateRight) {

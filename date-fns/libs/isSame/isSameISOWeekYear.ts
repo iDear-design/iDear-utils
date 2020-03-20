@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import startOfISOWeekYear from "./startOfISOWeekYear";
+import requiredArgs from "../../utils/requiredArgs";
+import startOfISOWeekYear from "../startOf/startOfISOWeekYear";
 
 export default function isSameISOWeekYear(dirtyDateLeft, dirtyDateRight) {
   requiredArgs(2, arguments)

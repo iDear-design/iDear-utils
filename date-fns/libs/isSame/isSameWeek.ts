@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import startOfWeek from "./startOfWeek";
+import requiredArgs from "../../utils/requiredArgs";
+import startOfWeek from "../startOf/startOfWeek";
 
 export default function isSameWeek(
   dirtyDateLeft,

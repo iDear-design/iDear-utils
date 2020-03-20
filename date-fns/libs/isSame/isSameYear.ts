@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
 
 export default function isSameYear(dirtyDateLeft, dirtyDateRight) {
   requiredArgs(2, arguments)
