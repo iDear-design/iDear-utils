@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import isSameHour from "./isSameHour";
+import requiredArgs from "../../utils/requiredArgs";
+import isSameHour from "../isSame/isSameHour";
 
 export default function isThisHour(dirtyDate) {
   requiredArgs(1, arguments)

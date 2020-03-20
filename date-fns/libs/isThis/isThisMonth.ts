@@ -1,5 +1,5 @@
-import requiredArgs from "../utils/requiredArgs";
-import isSameMonth from "./isSameMonth";
+import requiredArgs from "../../utils/requiredArgs";
+import isSameMonth from "../isSame/isSameMonth";
 
 export default function isThisMonth(dirtyDate) {
   requiredArgs(1, arguments)
