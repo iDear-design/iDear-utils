@@ -1,8 +1,8 @@
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
-import differenceInCalendarDays from "./differenceIn/differenceInCalendarDays";
-import startOfWeekYear from "./startOfWeekYear";
-import toDate from "./toDate";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import differenceInCalendarDays from "../differenceIn/differenceInCalendarDays";
+import startOfWeekYear from "../startOf/startOfWeekYear";
+import toDate from "../toDate";
 
 export default function setWeekYear(dirtyDate, dirtyWeekYear, dirtyOptions) {
   requiredArgs(2, arguments)

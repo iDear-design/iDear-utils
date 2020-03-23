@@ -1,8 +1,8 @@
-import toInteger from "../utils/toInteger";
-import toDate from "./toDate";
-import startOfISOWeekYear from "./startOfISOWeekYear";
-import differenceInCalendarDays from "./differenceIn/differenceInCalendarDays";
-import requiredArgs from "../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import toDate from "../toDate";
+import startOfISOWeekYear from "../startOf/startOfISOWeekYear";
+import differenceInCalendarDays from "../differenceIn/differenceInCalendarDays";
+import requiredArgs from "../../utils/requiredArgs";
 
 export default function setISOWeekYear(dirtyDate, dirtyISOWeekYear) {
   requiredArgs(2, arguments)

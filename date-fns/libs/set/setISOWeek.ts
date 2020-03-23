@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger";
-import getISOWeek from "./get/getISOWeek";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger";
+import getISOWeek from "../get/getISOWeek";
 
 export default function setISOWeek(dirtyDate, dirtyISOWeek) {
   requiredArgs(2, arguments)

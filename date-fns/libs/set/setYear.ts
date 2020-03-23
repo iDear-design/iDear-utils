@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
-import toDate from "./toDate";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import toDate from "../toDate";
 
 export default function setYear(dirtyDate, dirtyYear) {
   requiredArgs(2, arguments)

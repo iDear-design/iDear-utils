@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
-import toDate from "./toDate";
-import addDays from "./add/addDays";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import toDate from "../toDate";
+import addDays from "../add/addDays";
 
 export default function setDay(dirtyDate, dirtyDay, dirtyOptions) {
   requiredArgs(2, arguments)

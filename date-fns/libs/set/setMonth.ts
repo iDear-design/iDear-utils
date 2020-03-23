@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
-import toDate from "./toDate";
-import getDaysInMonth from "./get/getDaysInMonth";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import toDate from "../toDate";
+import getDaysInMonth from "../get/getDaysInMonth";
 
 export default function setMonth(dirtyDate, dirtyMonth) {
   requiredArgs(2, arguments)

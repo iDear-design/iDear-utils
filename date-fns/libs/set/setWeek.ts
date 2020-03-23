@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger";
-import getWeek from "./get/getWeek";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger";
+import getWeek from "../get/getWeek";
 
 export default function setWeek(dirtyDate, dirtyWeek, dirtyOptions) {
   requiredArgs(2, arguments)

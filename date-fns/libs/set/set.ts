@@ -1,7 +1,7 @@
-import requiredArgs from "../utils/requiredArgs";
+import requiredArgs from "../../utils/requiredArgs";
 import setMonth from "./setMonth";
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger"
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger"
 
 export default function set(dirtyDate, values) {
   requiredArgs(2, arguments)

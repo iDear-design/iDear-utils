@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger";
 import setMonth from "./setMonth";
 
 export default function setQuarter(dirtyDate, dirtyQuarter) {

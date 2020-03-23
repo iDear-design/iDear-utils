@@ -1,6 +1,6 @@
-import requiredArgs from "../utils/requiredArgs";
-import toDate from "./toDate";
-import toInteger from "../utils/toInteger";
+import requiredArgs from "../../utils/requiredArgs";
+import toDate from "../toDate";
+import toInteger from "../../utils/toInteger";
 
 export default function setMilliseconds(dirtyDate, dirtyMilliseconds) {
   requiredArgs(2, arguments)
