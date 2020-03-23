@@ -1,5 +1,5 @@
-import toInteger from "../utils/toInteger";
-import requiredArgs from "../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
+import requiredArgs from "../../utils/requiredArgs";
 
 var MILLISECONDS_IN_HOUR = 3600000
 var MILLISECONDS_IN_MINUTE = 60000

@@ -1,17 +1,17 @@
-import defaultLocale from "../locale/en-US/index"
-import subMilliseconds from "./subMilliseconds";
-import toDate from "./toDate";
+import defaultLocale from "../../locale/en-US"
+import subMilliseconds from "../sub/subMilliseconds";
+import toDate from "../toDate";
 import assign from "@timi-uitls/data-type/utils/assign"
-import longFormatters from "../utils/format/longFormatters";
-import getTimezoneOffsetInMilliseconds from "../utils/getTimezoneOffsetInMilliseconds";
+import longFormatters from "../../utils/format/longFormatters";
+import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
 import {
   isProtectedDayOfYearToken,
   isProtectedWeekYearToken,
   throwProtectedError
-} from "../utils/protectedTokens";
-import toInteger from "../utils/toInteger";
-import parsers from "../utils/parsers"
-import requiredArgs from "../utils/requiredArgs";
+} from "../../utils/protectedTokens";
+import toInteger from "../../utils/toInteger";
+import parsers from "../../utils/parsers"
+import requiredArgs from "../../utils/requiredArgs";
 
 // This RegExp consists of three parts separated by `|`:
 // - [yYQqMLwIdDecihHKkms]o matches any available ordinal number token
