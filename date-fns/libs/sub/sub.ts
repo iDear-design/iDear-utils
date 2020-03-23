@@ -1,8 +1,8 @@
-import requiredArgs from "../utils/requiredArgs";
-import toInteger from "../utils/toInteger";
+import requiredArgs from "../../utils/requiredArgs";
+import toInteger from "../../utils/toInteger";
 import subMonths from "./subMonths";
 import subDays from "./subDays";
-import toDate from "./toDate";
+import toDate from "../toDate";
 
 export default function sub(dirtyDate, duration) {
   requiredArgs(2, arguments)
