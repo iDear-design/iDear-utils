@@ -1,5 +1,3 @@
-import getwindow from "../../utils/getwindow"
-
 export default function angle(): Number {
-  return getwindow().orientation
+  return (window as any).orientation
 }
