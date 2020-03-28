@@ -31,7 +31,7 @@ export default class browserNotify {
   public Notifiy: any
   public timer: any
 
-  // 初始化
+  // 构造函数，初始化
   constructor(config) {
     this.interval = config.interval || 100; // 响应时长
     this.effect = config.effect || 'flash'; // 效果
