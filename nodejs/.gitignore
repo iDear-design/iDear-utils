@@ -3,9 +3,9 @@
 __MACOSX
 
 # flie path
-node_modules
-dist
-test
+/node_modules
+/dist
+/test
 
 # webpack file
 package-lock.json
