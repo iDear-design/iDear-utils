@@ -1,4 +1,4 @@
-// 判断是否存在localStorage
+// 判断是否支持localStorage
 export default function isLocal() {
   try {
     // in IE8 typeof localStorage.setItem === 'object'
