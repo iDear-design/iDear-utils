@@ -78,8 +78,22 @@ export function removeCookie(key: string, attributes: any) {
 }
 
 // 删除所有缓存数据
-export function cleanCookie() {
+export function clearCookie() {
+  let keys = getKeysCookie();
+  keys.forEach(element => {
+    setCookie(element, "", -24);
+  });
+}
 
+// 获取所有的cookie
+export function getKeysCookie() {
+  let arr = document.cookie.split(";");
+  let keys = [];
+  for (let i = 0; i < arr.length; i++) {
+    let arrTemp = arr[i].split("=");
+    keys.push(arrTemp[0]);
+  }
+  return keys;
 }
 
 // 设置默认值(创建api实例来全局设置)
