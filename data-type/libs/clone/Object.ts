@@ -1,5 +1,10 @@
 import assign from '../../utils/assign'
 
-export default function cloneObject(dirtyObject: any) {
-  return assign({}, dirtyObject)
+/**
+ * ## 克隆对象
+ * @param {string} obj 目标对象
+ * @returns {object}
+ */
+export default function cloneObject(obj: any): object {
+  return assign({}, obj)
 }
