@@ -1,8 +1,4 @@
-/**
- * Object.prototype.toString.call(o).slice(8, -1) === 'String'
- * ===
- * Object.prototype.toString.call(str) === '[object String]'
- */
+import {protoTypeArr} from "./protoType";
 
 /**
  * ## 是否字符串
@@ -10,7 +6,7 @@
  * @returns {boolean}
  */
 function isString(str: string): boolean {
-  return Object.prototype.toString.call(str) === '[object String]'
+  return protoTypeArr(str) === '[object String]'
 }
 
 /**
@@ -19,7 +15,7 @@ function isString(str: string): boolean {
  * @returns {boolean}
  */
 function isArray(arr: any[]): boolean {
-  return Object.prototype.toString.call(arr) === '[object Array]'
+  return protoTypeArr(arr) === '[object Array]'
 }
 
 /**
@@ -28,7 +24,7 @@ function isArray(arr: any[]): boolean {
  * @returns {boolean}
  */
 function isObject(obj: boolean): boolean {
-  return Object.prototype.toString.call(obj) === '[object Object]'
+  return protoTypeArr(obj) === '[object Object]'
 }
 
 /**
@@ -37,7 +33,7 @@ function isObject(obj: boolean): boolean {
  * @returns {boolean}
  */
 function isNumber(num: number): boolean {
-  return Object.prototype.toString.call(num) === '[object Number]'
+  return protoTypeArr(num) === '[object Number]'
 }
 
 /**
@@ -46,7 +42,7 @@ function isNumber(num: number): boolean {
  * @returns {boolean}
  */
 function isBoolean(bool: boolean): boolean {
-  return Object.prototype.toString.call(bool) === '[object Boolean]'
+  return protoTypeArr(bool) === '[object Boolean]'
 }
 
 /**
@@ -55,7 +51,7 @@ function isBoolean(bool: boolean): boolean {
  * @returns {boolean}
  */
 function isDate(date: Date): boolean {
-  return Object.prototype.toString.call(date) === '[object Date]'
+  return protoTypeArr(date) === '[object Date]'
 }
 
 /**
@@ -64,7 +60,7 @@ function isDate(date: Date): boolean {
  * @returns {boolean}
  */
 function isFunction(fun: boolean): boolean {
-  return Object.prototype.toString.call(fun) === '[object Function]'
+  return protoTypeArr(fun) === '[object Function]'
 }
 
 /**
@@ -73,7 +69,7 @@ function isFunction(fun: boolean): boolean {
  * @returns {boolean}
  */
 function isUndefined(bool: boolean): boolean {
-  return Object.prototype.toString.call(bool) === '[object Undefined]'
+  return protoTypeArr(bool) === '[object Undefined]'
 }
 
 /**
@@ -82,7 +78,7 @@ function isUndefined(bool: boolean): boolean {
  * @returns {boolean}
  */
 function isRegExp(rex: any): boolean {
-  return Object.prototype.toString.call(rex) === '[object RegExp]'
+  return protoTypeArr(rex) === '[object RegExp]'
 }
 
 /**
@@ -91,7 +87,7 @@ function isRegExp(rex: any): boolean {
  * @returns {boolean}
  */
 function isError(err: any): boolean {
-  return Object.prototype.toString.call(err) === '[object Error]'
+  return protoTypeArr(err) === '[object Error]'
 }
 
 /**
@@ -100,7 +96,7 @@ function isError(err: any): boolean {
  * @returns {boolean}
  */
 function isSymbol(sym: any): boolean {
-  return Object.prototype.toString.call(sym) === '[object Symbol]'
+  return protoTypeArr(sym) === '[object Symbol]'
 }
 
 /**
@@ -109,7 +105,7 @@ function isSymbol(sym: any): boolean {
  * @returns {boolean}
  */
 function isPromise(proms: any): boolean {
-  return Object.prototype.toString.call(proms) === '[object Promise]'
+  return protoTypeArr(proms) === '[object Promise]'
 }
 
 /**
@@ -118,7 +114,7 @@ function isPromise(proms: any): boolean {
  * @returns {boolean}
  */
 function isSet(set: any): boolean {
-  return Object.prototype.toString.call(set) === '[object Set]'
+  return protoTypeArr(set) === '[object Set]'
 }
 
 /**
