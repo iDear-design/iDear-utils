@@ -2,3 +2,5 @@
 */types
 */package-lock.json
 */dist
+
+*.idea
