@@ -4,7 +4,7 @@
  * @param {string} type asc: 升序/desc: 降序/random: 随机
  * @returns {any[]}
  */
-export default function sortArray(arr: any[], type?: string): any[] {
+export default function sort(arr: any[], type?: string): any[] {
   type = type || 'asc'
   return arr.sort((a: number, b: number): any => {
     switch (type) {
