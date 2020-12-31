@@ -1,5 +1,5 @@
 {
-  "name": "@timi-utils/cache",
+  "name": "@idear-tools/cache",
   "version": "0.0.1",
   "description": "",
   "main": "./index.js",
@@ -19,7 +19,7 @@
   },
   "keywords": [
     "utils",
-    "timi-utils",
+    "idear-tools",
     "timi-design"
   ],
   "dependencies": {},
