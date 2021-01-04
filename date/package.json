@@ -1,5 +1,5 @@
 {
-  "name": "@timi-utils/date-fns",
+  "name": "@idear-tools/date",
   "version": "1.0.0",
   "description": "",
   "main": "./index.js",
@@ -20,10 +20,10 @@
   "keywords": [
     "utils",
     "timi-design",
-    "timi-utils"
+    "idear-tools"
   ],
   "dependencies": {
-    "@timi-utils/data-type": "0.0.3"
+    "@idear-tools/data-type": "0.0.3"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",

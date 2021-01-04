@@ -1,4 +1,4 @@
-import {cloneObject} from "@timi-utils/data-type";
+import {cloneObject} from "@idear-tools/data-type";
 import toDate from "../toDate";
 import compareAsc from "../compareAsc";
 import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";

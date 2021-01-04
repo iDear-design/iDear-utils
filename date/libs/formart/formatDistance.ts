@@ -1,4 +1,4 @@
-import {cloneObject} from "@timi-utils/data-type";
+import {cloneObject} from "@idear-tools/data-type";
 import toDate from "../toDate";
 import differenceInMonths from "../differenceIn/differenceInMonths";
 import differenceInSeconds from "../differenceIn/differenceInSeconds";
