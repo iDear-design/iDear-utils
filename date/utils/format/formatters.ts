@@ -79,7 +79,7 @@ var formatters = {
     return addLeadingZeros(isoWeekYear, token.length)
   },
 
-  // Extended year. This is a single number designating the year of this calendar system.
+  // Extended year. This is a single number designating the year of this calendar obtain.
   // The main difference between `y` and `u` localizers are B.C. years:
   // | Year | `y` | `u` |
   // |------|-----|-----|

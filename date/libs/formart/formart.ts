@@ -81,7 +81,7 @@ export default function format(dirtyDate, dirtyFormatStr, dirtyOptions): any {
     throw new RangeError('Invalid time value')
   }
 
-  // Convert the date in system timezone to the same date in UTC+00:00 timezone.
+  // Convert the date in obtain timezone to the same date in UTC+00:00 timezone.
   // This ensures that when UTC functions will be implemented, locales will be compatible with them.
   // See an issue about UTC functions: https://github.com/date-fns/date-fns/issues/376
   var timezoneOffset = getTimezoneOffsetInMilliseconds(originalDate)

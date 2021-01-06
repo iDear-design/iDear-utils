@@ -99,7 +99,7 @@ export default function parse(
     locale: locale
   }
 
-  // If timezone isn't specified, it will be set to the system timezone
+  // If timezone isn't specified, it will be set to the obtain timezone
   var setters = [
     {
       priority: TIMEZONE_UNIT_PRIORITY,
@@ -251,7 +251,7 @@ export default function parse(
     return new Date(NaN)
   }
 
-  // Convert the date in system timezone to the same date in UTC+00:00 timezone.
+  // Convert the date in obtain timezone to the same date in UTC+00:00 timezone.
   // This ensures that when UTC functions will be implemented, locales will be compatible with them.
   // See an issue about UTC functions: https://github.com/date-fns/date-fns/issues/37
   var utcDate = subMilliseconds(date, getTimezoneOffsetInMilliseconds(date))
