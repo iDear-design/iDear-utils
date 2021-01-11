@@ -1,5 +1,25 @@
-import webSQL from "./websqslInfo";
+import isWebSQL from "@idear-tools/judge";
+import webSQL from "@idear-tools/config";
 
+const isCheck = (): boolean => {
+  let isHas: boolean = isSession()
+  if (!isSession()) console.error('对不起，您的运行环境不支持WebSQL！')
+  return isHas
+}
+
+/**
+ * 声明webSql数据类型
+ * */
+interface WebSQLConfig {
+  name: string, // 数据库名称
+  version: string, // 版本号
+  description: string, // 数据库的描述
+  size: number // 数据的大小
+}
+
+/**
+ * 默认的webSql数据
+ * */
 const defaultDatabase: any = {
   name: 'Timi-WebSQL', // 数据库名称
   version: '1.0.0', // 版本号
@@ -7,13 +27,6 @@ const defaultDatabase: any = {
   size: 10 * 1024 * 1024 // 数据的大小
 }
 
-// 声明
-interface WebSQLConfig {
-  name: string, // 数据库名称
-  version: string, // 版本号
-  description: string, // 数据库的描述
-  size: number // 数据的大小
-}
 
 export default class WebSQL {
   public WEBSQLDB: any;
