@@ -1,64 +1,66 @@
+import {checkTypeConfig} from "../../types/regExp"
+import regExp from "@idear-tools/config"
+
 /**
  * ## 检验各种数据类型
  * @param {string} str 字符串
  * @param {string} type [
- * phone-手机号码
- * tel-座机
- * card-身份证
- * pwd-密码以字母开头，长度在6~18之间，只能包含字母、数字和下划线
- * postal-邮政编码
- * QQ-QQ号
- * email-邮箱
- * money-金额(小数点2位)
- * URL-网址
- * IP-IP地址
- * date-日期时间
- * number-数字
- * english-英文
- * chinese-中文
- * lower-小写
- * upper-大写
- * HTML-HTML标记
+ *    phone-手机号码
+ *    tel-座机
+ *    idCard-身份证
+ *    pwd-密码以字母开头，长度在6~18之间，只能包含字母、数字和下划线
+ *    postal-邮政编码
+ *    QQ-QQ号
+ *    email-邮箱
+ *    money-金额(小数点2位)
+ *    URL-网址
+ *    IP-IP地址
+ *    date-日期时间
+ *    number-数字
+ *    english-英文
+ *    chinese-中文
+ *    lower-小写
+ *    upper-大写
+ *    HTML-HTML标记
  * ]
  * @returns {boolean}
  */
-export default function checkString(str: string, type?: string): boolean {
-  type = type || 'str';
+export default function checkString(str: string, type: checkTypeConfig): boolean {
   switch (type) {
     case 'phone':   //手机号码
-      return /^1[3|4|5|6|7|8|9][0-9]{9}$/.test(str);
+      return regExp.phone.test(str);
     case 'tel':     //座机
-      return /^(0\d{2,3}-\d{7,8})(-\d{1,4})?$/.test(str);
-    case 'card':    //身份证
-      return /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(str);
+      return regExp.tel.test(str);
+    case 'idCard':    //身份证
+      return regExp.idCard.test(str);
     case 'pwd':     //密码以字母开头，长度在6~18之间，只能包含字母、数字和下划线
-      return /^[a-zA-Z]\w{5,17}$/.test(str)
+      return regExp.pwd.test(str)
     case 'postal':  //邮政编码
-      return /[1-9]\d{5}(?!\d)/.test(str);
+      return regExp.postal.test(str);
     case 'QQ':      //QQ号
-      return /^[1-9][0-9]{4,9}$/.test(str);
+      return regExp.QQ.test(str);
     case 'email':   //邮箱
-      return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(str);
+      return regExp.email.test(str);
     case 'money':   //金额(小数点2位)
-      return /^\d*(?:\.\d{0,2})?$/.test(str);
+      return regExp.money.test(str);
     case 'URL':     //网址
-      return /(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/.test(str)
+      return regExp.URL.test(str)
     case 'IP':      //IP
-      return /((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))/.test(str);
+      return regExp.IP.test(str);
     case 'date':    //日期时间
-      return /^(\d{4})\-(\d{2})\-(\d{2}) (\d{2})(?:\:\d{2}|:(\d{2}):(\d{2}))$/.test(str) || /^(\d{4})\-(\d{2})\-(\d{2})$/.test(str)
+      return regExp.date.test(str) || regExp.date2.test(str)
     case 'number':  //数字
-      return /^[0-9]$/.test(str);
+      return regExp.number.test(str);
     case 'english': //英文
-      return /^[a-zA-Z]+$/.test(str);
+      return regExp.english.test(str);
     case 'chinese': //中文
-      return /^[\u4E00-\u9FA5]+$/.test(str);
+      return regExp.chinese.test(str);
     case 'lower':   //小写
-      return /^[a-z]+$/.test(str);
+      return regExp.phone.test(str);
     case 'upper':   //大写
-      return /^[A-Z]+$/.test(str);
+      return regExp.upper.test(str);
     case 'HTML':    //HTML标记
-      return /<("[^"]*"|'[^']*'|[^'">])*>/.test(str);
+      return regExp.HTML.test(str);
     default:
       return true;
   }
