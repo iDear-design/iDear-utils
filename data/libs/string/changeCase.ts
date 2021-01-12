@@ -1,11 +1,13 @@
+import {changeCaseConfig} from "../../types/string";
+
 /**
  * 提还字母大小写
  * @param  {String} str
- * @param  {Number} type 1:首字母大写  2：首页母小写  3：大小写转换  4：全部大写  5：全部小写
+ * @param  {Number} type 1-首字母大写  2-首页母小写  3-大小写转换  4-全部大写  5-全部小写
  * @return {String}
  */
-export default function changeCase(str: string, type: number): string {
-  type = type || 1
+
+export default function changeCase(str: string, type: changeCaseConfig): string {
   switch (type) {
     case 1:
       return str.replace(/\b\w+\b/g, function (word) {
