@@ -1,4 +1,4 @@
-export default function assign(target: any, dirtyObject: any) {
+export default function assign(target: object, dirtyObject: object) {
   if (target == null) {
     throw new TypeError(
       'assign requires that input parameter not be null or undefined'
