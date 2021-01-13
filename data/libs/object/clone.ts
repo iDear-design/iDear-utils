@@ -1,4 +1,4 @@
-import assign from '../../utils/assign'
+import objectAssign from './assign'
 
 /**
  * ## 克隆对象
@@ -6,5 +6,5 @@ import assign from '../../utils/assign'
  * @returns {object}
  */
 export default function cloneObject(obj: any): object {
-  return assign({}, obj)
+  return objectAssign({}, obj)
 }
