@@ -1,7 +1,7 @@
 import defaultLocale from "../../locale/en-US"
 import subMilliseconds from "../sub/subMilliseconds";
 import toDate from "../toDate";
-import assign from "@timi-uitls/data-type/utils/assign"
+import objectAssign from "@idear-tools/data"
 import longFormatters from "../../utils/format/longFormatters";
 import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
 import {
