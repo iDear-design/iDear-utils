@@ -5,8 +5,8 @@ const dateUtils: any = {
   format
 }
 
-const timiData: any = {
+const idearData: any = {
   ...dateUtils
 }
 
-export default timiData
+export default idearData
