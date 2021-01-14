@@ -1,8 +1,8 @@
 import {getUserAgent} from "../../utils/getNavigator";
-import Agents from "../../utils/dictionary/agents";
+import {userAgents} from "@idear-tools/config";
 
 // 移动端
 export default function isMobile(): Boolean {
-  let Mobile = (getUserAgent().toLowerCase()).indexOf(Agents) >= 0
+  let Mobile = (getUserAgent().toLowerCase()).indexOf(userAgents) >= 0
   return Mobile
 }
