@@ -1,4 +1,4 @@
-import isArray from "./isArray";
+import isArray from "@idear-tools/judge";
 
 export default function createAudio(url) {
   const audioElm = document.createElement('audio');

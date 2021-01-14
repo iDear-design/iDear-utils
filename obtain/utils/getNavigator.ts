@@ -1,7 +1,9 @@
+import {nav} from "@idear-tools/config"
+
 export function getUserAgent() {
-  return (navigator as any).userAgent
+  return nav.userAgent
 }
 
 export function getAppVersion() {
-  return (navigator as any).appVersion
+  return nav.appVersion
 }
