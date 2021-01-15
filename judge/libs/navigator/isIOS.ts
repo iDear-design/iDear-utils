@@ -1,4 +1,4 @@
-import {getUserAgent} from "../../utils/getNavigator";
+import {getUserAgent} from "@idear-tools/obtain";
 
 // ios终端
 export default function isIOS(): Boolean {

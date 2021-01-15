@@ -1,4 +1,4 @@
-import {getUserAgent} from "../../utils/getNavigator";
+import {getUserAgent} from "@idear-tools/obtain";
 import {userAgents} from "@idear-tools/config";
 
 // pc端

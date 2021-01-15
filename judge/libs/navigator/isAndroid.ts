@@ -1,4 +1,4 @@
-import {getUserAgent} from "../../utils/getNavigator";
+import {getUserAgent} from "@idear-tools/obtain";
 
 // android终端
 export default function isAndroid(): Boolean {
