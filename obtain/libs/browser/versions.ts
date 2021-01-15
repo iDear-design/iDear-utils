@@ -1,4 +1,4 @@
-import {getUserAgent} from "../../utils/getNavigator";
+import {getUserAgent} from "../window/getNavigator";
 
 export default function versions() {
   let userAgent = getUserAgent()
