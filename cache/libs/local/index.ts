@@ -7,37 +7,54 @@ const isCheck = (): boolean => {
   return isHas
 }
 
-// 保存数据
+/**
+ * 设置localStorage
+ * @param {string} localKey 键名
+ * @param {string} localData 值
+ * */
 export function setLocal(localKey: string, localData: any) {
   if (!isCheck()) return
   JSON.stringify(local.setItem(localKey, localData))
 }
 
-// 读取数据
+/**
+ * 读取localStorage
+ * @param {string} localKey 键名
+ * */
 export function getLocal(localKey: string) {
   if (!isCheck()) return
   return JSON.parse(local.getItem(localKey))
 }
 
-// 删除数据
+/**
+ * 删除localStorage
+ * @param {string} localKey 键名
+ * */
 export function removeLocal(localKey: string) {
   if (!isCheck()) return
   local.removeItem(localKey)
 }
 
-// 删除所有缓存数据
+/**
+ * 清除localStorage
+ * */
 export function cleanLocal() {
   if (!isCheck()) return
   local.clear()
 }
 
-// 得到某个索引的key
+/**
+ * 得到某个索引的key
+ * @param {string} keyIndex 索引值
+ * */
 export function localKey(keyIndex: number) {
   if (!isCheck()) return
   return local.key(keyIndex)
 }
 
-// 得到session的缓存数量
+/**
+ * 得到localStorage的缓存数量
+ * */
 export function localNum() {
   if (!isCheck()) return
   return local.length

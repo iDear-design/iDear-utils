@@ -6,7 +6,12 @@ const Attributes: any = {path: '/'}
 let defaultConverter: any = converter
 let defaultAttributes: any = Attributes
 
-// 保存数据
+/**
+ * 设置cookie
+ * @param {string} key 键名
+ * @param {string} value 值
+ * @param {string} attributes 方法
+ * */
 export function setCookie(key: string, value: any, attributes: any) {
   if (typeof (document as any) === 'undefined') {
     return
@@ -44,7 +49,10 @@ export function setCookie(key: string, value: any, attributes: any) {
   return ((document as any).cookie = key + '=' + value + stringifiedAttributes)
 }
 
-// 读取数据
+/**
+ * 读取cookie
+ * @param {string} key 键名
+ * */
 export function getCookie(key: string) {
   if (typeof (document as any) === 'undefined' || (arguments.length && !key)) {
     return
@@ -72,12 +80,18 @@ export function getCookie(key: string) {
   return key ? jar[key] : jar
 }
 
-// 删除数据
+/**
+ * 删除cookie
+ * @param {string} key 键名
+ * @param {string} attributes 方法
+ * */
 export function removeCookie(key: string, attributes: any) {
   setCookie(key, '', assign({}, attributes, {expires: -1}))
 }
 
-// 删除所有缓存数据
+/**
+ * 清除cookie
+ * */
 export function clearCookie() {
   let keys = getKeysCookie();
   keys.forEach(element => {
@@ -85,7 +99,9 @@ export function clearCookie() {
   });
 }
 
-// 获取所有的cookie
+/**
+ * 获取所有cookie
+ * */
 export function getKeysCookie() {
   let arr = document.cookie.split(";");
   let keys = [];
@@ -96,13 +112,17 @@ export function getKeysCookie() {
   return keys;
 }
 
-// 设置默认值(创建api实例来全局设置)
+/**
+ * 设置默认值(创建api实例来全局设置)
+ * */
 export function withAttributes(attributes: any) {
   defaultConverter = {value: Object.freeze(converter)}
   defaultAttributes = assign({}, {value: Object.freeze(Attributes)}, attributes)
 }
 
-// 转换器(创建一个覆盖默认解码实现的api新实例)
+/**
+ * 转换器(创建一个覆盖默认解码实现的api新实例)
+ * */
 export function withConverter(converter: any) {
   defaultConverter = assign({}, {value: Object.freeze(Attributes)}, converter)
   defaultAttributes = {value: Object.freeze(Attributes)}
