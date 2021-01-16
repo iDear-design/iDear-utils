@@ -1,8 +1,13 @@
-// 判断是否支持localStorage
-export default function isLocal() {
+import {local} from "@idear-tools/config";
+
+/**
+ * 判断是否支持localStorage
+ * @returns {boolean}
+ * */
+export default function isLocal(): boolean {
   try {
     // in IE8 typeof localStorage.setItem === 'object'
-    return (typeof localStorage !== 'undefined' && 'setItem' in localStorage && !!localStorage.setItem)
+    return (typeof local !== 'undefined' && 'setItem' in local && !!local.setItem)
   } catch (e) {
     return false;
   }
