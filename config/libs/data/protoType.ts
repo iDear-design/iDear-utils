@@ -1,5 +1,5 @@
 /**
- * ## 是否字符串
+ * ## 判断类型
  * @param {any} data 目标值
  * @returns {string} 'String'
  */
@@ -8,7 +8,7 @@ export function protoTypeString(data: any): string {
 }
 
 /**
- * ## 是否字符串
+ * ## 判断类型
  * @param {any} data 目标值
  * @returns {string} '[object String]'
  */

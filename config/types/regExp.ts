@@ -18,4 +18,5 @@ export type regExpConfig = {
   upper: RegExp
   HTML: RegExp
   symbols: RegExp
+  color: RegExp
 }
