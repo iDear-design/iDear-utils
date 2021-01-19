@@ -1,9 +1,9 @@
-import {idCardCityConfig} from "../../types/idCardCity";
+import {numKeyObjConfig} from "../../types/objectAny";
 
 /**
  * 身份证地址的数据
  */
-const idCardCityData: idCardCityConfig = {
+const idCardCityData: numKeyObjConfig = {
   11: '北京', 12: '天津', 13: '河北', 14: '山西', 15: '内蒙古',
   21: '辽宁', 22: '吉林', 23: '黑龙江',
   31: '上海', 32: '江苏', 33: '浙江', 34: '安徽', 35: '福建', 36: '江西', 37: '山东',
