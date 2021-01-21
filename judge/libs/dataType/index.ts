@@ -100,6 +100,15 @@ function isSymbol(sym: any): boolean {
 }
 
 /**
+ * ## 是否ArrayBuffer
+ * @param {string} sym 目标值
+ * @returns {boolean}
+ */
+function isArrayBuffer(sym: any): boolean {
+  return protoTypeArr(sym) === '[object ArrayBuffer]'
+}
+
+/**
  * ## 是否Promise对象
  * @param {string} proms 目标值
  * @returns {boolean}
@@ -149,6 +158,7 @@ export default {
   isRegExp,
   isError,
   isSymbol,
+  isArrayBuffer,
   isPromise,
   isSet,
   isFalse,
