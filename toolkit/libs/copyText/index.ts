@@ -1,6 +1,6 @@
-var copyElem: HTMLTextAreaElement
+import {doc} from "@idear-tools/config"
 
-const doc: Document = (window as any).document
+var copyElem: HTMLTextAreaElement
 
 /**
  * 创建剪贴板
