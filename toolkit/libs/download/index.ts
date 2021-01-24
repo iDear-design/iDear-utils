@@ -1,16 +1,38 @@
+import {doc, win} from "@idear-tools/config"
+
 /**
- * ## 创建A标签下载
+ * 根据地址下载文件
  * @param {string} url: 下载地址
- * @param {string} title: 下载标题
+ * @param {string} fileName: 下载标题
  * @param {string} target: 窗口位置（默认新开窗口）
  * @returns {any}
  */
-export function tagAToDownload(fileurl: string, title: string = '', target: string = '_blank') {
-  let tagA = (document as any).createElement('a')
-  tagA.setAttribute('href', fileurl)
-  tagA.setAttribute('download', title)
-  tagA.setAttribute('target', target)
-  (document as any).body.appendChild(tagA)
-  tagA.click()
-  (document as any).body.removeChild(tagA)
+export function urlDownload(url: string, fileName: string = 'urlFile', target: string = '_blank') {
+  let link = doc.createElement('a')
+  link.style.display = 'none';
+  link.href = url
+  link.download = fileName;
+  link.target = target;
+  doc.body.appendChild(link)
+  link.click()
+  doc.body.removeChild(link)
+}
+
+
+/**
+ * 根据地址下载文件
+ * @param {Blob} data: 下载地址
+ * @param {string} fileName: 下载文件名称[带后缀]
+ * @param {string} target: 窗口位置（默认新开窗口）
+ * @returns {any}
+ */
+export const filesDownload = (data: Blob, fileName: string, target: string = '_blank') => {
+  const link = doc.createElement('a');
+  link.style.display = 'none';
+  link.href = win.URL.createObjectURL(data);
+  link.download = fileName;
+  link.target = target;
+  doc.body.appendChild(link)
+  link.click();
+  doc.body.removeChild(link);
 }
