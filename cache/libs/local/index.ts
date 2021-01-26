@@ -1,5 +1,5 @@
-import isLocal from "@idear-tools/judge";
-import local from "@idear-tools/config";
+import isLocal from "@idear-utils/judge";
+import local from "@idear-utils/config";
 
 const isCheck = (): boolean => {
   let isHas: boolean = isLocal()

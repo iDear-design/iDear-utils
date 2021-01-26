@@ -1,5 +1,5 @@
-import isSession from "@idear-tools/judge";
-import session from "@idear-tools/config";
+import isSession from "@idear-utils/judge";
+import session from "@idear-utils/config";
 
 const isCheck = (): boolean => {
   let isHas: boolean = isSession()

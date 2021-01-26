@@ -1,5 +1,5 @@
-import isWebSQL from "@idear-tools/judge";
-import webSQL from "@idear-tools/config";
+import isWebSQL from "@idear-utils/judge";
+import webSQL from "@idear-utils/config";
 
 const isCheck = (): boolean => {
   let isHas: boolean = isSession()
@@ -23,7 +23,7 @@ interface WebSQLConfig {
 const defaultDatabase: any = {
   name: 'Timi-WebSQL', // 数据库名称
   version: '1.0.0', // 版本号
-  description: '这是@idear-tools/cache的webSQL数据库', // 数据库的描述
+  description: '这是@idear-utils/cache的webSQL数据库', // 数据库的描述
   size: 10 * 1024 * 1024 // 数据的大小
 }
 
