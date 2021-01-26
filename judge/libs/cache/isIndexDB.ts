@@ -1,4 +1,4 @@
-import {nav} from "@idear-tools/config";
+import {nav} from "@idear-utils/config";
 
 function getIndexDB() {
   /* global indexedDB,webkitIndexedDB,mozIndexedDB,OIndexedDB,msIndexedDB */

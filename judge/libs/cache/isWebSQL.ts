@@ -1,4 +1,4 @@
-import {win} from "@idear-tools/config";
+import {win} from "@idear-utils/config";
 
 /**
  * 判断是否支持WebSQL

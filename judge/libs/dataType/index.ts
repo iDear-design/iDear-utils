@@ -1,4 +1,4 @@
-import {protoTypeArr} from "@idear-tools/config";
+import {protoTypeArr} from "@idear-utils/config";
 
 /**
  * ## 是否字符串

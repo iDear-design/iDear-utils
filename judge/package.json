@@ -1,5 +1,5 @@
 {
-  "name": "@idear-tools/system",
+  "name": "@idear-utils/system",
   "version": "0.0.1",
   "description": "",
   "main": "./index.js",
@@ -19,7 +19,7 @@
   },
   "keywords": [
     "utils",
-    "idear-tools",
+    "idear-utils",
     "idear-design"
   ],
   "dependencies": {},

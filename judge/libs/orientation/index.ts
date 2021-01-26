@@ -1,4 +1,4 @@
-import {getAngle} from "@idear-tools/obtain";
+import {getAngle} from "@idear-utils/obtain";
 
 // 横屏
 export default function isTransverse(): Boolean {

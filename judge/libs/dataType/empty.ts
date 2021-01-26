@@ -1,4 +1,4 @@
-import {protoTypeString} from "@idear-tools/config";
+import {protoTypeString} from "@idear-utils/config";
 
 /**
  * @desc   判断`obj`是否为空

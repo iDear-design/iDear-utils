@@ -1,4 +1,4 @@
-import {session} from "@idear-tools/config";
+import {session} from "@idear-utils/config";
 
 /**
  * 判断是否支持sessionStorage

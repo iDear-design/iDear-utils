@@ -1,4 +1,4 @@
-import {local} from "@idear-tools/config";
+import {local} from "@idear-utils/config";
 
 /**
  * 判断是否支持localStorage
