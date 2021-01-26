@@ -1,4 +1,4 @@
-import regExp from "@idear-tools/config"
+import regExp from "@idear-utils/config"
 
 /**
  * ## 检测密码强度

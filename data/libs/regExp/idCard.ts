@@ -1,4 +1,4 @@
-import {idCardCityData, regExp} from "@idear-tools/config"
+import {idCardCityData, regExp} from "@idear-utils/config"
 
 /**
  * ## 是否身份证

@@ -1,5 +1,5 @@
 import {checkTypeConfig} from "../../types/regExp"
-import regExp from "@idear-tools/config"
+import regExp from "@idear-utils/config"
 
 /**
  * ## 检验各种数据类型
