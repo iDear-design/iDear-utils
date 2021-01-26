@@ -1,5 +1,5 @@
 {
-  "name": "@idear-tools/date",
+  "name": "@idear-utils/date",
   "version": "1.0.0",
   "description": "",
   "main": "./index.js",
@@ -20,10 +20,10 @@
   "keywords": [
     "utils",
     "idear-design",
-    "idear-tools"
+    "idear-utils"
   ],
   "dependencies": {
-    "@idear-tools/data-type": "0.0.3"
+    "@idear-utils/data-type": "0.0.3"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",

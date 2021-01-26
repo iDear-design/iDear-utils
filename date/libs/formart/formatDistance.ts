@@ -1,4 +1,4 @@
-import {cloneObject} from "@idear-tools/data-type";
+import {cloneObject} from "@idear-utils/data-type";
 import toDate from "../toDate";
 import differenceInMonths from "../differenceIn/differenceInMonths";
 import differenceInSeconds from "../differenceIn/differenceInSeconds";

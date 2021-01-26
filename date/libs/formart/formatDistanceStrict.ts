@@ -1,4 +1,4 @@
-import {cloneObject} from "@idear-tools/data-type";
+import {cloneObject} from "@idear-utils/data-type";
 import toDate from "../toDate";
 import compareAsc from "../compareAsc";
 import getTimezoneOffsetInMilliseconds from "../../utils/getTimezoneOffsetInMilliseconds";
