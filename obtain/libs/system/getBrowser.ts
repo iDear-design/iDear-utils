@@ -1,4 +1,4 @@
-import {win,nav} from "@idear-tools/config";
+import {win,nav} from "@idear-utils/config";
 import {getUserAgent} from "./getNavigator";
 
 // 浏览器高度

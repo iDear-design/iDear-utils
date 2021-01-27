@@ -1,4 +1,4 @@
-import {doc} from "@idear-tools/config"
+import {doc} from "@idear-utils/config"
 
 const bodyInfo = (doc.compatMode && doc.compatMode == 'CSS1Compat') ? doc.documentElement : doc.body;
 

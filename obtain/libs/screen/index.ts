@@ -1,4 +1,4 @@
-import {win} from "@idear-tools/config"
+import {win} from "@idear-utils/config"
 
 const screenInfo = screen || win.screen
 

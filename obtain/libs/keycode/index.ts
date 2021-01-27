@@ -1,4 +1,4 @@
-import {keyCodeConfig} from "@idear-tools/config"
+import {keyCodeConfig} from "@idear-utils/config"
 
 /**
  * @desc 根据keycode获得键名

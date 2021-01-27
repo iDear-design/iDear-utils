@@ -1,4 +1,4 @@
-import {nav} from "@idear-tools/config"
+import {nav} from "@idear-utils/config"
 
 /**
  * @desc 判断是手机吗

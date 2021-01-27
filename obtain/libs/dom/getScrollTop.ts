@@ -1,4 +1,4 @@
-import {doc} from "@idear-tools/config";
+import {doc} from "@idear-utils/config";
 
 /**
  * @desc 获取滚动条距顶部的距离
