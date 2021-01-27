@@ -1,4 +1,4 @@
-import {protoTypeString} from "@idear-tools/config"
+import {protoTypeString} from "@idear-utils/config"
 
 
 /**

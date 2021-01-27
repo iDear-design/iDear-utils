@@ -1,4 +1,4 @@
-import {isHasClass} from "@idear-tools/judge"
+import {isHasClass} from "@idear-utils/judge"
 
 /**
  * @desc   为元素添加class

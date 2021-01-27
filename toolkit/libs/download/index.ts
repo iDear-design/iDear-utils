@@ -1,4 +1,4 @@
-import {doc, win} from "@idear-tools/config"
+import {doc, win} from "@idear-utils/config"
 
 /**
  * 根据地址下载文件

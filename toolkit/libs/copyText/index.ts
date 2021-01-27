@@ -1,4 +1,4 @@
-import {doc} from "@idear-tools/config"
+import {doc} from "@idear-utils/config"
 
 var copyElem: HTMLTextAreaElement
 
