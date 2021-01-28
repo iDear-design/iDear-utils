@@ -9,32 +9,6 @@
     <h4>前端开发工具库，集成了前端开发中常用到的函数库、方法库...喜欢的话，欢迎star</h4>
 </h2>
 
-## 相关链接
-
-- **基础信息配置【一些常规的的基础信息、常量...的配置】** </br>
-  [@idear-utils/config](./config)
-
-- **缓存操作【cookie，localStorage，sessionStorage，webSQL，indexDB】** </br>
-  [@idear-utils/cache](./cache)
-
-- **数据处理【数组、对象、字符串、数字、正则...的运算、克隆、合并等操作，以及数据的相关处理】** </br>
-  [@idear-utils/data](./data)
-
-- **日期格式化【日期格式化操作】** </br>
-  [@idear-utils/date](./date)
-
-- **判断操作【判断数据类型、操作系统、环境】** </br>
-  [@idear-utils/judge](./judge)
-
-- **获取操作【获取操作系统、环境的相关信息】** </br>
-  [@idear-utils/obtain](./obtain)
-
-- **nodejs【nodejs的相关操作】** </br>
-  [@idear-utils/nodejs](./nodejs)
-
-- **工具箱【复制，导出exel、doc、pdf，加密】** </br>
-  [@idear-utils/toolkit](./toolkit)
-
 ## 主要维护人员
 
 |人员|github账号|头像|作者博客|作者网站|联系邮箱|
