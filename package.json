@@ -1,5 +1,5 @@
 {
-  "name": "@idear-utils/toolkit",
+  "name": "idear-utils",
   "version": "0.0.1",
   "description": "",
   "main": "./index.js",
