@@ -27,7 +27,7 @@ export type regExpConfig = {
 /**
  * 声明检验各种数据类型的数据类型
  * */
-export type checkTypeConfig =
+export type regExpTypeConfig =
   'phone'
   | 'tel'
   | 'idCard'
