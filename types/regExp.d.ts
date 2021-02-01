@@ -1,3 +1,6 @@
+/**
+ * 声明存在的正则验证
+ * */
 export type regExpConfig = {
   phone: RegExp
   tel: RegExp
@@ -20,3 +23,27 @@ export type regExpConfig = {
   symbols: RegExp
   color: RegExp
 }
+
+/**
+ * 声明检验各种数据类型的数据类型
+ * */
+export type checkTypeConfig =
+  'phone'
+  | 'tel'
+  | 'idCard'
+  | 'pwd'
+  | 'postal'
+  | 'QQ'
+  | 'email'
+  | 'money'
+  | 'URL'
+  | 'IP'
+  | 'date'
+  | 'number'
+  | 'english'
+  | 'chinese'
+  | 'lower'
+  | 'upper'
+  | 'HTML'
+  | 'symbols'
+  | 'color'

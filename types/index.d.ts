@@ -1,2 +1,2 @@
 export {numKeyObjConfig} from "./numKeyObj";
-export {regExpConfig} from "./regExp";
+export {regExpConfig, regExpTypeConfig} from "./regExp";
