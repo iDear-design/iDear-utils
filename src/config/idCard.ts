@@ -1,7 +1,7 @@
 import {numKeyObjConfig} from "../../types";
 
 /**
- * 身份证地址的数据
+ * @desc 身份证地址的数据
  */
 const idCardCityData: numKeyObjConfig = {
   11: '北京', 12: '天津', 13: '河北', 14: '山西', 15: '内蒙古',

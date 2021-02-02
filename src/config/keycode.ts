@@ -1,5 +1,8 @@
 import {numKeyObjConfig} from "../../types";
 
+/**
+ * @desc 键盘代码对应的键盘值
+ * */
 export const keyCodeConfig: numKeyObjConfig = {
   8: 'Backspace',
   9: 'Tab',

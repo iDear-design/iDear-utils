@@ -1,5 +1,5 @@
 /**
- * ## 判断类型
+ * @desc 判断类型
  * @param {any} data 目标值
  * @returns {string} 'String'
  */
@@ -8,7 +8,7 @@ export function dataTypeString(data: any): string {
 }
 
 /**
- * ## 判断类型
+ * @desc 判断类型
  * @param {any} data 目标值
  * @returns {string} '[object String]'
  */
