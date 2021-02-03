@@ -1,10 +1,10 @@
-import {doc} from "@idear-utils/config";
+import {doc} from "../config/system";
 
 /**
- * ## 判读是否支持全屏
+ * @desc 判读是否支持全屏
  * @returns {boolean}
  */
-export function isFullscreen(): boolean {
+export const isFullscreen = (): boolean => {
   return (
     doc.fullscreenEnabled ||
     doc.mozFullScreenEnabled ||
