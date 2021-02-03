@@ -1,4 +1,4 @@
-import {nav} from "../config/system";
+import {nav, win, doc} from "../config/system";
 import {getAngle} from "../systemOS/window";
 import userAgents from "../config/userAgent";
 
@@ -54,4 +54,36 @@ export const isTransverse = (): boolean => {
 export const isVertical = (): boolean => {
   let angleNum = getAngle()
   return angleNum === 180 || angleNum === 0
+}
+
+/**
+ * @desc 是否Touch屏幕
+ * @returns {boolean}
+ */
+export const isTouch = (): boolean => {
+  return ('ontouchstart' in win) || win.DocumentTouch
+}
+
+/**
+ * @desc 是否webKit内核
+ * @returns {boolean}
+ */
+export const isWebKit = (): boolean => {
+  return versions().webKit
+}
+
+/**
+ * @desc 是否IE内核
+ * @returns {boolean}
+ */
+export const isIE = (): boolean => {
+  return versions().trident
+}
+
+/**
+ * @desc 是否支持webP格式图片
+ * @return {Boolean}
+ */
+export const isSupportWebP = (): boolean => {
+  return !![].map && doc.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') === 0;
 }
