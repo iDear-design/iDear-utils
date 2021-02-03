@@ -1,5 +1,6 @@
 import {nav} from "../config/system";
 import userAgents from "../config/userAgent";
+import {getAngle} from "../systemOS/window";
 
 /**
  * @desc 是否android终端
@@ -35,4 +36,22 @@ export const isMobile = (): boolean => {
 export const isPc = (): boolean => {
   let pc: boolean = !isMobile()
   return pc
+}
+
+/**
+ * @desc 是否横屏
+ * @returns {boolean}
+ */
+export const isTransverse = (): boolean => {
+  let angleNum = getAngle()
+  return angleNum === 90 || angleNum === -90
+}
+
+/**
+ * @desc 是否竖屏
+ * @returns {boolean}
+ */
+export const isVertical = (): boolean => {
+  let angleNum = getAngle()
+  return angleNum === 180 || angleNum === 0
 }
