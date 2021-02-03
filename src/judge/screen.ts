@@ -1,7 +1,7 @@
 import {doc} from "../config/system";
 
 /**
- * @desc 判读是否支持全屏
+ * @desc 是否支持全屏
  * @returns {boolean}
  */
 export const isFullscreen = (): boolean => {
