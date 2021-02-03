@@ -1,6 +1,6 @@
 import {nav} from "../config/system";
-import userAgents from "../config/userAgent";
 import {getAngle} from "../systemOS/window";
+import userAgents from "../config/userAgent";
 
 /**
  * @desc 是否android终端
