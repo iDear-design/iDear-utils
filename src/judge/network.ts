@@ -1,14 +1,14 @@
 /**
- * ## 判断是否是内网ip
+ * @desc 判断是否是内网ip
  * @param {string} ip ip地址
  * @returns {boolean}
  */
-export function isLAN(ip: string): boolean {
+export const isLAN = (ip: string): boolean => {
   ip.toLowerCase()
-  if (ip == 'localhost') return true
+  if (ip === "") return false
+  if (ip === 'localhost' || ip === '127.0.0.1') return true
   let a_ip = 0
-  if (ip == "") return false
-  let aNum = ip.split(".")
+  let aNum = ip.split(".") || []
   if (aNum.length != 4) return false
   a_ip += parseInt(aNum[0]) << 24
   a_ip += parseInt(aNum[1]) << 16
