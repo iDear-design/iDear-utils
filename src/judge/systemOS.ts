@@ -33,9 +33,9 @@ export const isMobile = (): boolean => {
  * @desc 是否移动端
  * @returns {boolean}
  */
-export const isPc = (): boolean => {
-  let pc: boolean = !isMobile()
-  return pc
+export const isWeb = (): boolean => {
+  let web: boolean = !isMobile()
+  return web
 }
 
 /**
