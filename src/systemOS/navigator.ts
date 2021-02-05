@@ -17,7 +17,7 @@ export const navAppVersion: any = nav.appVersion
 export const getNavType = () => {
   let userAgent = 'navigator' in window && 'userAgent' in nav && navUserAgent.toLowerCase() || '';
   let appVersion = 'navigator' in window && 'appVersion' in nav && navAppVersion.toLowerCase() || '';
-  let vendor = 'navigator' in window && 'vendor' in nav && nav.vendor.toLowerCase() || '';
+  // let vendor = 'navigator' in window && 'vendor' in nav && nav.vendor.toLowerCase() || '';
 
   if (/mac/i.test(appVersion)) return 'MacOSX'
   if (/win/i.test(appVersion)) return 'windows'
