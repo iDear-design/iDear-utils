@@ -1,13 +1,14 @@
 import {nav, win, doc} from "../config/system";
 import {getAngle} from "../systemOS/window";
-import userAgents from "../config/userAgent";
+import {navUserAgent} from "../systemOS/navigator";
+import mobileTypeData from "../config/mobileType";
 
 /**
  * @desc 是否android终端
  * @returns {boolean}
  */
 export const isAndroid = (): boolean => {
-  let Android: boolean = nav.userAgent.indexOf('Android') > -1 || nav.userAgent.indexOf('Adr') > -1
+  let Android: boolean = navUserAgent.indexOf('Android') > -1 || navUserAgent.indexOf('Adr') > -1
   return Android
 }
 
@@ -16,7 +17,7 @@ export const isAndroid = (): boolean => {
  * @returns {boolean}
  */
 export const isIOS = (): boolean => {
-  let iOS: boolean = nav.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+  let iOS: boolean = navUserAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
   return iOS
 }
 
@@ -25,7 +26,7 @@ export const isIOS = (): boolean => {
  * @returns {boolean}
  */
 export const isMobile = (): boolean => {
-  let mobile: boolean = (nav.userAgent.toLowerCase()).indexOf(userAgents) >= 0
+  let mobile: boolean = (navUserAgent.toLowerCase()).indexOf(mobileTypeData) >= 0
   return mobile
 }
 
@@ -69,7 +70,7 @@ export const isTouch = (): boolean => {
  * @returns {boolean}
  */
 export const isWebKit = (): boolean => {
-  return versions().webKit
+  return navUserAgent.indexOf('WebKit') > -1
 }
 
 /**
@@ -77,7 +78,7 @@ export const isWebKit = (): boolean => {
  * @returns {boolean}
  */
 export const isIE = (): boolean => {
-  return versions().trident
+  return navUserAgent.indexOf('Trident') > -1
 }
 
 /**
