@@ -14,7 +14,7 @@ export const navAppVersion: any = nav.appVersion
  * @desc 获取操作系统类型
  * @return {String}
  */
-export const navType = () => {
+export const getNavType = () => {
   let userAgent = 'navigator' in window && 'userAgent' in nav && navUserAgent.toLowerCase() || '';
   let appVersion = 'navigator' in window && 'appVersion' in nav && navAppVersion.toLowerCase() || '';
   let vendor = 'navigator' in window && 'vendor' in nav && nav.vendor.toLowerCase() || '';
@@ -32,8 +32,8 @@ export const navType = () => {
  * @desc 判断是手机吗
  * @return {String}
  */
-export const webType = () => {
-  if (navType() === 'ios' || navType() === 'android' || navType() === 'windowsPhone') return 'mobile'
+export const getWebType = () => {
+  if (getNavType() === 'ios' || getNavType() === 'android' || getNavType() === 'windowsPhone') return 'mobile'
   else return 'web'
 }
 
@@ -41,10 +41,10 @@ export const webType = () => {
  * @desc 判断手机类型
  * @return {String}
  */
-export const mobileType = () => {
-  if (navType() === 'ios') return 'iPhone'
-  else if (navType() === 'android') return 'Android'
-  else if (navType() === 'windowsPhone') return 'WindowsPhone'
+export const getMobileType = () => {
+  if (getNavType() === 'ios') return 'iPhone'
+  else if (getNavType() === 'android') return 'Android'
+  else if (getNavType() === 'windowsPhone') return 'WindowsPhone'
   else return null
 }
 
@@ -55,9 +55,9 @@ export const mobileType = () => {
 export const getNavInfo = () => {
   let navInfo: any = {
     appVersion: navAppVersion,
-    navType: navType(),
-    webType: webType(),
-    mobileType: mobileType()
+    navType: getNavType(),
+    webType: getWebType(),
+    mobileType: getMobileType()
   }
   return navInfo
 }

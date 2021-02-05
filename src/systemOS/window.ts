@@ -71,7 +71,7 @@ export const getAngle = (): number => {
 
 
 /**
- * @desc 获取到角度【横屏、竖屏】
+ * @desc 获取到对应的浏览器内核
  * @returns {boolean}
  */
 export const getVersions = (): object => {
