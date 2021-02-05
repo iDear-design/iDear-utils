@@ -1,4 +1,4 @@
-import {nav, win, doc} from "../config/system";
+import {win, doc} from "../config/system";
 import {getAngle} from "../systemOS/window";
 import {navUserAgent} from "../systemOS/navigator";
 import mobileTypeData from "../config/mobileType";
