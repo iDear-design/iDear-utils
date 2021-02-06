@@ -1,15 +1,15 @@
-import {keyCodeConfig} from "@idear-utils/config"
+import {keyCodeConfig} from "../config/keycode";
 
 /**
  * @desc 根据keycode获得键名
  * @param  {Number} keycode
  * @return {String}
  */
-function getKeyName(keycode) {
+export const getKeyName = (keycode: number): string => {
   if (keyCodeConfig[keycode]) {
     return keyCodeConfig[keycode];
   } else {
-    console.log('Unknow Key(Key Code:' + keycode + ')');
+    console.error('没有找到对应的键名:' + keycode);
     return '';
   }
 };
