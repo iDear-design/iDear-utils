@@ -4,6 +4,6 @@
  * @param {String} cls
  * @return {Boolean}
  */
-function isHasClass(ele: HTMLElement, cls: string) {
+export const isHasClass = (ele: HTMLElement, cls: string) => {
   return (new RegExp('(\\s|^)' + cls + '(\\s|$)')).test(ele.className);
 }
