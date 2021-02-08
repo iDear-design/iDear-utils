@@ -1,9 +1,9 @@
 /**
- * ## 多张图片制作微信群聊组合头像
+ * @desc 多张图片制作微信群聊组合头像
  * @param {Array} data 图片集合[]
  * @returns {any}
  */
-export function groupPicture(data: any[]): any {
+export const groupPicture = (data: any[]): any => {
   let base64 = []
   let c = document.createElement('canvas')
   let ctx = c.getContext('2d')
@@ -15,7 +15,7 @@ export function groupPicture(data: any[]): any {
   ctx.fill()
 
   // 循环把图片放入canvas
-  function drawing(n) {
+  const drawing = (n: number) => {
     if (n < len) {
       let img = new Image
       // 解决跨域
