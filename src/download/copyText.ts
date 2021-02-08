@@ -1,9 +1,9 @@
-import {doc} from "@idear-utils/config"
+import {doc} from "../config/system";
 
 var copyElem: HTMLTextAreaElement
 
 /**
- * 创建剪贴板
+ * @desc 创建剪贴板
  * @param {String} content 复制的内容
  */
 const handleText = (content: string | number) => {
@@ -24,7 +24,7 @@ const handleText = (content: string | number) => {
 
 
 /**
- * 复制内容到剪贴板
+ * @desc 复制内容到剪贴板
  * @param {String} content 复制的内容
  */
 const copyText = (content: string | number): boolean => {
