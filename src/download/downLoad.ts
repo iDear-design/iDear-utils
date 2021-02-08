@@ -1,7 +1,7 @@
-import {doc, win} from "@idear-utils/config"
+import {doc, win} from "../config/system";
 
 /**
- * 根据地址下载文件
+ * @desc 根据地址下载文件
  * @param {string} url: 下载地址
  * @param {string} fileName: 下载标题
  * @param {string} target: 窗口位置（默认新开窗口）
@@ -20,7 +20,7 @@ export function urlDownload(url: string, fileName: string = 'urlFile', target: s
 
 
 /**
- * 根据地址下载文件
+ * @desc 根据文件流下载文件
  * @param {Blob} data: 下载地址
  * @param {string} fileName: 下载文件名称[带后缀]
  * @param {string} target: 窗口位置（默认新开窗口）
