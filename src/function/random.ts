@@ -1,9 +1,17 @@
 /**
+ * @desc 随机数
+ * @return {Number}
+ */
+export const random = (): number => {
+  return Math.random()
+}
+
+/**
  * @desc 随机生成颜色
  * @return {String}
  */
 export const randomColor = (): string => {
-  return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
+  return '#' + ('00000' + (random() * 0x1000000 << 0).toString(16)).slice(-6);
 }
 
 /**
@@ -12,6 +20,6 @@ export const randomColor = (): string => {
  * @param  {Number} max
  * @return {Number}
  */
-export const randomNum = (min, max): number => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+export const randomNum = (min: number, max: number): number => {
+  return Math.floor(random() * (max - min + 1)) + min;
 }
