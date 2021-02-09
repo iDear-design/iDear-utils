@@ -1,9 +1,9 @@
 /**
- * ## 创建A标签下载
- * @param {hexDigit} hexDigit: 下载地址
- * @returns {string}
+ * @desc 创建uuid
+ * @param {String} hex: uuid用到的哪些字符串
+ * @returns {String}
  */
-export function createUuid(hex: string): string {
+export const createUuid = (hex: string): string => {
   let s = []
   let hexDigits = hex || '0123456789abcdef'
   for (let i = 0; i < 36; i++) {
