@@ -1,17 +1,17 @@
-import {changeFavicon, getFavicon} from "../../utils/notify/getFavicon";
-import createAudio from "../../utils/notify/createAudio";
-import {isNotification} from "../../utils/notify/notification";
-import jsonArguments from "../../utils/notify/jsonArguments";
+import {changeFavicon, getFavicon} from "../libs/notify/getFavicon";
+import createAudio from "../libs/notify/createAudio";
+import {isNotification} from "../libs/notify/notification";
+import jsonArguments from "../libs/notify/jsonArguments";
 
 const defaultNotification: any = {
   title: '提示!',
   body: '您有一条新的消息...',
-  openurl: '',
+  openurl: './'
 }
 
 const repeatableEffects: string[] = ['flash', 'scroll'];
 
-export default class browserNotify {
+class browserNotify {
   public interval: number;
   public effect: string;
   public title: string;
@@ -257,3 +257,5 @@ export default class browserNotify {
     return this;
   }
 }
+
+export default browserNotify
