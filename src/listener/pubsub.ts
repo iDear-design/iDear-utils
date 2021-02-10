@@ -1,25 +1,24 @@
-/*
-自定义消息订阅与发布
-*/
+/**
+ * @desc 自定义消息订阅与发布
+ */
+const pubSub: any = {}
 
-const PubSub = {}
-/*
-  {
-    add: {
-      token1: callback1,
-      token2: callback2
-    },
-    update: {
-      token3: callback3
-    }
-  }
-*/
-let callbacksObj = {} // 保存所有回调的容器
-let id = 0 // 用于生成token的标记
+/**
+ * @desc 保存所有回调的容器
+ */
+let callbacksObj: object = {}
 
-// 1. 订阅消息
-PubSub.subscribe = function (msgName, callback) {
+/**
+ * @desc 用于生成token的标记
+ */
+let id: number = 0
 
+/**
+ * @desc 订阅消息
+ * @param {String} msgName  订阅消息名称
+ * @param {Function} callback 事件方法
+ */
+pubSub.subscribe = (msgName: string, callback: Function) => {
   // 确定token
   const token = 'token_' + ++id
   // 取出当前消息对应的callbacks
@@ -35,14 +34,16 @@ PubSub.subscribe = function (msgName, callback) {
   return token
 }
 
-
-// 2. 发布异步的消息
-PubSub.publish = function (msgName, data) {
+/**
+ * @desc 发布异步的消息
+ * @param {String} msgName  订阅消息名称
+ * @param {Any} callback 事件方法
+ */
+pubSub.publish = (msgName: string, data: any) => {
   // 取出当前消息对应的callbacks
   let callbacks = callbacksObj[msgName]
   // 如果有值
   if (callbacks) {
-    // callbacks = Object.assign({}, callbacks)
     // 启动定时器, 异步执行所有的回调函数
     setTimeout(() => {
       Object.values(callbacks).forEach(callback => {
@@ -52,8 +53,12 @@ PubSub.publish = function (msgName, data) {
   }
 }
 
-// 3. 发布同步的消息
-PubSub.publishSync = function (msgName, data) {
+/**
+ * @desc 发布同步的消息
+ * @param {String} msgName  订阅消息名称
+ * @param {Any} callback 事件方法
+ */
+pubSub.publishSync = (msgName: string, data: any) => {
   // 取出当前消息对应的callbacks
   const callbacks = callbacksObj[msgName]
   // 如果有值
@@ -65,25 +70,26 @@ PubSub.publishSync = function (msgName, data) {
   }
 }
 
-/*
-4. 取消消息订阅
-  1). 没有传值, flag为undefined
-  2). 传入token字符串
-  3). msgName字符串
-*/
-PubSub.unsubscribe = function (flag) {
+/**
+ * @desc 取消消息订阅
+ * @param {String | undefined} flag 订阅消息名称
+ */
+pubSub.unsubscribe = (flag: any) => {
   // 如果flag没有指定或者为null, 取消所有
   if (flag === undefined) {
     callbacksObj = {}
   } else if (typeof flag === 'string') {
-    if (flag.indexOf('token_') === 0) { // flag是token
+    // flag是token [传入token字符串]
+    if (flag.indexOf('token_') === 0) {
       // 找到flag对应的callbacks
       const callbacks = Object.values(callbacksObj).find(callbacks => callbacks.hasOwnProperty(flag))
       // 如果存在, 删除对应的属性
       if (callbacks) {
         delete callbacks[flag]
       }
-    } else { // flag是msgName
+    }
+    // flag是msgName字符串
+    else {
       delete callbacksObj[flag]
     }
 
@@ -92,4 +98,4 @@ PubSub.unsubscribe = function (flag) {
   }
 }
 
-export default PubSub
+export default pubSub
