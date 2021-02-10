@@ -19,7 +19,6 @@ let id: number = 0
  * @param {Function} callback 事件方法
  */
 pubSub.subscribe = (msgName: string, callback: Function) => {
-  // 确定token
   const token = 'token_' + ++id
   // 取出当前消息对应的callbacks
   const callbacks = callbacksObj[msgName]
