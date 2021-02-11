@@ -16,7 +16,7 @@
     "declarationMap": true,
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "es5",
+    "target": "ESNext",
     // 转化成的目标语言
     "baseUrl": "./",
     "types": [
@@ -28,7 +28,7 @@
     ],
     "lib": [
       "dom",
-      "es2015"
+      "ESNext"
     ],
     "jsx": "react",
     "allowJs": false
