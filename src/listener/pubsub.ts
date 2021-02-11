@@ -45,7 +45,7 @@ pubSub.publish = (msgName: string, data: any) => {
   if (callbacks) {
     // 启动定时器, 异步执行所有的回调函数
     setTimeout(() => {
-      Object.values(callbacks).forEach(callback => {
+      Object.values(callbacks).forEach((callback: Function) => {
         callback(data)
       })
     }, 0)
@@ -63,7 +63,7 @@ pubSub.publishSync = (msgName: string, data: any) => {
   // 如果有值
   if (callbacks) {
     // 立即同步执行所有的回调函数
-    Object.values(callbacks).forEach(callback => {
+    Object.values(callbacks).forEach((callback: Function) => {
       callback(data)
     })
   }
