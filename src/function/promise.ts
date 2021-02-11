@@ -144,22 +144,23 @@ Promise.prototype.then = function (onResolved, onRejected) {
   })
 }
 
-/*
-用来指定失败回调函数的方法
-catch是then的语法糖
-*/
+/**
+ * @desc 用来指定失败回调函数的方法【catch是then的语法糖】
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.prototype.catch = function (onRejected) {
   return this.then(undefined, onRejected)
 }
 
-/*
-用来返回一个指定vlaue的成功的promise
-value可能是一个一般的值, 也可能是promise对象
-*/
+/**
+ * @desc 用来返回一个指定vlaue的成功的promise【value可能是一个一般的值, 也可能是promise对象】
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.resolve = function (value) {
   return new Promise((resolve, reject) => {
     // 如果value是一个promise, 最终返回的promise的结果由value决定
     if (value instanceof Promise) {
+      // @ts-ignore
       value.then(resolve, reject)
     } else { // value不是promise, 返回的是成功的promise, 成功的值就是value
       resolve(value)
@@ -167,18 +168,20 @@ Promise.resolve = function (value) {
   })
 }
 
-/*
-用来返回一个指定reason的失败的promise
-*/
+/**
+ * @desc 用来返回一个指定reason的失败的promise
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.reject = function (reason) {
-  return new Promise((resolve, reject) => {
+  return new Promise((_resolve, reject) => {
     reject(reason)
   })
 }
 
-/*
-返回一个promise, 只有当数组中所有promise都成功才成功, 否则失败
-*/
+/**
+ * @desc 返回一个promise, 只有当数组中所有promise都成功才成功, 否则失败
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.all = function (promises) {
   return new Promise((resolve, reject) => {
 
@@ -200,9 +203,10 @@ Promise.all = function (promises) {
   })
 }
 
-/*
-返回一个promise, 由第一个完成promise决定
-*/
+/**
+ * @desc 返回一个promise, 由第一个完成promise决定
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.race = function (promises) {
   return new Promise((resolve, reject) => {
     // 遍历所有promise, 取其对应的结果
@@ -213,14 +217,16 @@ Promise.race = function (promises) {
   })
 }
 
-/*
-返回一个延迟指定时间才成功(也可能失败)的promise
-*/
+/**
+ * @desc 返回一个延迟指定时间才成功(也可能失败)的promise
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.resolveDelay = function (value, time) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       // 如果value是一个promise, 最终返回的promise的结果由value决定
       if (value instanceof Promise) {
+        // @ts-ignore
         value.then(resolve, reject)
       } else { // value不是promise, 返回的是成功的promise, 成功的值就是value
         resolve(value)
@@ -229,11 +235,12 @@ Promise.resolveDelay = function (value, time) {
   })
 }
 
-/*
-返回一个延迟指定时间才失败的promise
-*/
+/**
+ * @desc 返回一个延迟指定时间才失败的promise
+ * @param {String} excutor  订阅消息名称
+ */
 Promise.rejectDelay = function (reason, time) {
-  return new Promise((resolve, reject) => {
+  return new Promise((_resolve, reject) => {
     setTimeout(() => {
       reject(reason)
     }, time)
