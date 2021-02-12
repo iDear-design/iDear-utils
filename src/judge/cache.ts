@@ -1,4 +1,4 @@
-import {local, session, webSQL} from "../config/cache";
+import {LOCAL, SESSION, WEBSQL} from "../config/cache";
 import {nav} from "../config/system";
 
 /**
@@ -8,8 +8,9 @@ import {nav} from "../config/system";
 export const isLocal = (): boolean => {
   try {
     // in IE8 typeof localStorage.setItem === 'object'
-    return (typeof local !== 'undefined' && 'setItem' in local && !!local.setItem)
+    return (typeof LOCAL !== 'undefined' && 'setItem' in LOCAL && !!LOCAL.setItem)
   } catch (e) {
+    console.error('对不起，您的运行环境不支持localStorage！')
     return false;
   }
 }
@@ -21,8 +22,9 @@ export const isLocal = (): boolean => {
 export const isSession = (): boolean => {
   try {
     // in IE8 typeof localStorage.setItem === 'object'
-    return (typeof session !== 'undefined' && 'setItem' in session && !!session.setItem)
+    return (typeof SESSION !== 'undefined' && 'setItem' in SESSION && !!SESSION.setItem)
   } catch (e) {
+    console.error('对不起，您的运行环境不支持essionStorage！')
     return false;
   }
 }
@@ -32,7 +34,12 @@ export const isSession = (): boolean => {
  * @returns {boolean}
  * */
 export const isWebSQL = (): boolean => {
-  return typeof webSQL === 'function';
+  if(typeof WEBSQL === 'function'){
+    return true
+  }else{
+    console.error('对不起，您的运行环境不支持WebSQL！')
+    return false;
+  }
 }
 
 /**
@@ -47,6 +54,7 @@ export const isIndexDB = () => {
     let hasFetch = typeof fetch === 'function' && fetch.toString().indexOf('[native code') !== -1
     return ((!isSafari || hasFetch) && typeof indexedDB !== 'undefined' && typeof IDBKeyRange !== 'undefined')
   } catch (e) {
+    console.error('对不起，您的运行环境不支持indexDB！')
     return false;
   }
 }
