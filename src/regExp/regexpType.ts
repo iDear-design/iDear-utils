@@ -1,9 +1,9 @@
-import {checkTypeConfig} from "../../types/regExp"
-import regExp from "@idear-utils/config"
+import regExp from "../config/regExp";
+import {regExpTypeConfig} from "../../types";
 
 /**
- * ## 检验各种数据类型
- * @param {string} str 字符串
+ * @desc 检验各种数据类型
+ * @param {string} str 检查的字符串
  * @param {string} type [
  *    phone-手机号码
  *    tel-座机
@@ -25,7 +25,7 @@ import regExp from "@idear-utils/config"
  * ]
  * @returns {boolean}
  */
-export default function checkString(str: string, type: checkTypeConfig): boolean {
+export const checkRegexpType = (str: string, type: regExpTypeConfig): boolean => {
   switch (type) {
     case 'phone':   //手机号码
       return regExp.phone.test(str);
@@ -64,4 +64,14 @@ export default function checkString(str: string, type: checkTypeConfig): boolean
     default:
       return true;
   }
+}
+
+/**
+ * @desc 阶乘
+ * @param {string} str 检查的字符串
+ * @param {RegExp} regExp 检查的正则
+ * @returns {number}
+ */
+export const checkRegexp = (str: string, regExp: RegExp): boolean => {
+  return regExp.test(str)
 }
