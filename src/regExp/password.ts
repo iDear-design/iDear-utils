@@ -1,12 +1,12 @@
-import regExp from "@idear-utils/config"
+import regExp from "../config/regExp";
 
 /**
- * ## 检测密码强度
+ * @desc 检测密码强度
  * @param {pwding} pwd 字符串
  * @returns {boolean}
  */
-export default function checkPwd(pwd: string): number {
-  var Strength = 0;
+export const pwdStrength = (pwd: string): number => {
+  let Strength: number = 0;
   if (pwd.length < 6) {
     return Strength
   }
