@@ -1,7 +1,7 @@
-import {changeFavicon, getFavicon} from "../libs/notify/getFavicon";
-import createAudio from "../libs/notify/createAudio";
-import {isNotification} from "../libs/notify/notification";
-import jsonArguments from "../libs/notify/jsonArguments";
+import {changeFavicon, getFavicon} from "../../libs/notify/getFavicon";
+import createAudio from "../../libs/notify/createAudio";
+import {isNotification} from "../../libs/notify/notification";
+import jsonArguments from "../../libs/notify/jsonArguments";
 
 const defaultNotification: any = {
   title: '提示!',
