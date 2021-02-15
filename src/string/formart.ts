@@ -1,13 +1,13 @@
-import {changeCaseConfig} from "../../types/string";
+/** @desc 字符串的格式化 */
+import {changeCaseConfig} from "../../types/numType";
 
 /**
- * 提还字母大小写
+ * @desc 提还字母大小写
  * @param  {String} str
  * @param  {Number} type 1-首字母大写  2-首页母小写  3-大小写转换  4-全部大写  5-全部小写
- * @return {String}
+ * @returns {number}
  */
-
-export default function changeCase(str: string, type: changeCaseConfig): string {
+export const changeCase = (str: string, type: changeCaseConfig): string => {
   switch (type) {
     case 1:
       return str.replace(/\b\w+\b/g, function (word) {
