@@ -7,7 +7,6 @@ export function deepClone(data: object): any {
   let copy: any;
   // the 3 simple types, and null or undefined
   if (null == data || "object" != typeof data) return data;
-
   // Date
   if (data instanceof Date) {
     copy = new Date();
@@ -22,7 +21,6 @@ export function deepClone(data: object): any {
     }
     return copy;
   }
-
   // Object
   if (data instanceof Object) {
     copy = {};
