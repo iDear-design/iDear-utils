@@ -89,7 +89,6 @@ export const arrFlatten = (arr: Array<any>): Array<any> => {
   }, [])
 }
 
-
 /**
  * @desc 删除数组中与value相同的元素, 返回所有删除元素的数组
  * @param {Array<number> | Array<string>} arr 数组
@@ -110,7 +109,6 @@ export const arrPull = (arr: Array<number> | Array<string>, ...arr2: any) => {
   return result
 }
 
-
 /**
  * @desc 功能与pull一致, 只是参数变为数组
  * @param {Array<number> | Array<string>} arr  数组
@@ -120,4 +118,25 @@ export const arrPull = (arr: Array<number> | Array<string>, ...arr2: any) => {
 export const arrPullAll = (arr: Array<number> | Array<string>, arr2: Array<number> | Array<string>) => {
   if (!arr2 || !Array.isArray(arr2)) return []
   return arrPull(arr, ...arr2)
+}
+
+
+/**
+ * @desc 数组对象去重
+ * @param {Array<object>} arrObj 数组对象
+ * @param {string} key 对象属性key
+ * @returns {Array<any>}
+ */
+export const arrUnique = (arrObj: Array<object>, key: string): Array<any> => {
+  let arr: Array<any> = []
+  let r = []
+  for (let i = 0; i < arrObj.length; i++) {
+    let item = arrObj[i]
+    if (r.indexOf(item[key]) !== -1) {
+      continue
+    }
+    r.push(item[key])
+    arr.push(item)
+  }
+  return arr
 }
