@@ -31,7 +31,7 @@ export const arrDiff = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
 }
 
 /**
- * @desc 
+ * @desc
  * @param {Array<any>} arr1 数组1
  * @param {Array<any>} arr2 数组2
  * @returns {Array<any>}
@@ -40,7 +40,6 @@ export const arrDiffWith = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
   let newArr: any = new Set(arr2)
   return [].concat(arr1.filter((item) => newArr.has(item)))
 }
-
 
 /**
  * @desc 得到arr1中所有不在arr2中的元素组成的数组(不改变原数组)
@@ -52,4 +51,28 @@ export const arrDiffFirst = (arr1: Array<any>, arr2: Array<any>): Array<any> => 
   if (arr1.length === 0) return []
   else if (arr2.length === 0) return arr1.slice()
   return arr1.filter(item => arr2.indexOf(item) === -1)
+}
+
+/**
+ * @desc 得到数组过滤掉左边count个后剩余元素组成的数组
+ * @param {Array<any>} arr 数组1
+ * @param {number} count 数组2
+ * @returns {Array<any>}
+ */
+export const arrDropLeft = (arr: Array<any>, count: number): Array<any> => {
+  if (arr.length === 0 || count >= arr.length) return []
+  count = count || 1
+  return arr.filter((_item: any, index: number) => index >= count)
+}
+
+/**
+ * @desc 得到数组过滤掉右边count个后剩余元素组成的数组
+ * @param {Array<any>} arr 数组1
+ * @param {number} count 数组2
+ * @returns {Array<any>}
+ */
+export const arrDropRight = (arr: Array<any>, count: number): Array<any> => {
+  if (arr.length === 0 || count >= arr.length) return []
+  count = count || 1
+  return arr.filter((_item: any, index: number) => index < arr.length - count)
 }
