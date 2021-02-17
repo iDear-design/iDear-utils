@@ -76,3 +76,15 @@ export const arrDropRight = (arr: Array<any>, count: number): Array<any> => {
   count = count || 1
   return arr.filter((_item: any, index: number) => index < arr.length - count)
 }
+
+/**
+ * @desc 数组扁平化: 取出嵌套数组(多维)中的所有元素放到一个新数组(一维)中
+ * @param {Array<any>} array 数组
+ * @returns {any[]} 如: [1, [3, [2, 4]]]  ==>  [1, 3, 2, 4]
+ */
+export const arrFlatten = (arr: Array<any>): Array<any> => {
+  return arr.reduce((pre, item) => {
+    if (Array.isArray(item)) return pre.concat(arrFlatten(item))
+    else return pre.concat(item)
+  }, [])
+}
