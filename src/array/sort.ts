@@ -1,10 +1,10 @@
 /**
- * ## 冒泡排序
- * @param {number[]} arr 目标数组
+ * @desc 冒泡排序
+ * @param {Array<number>} arr 目标数组
  * @param {string} type asc:升序   desc:降序
- * @returns {boolean}
+ * @returns {Array<number>}
  */
-export function bubbleSort(arr: number[], type: string = 'asc'): number[] {
+export const arrBubble = (arr: Array<number>, type: string = 'asc'): Array<number> => {
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
       if (type === 'asc' && (arr[j] > arr[j + 1])) {
@@ -22,12 +22,12 @@ export function bubbleSort(arr: number[], type: string = 'asc'): number[] {
 }
 
 /**
- * ## 选择排序
- * @param {number[]} arr 目标数组
+ * @desc 选择排序
+ * @param {Array<number>} arr 目标数组
  * @param {string} type asc:升序   desc:降序
- * @returns {boolean}
+ * @returns {Array<number>}
  */
-export function selectSort(arr: number[], type: string = 'asc'): number[] {
+export const arrSelect = (arr: Array<number>, type: string = 'asc'): Array<number> => {
   let minIndex, temp;
   for (let i = 0; i < arr.length - 1; i++) {
     minIndex = i
@@ -46,12 +46,12 @@ export function selectSort(arr: number[], type: string = 'asc'): number[] {
 }
 
 /**
- * ## 插入排序
- * @param {number[]} arr 目标数组
+ * @desc 插入排序
+ * @param {Array<number>} arr 目标数组
  * @param {string} type asc:升序   desc:降序
- * @returns {boolean}
+ * @returns {Array<number>}
  */
-export function insertSort(arr: number[], type: string = 'asc'): number[] {
+export const arrInsert = (arr: Array<number>, type: string = 'asc'): Array<number> => {
   let current, preIndex;
   for (let i = 1; i < arr.length; i++) {
     current = arr[i]
