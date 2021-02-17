@@ -17,3 +17,39 @@ export const arrChunk = (arr: Array<any>, size: number): Array<any> => {
 
   return bigArr
 }
+
+/**
+ * @desc 数组差集
+ * @param {Array<any>} arr1 数组1
+ * @param {Array<any>} arr2 数组2
+ * @returns {Array<any>}
+ */
+export const arrDiff = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
+  let newArr1: any = new Set(arr1)
+  let newArr2: any = new Set(arr2)
+  return [].concat(arr1.filter((item) => !newArr2.has(item))).concat(arr2.filter((item) => !newArr1.has(item)))
+}
+
+/**
+ * @desc 
+ * @param {Array<any>} arr1 数组1
+ * @param {Array<any>} arr2 数组2
+ * @returns {Array<any>}
+ */
+export const arrDiffWith = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
+  let newArr: any = new Set(arr2)
+  return [].concat(arr1.filter((item) => newArr.has(item)))
+}
+
+
+/**
+ * @desc 得到arr1中所有不在arr2中的元素组成的数组(不改变原数组)
+ * @param {Array<any>} arr1 数组1
+ * @param {Array<any>} arr2 数组2
+ * @returns {Array<any>}
+ */
+export const arrDiffFirst = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
+  if (arr1.length === 0) return []
+  else if (arr2.length === 0) return arr1.slice()
+  return arr1.filter(item => arr2.indexOf(item) === -1)
+}
