@@ -88,3 +88,36 @@ export const arrFlatten = (arr: Array<any>): Array<any> => {
     else return pre.concat(item)
   }, [])
 }
+
+
+/**
+ * @desc 删除数组中与value相同的元素, 返回所有删除元素的数组
+ * @param {Array<number> | Array<string>} arr 数组
+ * @returns {any[]} 如: arrPull([1,3,5,3,7], 2, 7, 3, 7) ===> 数组变为[1, 5], 返回值为[3,3,7]
+ */
+export const arrPull = (arr: Array<number> | Array<string>, ...arr2: any) => {
+  if (arr.length === 0 || arr2.length === 0) return []
+  arr2 = Array.from(new Set(arr2))
+  let result = []
+  for (let index = 0; index < arr.length; index++) {
+    const item = arr[index];
+    if (arr2.indexOf(item) !== -1) {
+      arr.splice(index, 1)
+      result.push(item)
+      index--
+    }
+  }
+  return result
+}
+
+
+/**
+ * @desc 功能与pull一致, 只是参数变为数组
+ * @param {Array<number> | Array<string>} arr  数组
+ * @param {Array<number> | Array<string>} arr2  数组
+ * @returns {any[]} arrPullAll([1,3,5,3,7], [2, 7, 3, 7]) ===> 数组变为[1, 5], 返回值为[3,3,7]
+ */
+export const arrPullAll = (arr: Array<number> | Array<string>, arr2: Array<number> | Array<string>) => {
+  if (!arr2 || !Array.isArray(arr2)) return []
+  return arrPull(arr, ...arr2)
+}
