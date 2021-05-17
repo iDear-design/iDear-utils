@@ -3,7 +3,7 @@ import {doc} from "../config/system";
 var copyElem: HTMLTextAreaElement
 
 /**
- * @desc 创建剪贴板
+ * @description 创建剪贴板
  * @param {String} content 复制的内容
  */
 const handleText = (content: string | number) => {
@@ -24,7 +24,7 @@ const handleText = (content: string | number) => {
 
 
 /**
- * @desc 复制内容到剪贴板
+ * @description 复制内容到剪贴板
  * @param {String} content 复制的内容
  */
 const copyText = (content: string | number): boolean => {

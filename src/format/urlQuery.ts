@@ -1,5 +1,5 @@
 /**
- * @desc url参数转对象
+ * @description url参数转对象
  * @param {string} url 地址，默认：window.location.href
  * @returns {object}
  */
@@ -12,7 +12,7 @@ export const getQuery = (url: string): object => {
 }
 
 /**
- * @desc url对象序列化
+ * @description url对象序列化
  * @param {object} url 地址
  * @returns {string}
  */

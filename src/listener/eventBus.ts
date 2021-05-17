@@ -1,15 +1,15 @@
 /**
- * @desc 定义事件监听
+ * @description 定义事件监听
  */
 const eventBus: any = {}
 
 /**
- * @desc 回调返回数据
+ * @description 回调返回数据
  */
 let callbacksObj: object = {}
 
 /**
- * @desc 绑定事件监听
+ * @description 绑定事件监听
  * @param {String} eventName 事件名称
  * @param {Function} callback 事件方法
  */
@@ -23,7 +23,7 @@ eventBus.on = function (eventName: string, callback: Function) {
 }
 
 /**
- * @desc 分发事件
+ * @description 分发事件
  * @param {String} eventName 事件名称
  * @param {Any} data 事件数据
  */
@@ -37,7 +37,7 @@ eventBus.emit = function (eventName: string, data: any) {
 }
 
 /**
- * @desc 移除事件监听
+ * @description 移除事件监听
  * @param {String} eventName 事件名称
  */
 eventBus.off = function (eventName: string) {

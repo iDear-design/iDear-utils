@@ -1,7 +1,7 @@
-/** @desc 数组的相关计算 */
+/** @description 数组的相关计算 */
 
 /**
- * @desc 统计数组中各个元素出现的次数
+ * @description 统计数组中各个元素出现的次数
  * @param {Array<number | string> } arr 数组
  * @returns {object}
  */

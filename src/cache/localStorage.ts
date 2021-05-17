@@ -2,7 +2,7 @@ import {LOCAL} from "../config/cache";
 import {isLocal} from "../judge/cache";
 
 /**
- * @desc 设置localStorage
+ * @description 设置localStorage
  * @param {string} keyName 键名
  * @param {string} saveData 值
  * */
@@ -12,7 +12,7 @@ export const setLocal = (keyName: string, saveData: any) => {
 }
 
 /**
- * @desc 读取localStorage
+ * @description 读取localStorage
  * @param {string} keyName 键名
  * */
 export const getLocal = (keyName: string) => {
@@ -21,7 +21,7 @@ export const getLocal = (keyName: string) => {
 }
 
 /**
- * @desc 删除localStorage
+ * @description 删除localStorage
  * @param {string} keyName 键名
  * */
 export const removeLocal = (keyName: string) => {
@@ -30,7 +30,7 @@ export const removeLocal = (keyName: string) => {
 }
 
 /**
- * @desc 清除localStorage
+ * @description 清除localStorage
  * */
 export const cleanLocal = () => {
   if (!isLocal()) return
@@ -38,7 +38,7 @@ export const cleanLocal = () => {
 }
 
 /**
- * @desc 得到某个索引的key
+ * @description 得到某个索引的key
  * @param {string} keyIndex 索引值
  * */
 export const localKey = (keyIndex: number) => {
@@ -47,7 +47,7 @@ export const localKey = (keyIndex: number) => {
 }
 
 /**
- * @desc 得到localStorage的缓存数量
+ * @description 得到localStorage的缓存数量
  * */
 export const localLength = () => {
   if (!isLocal()) return
@@ -55,7 +55,7 @@ export const localLength = () => {
 }
 
 /**
- * @desc localStorage汇总
+ * @description localStorage汇总
  * */
 const local = {
   set: setLocal,

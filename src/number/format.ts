@@ -1,7 +1,7 @@
-/** @desc 数字格式化操作 */
+/** @description 数字格式化操作 */
 
 /**
- * @desc 数字超过xx显示xx+
+ * @description 数字超过xx显示xx+
  * @param {number} num 目标数字
  * @param {number} maxNum 超过的数字
  * @param {string} numType 超过目标数字显示的字符
@@ -17,7 +17,7 @@ export const filter = (num: number = 0, maxNum: number = 0, numType: string = '+
 
 
 /**
- * @desc 现金额转大写
+ * @description 现金额转大写
  * @param  {Number} 现金额
  * @return {String}
  */

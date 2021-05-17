@@ -1,4 +1,4 @@
-/** @desc 字符串的格式化 */
+/** @description 字符串的格式化 */
 import {changeCaseConfig, trimStringConfig} from "../../types/numType";
 
 /**
@@ -25,7 +25,7 @@ export const strTrim = (str: string, type?: trimStringConfig): string => {
 }
 
 /**
- * @desc 提还字母大小写
+ * @description 提还字母大小写
  * @param  {string} str 目标字符串
  * @param  {number} type 1-首字母大写  2-首页母小写  3-大小写转换  4-全部大写  5-全部小写
  * @returns {string}
@@ -62,7 +62,7 @@ export const strChangeCase = (str: string, type: changeCaseConfig): string => {
 }
 
 /**
- * @desc 生成一个倒序的字符串
+ * @description 生成一个倒序的字符串
  * @param  {string} str 目标字符串
  * @returns {string}
  */
@@ -73,7 +73,7 @@ export const strReverse = (str: string): string => {
 }
 
 /**
- * @desc 字符串是否是回文: 如果给定的字符串是回文，则返回 true ；否则返回 false
+ * @description 字符串是否是回文: 如果给定的字符串是回文，则返回 true ；否则返回 false
  * @param  {string} str 目标字符串
  * @returns {boolean}
  */
@@ -82,7 +82,7 @@ export const strPalindrome = (str: string): boolean => {
 }
 
 /**
- * @desc 截取字符串: 如果字符串的长度超过了num, 截取前面num长度部分, 并以...结束
+ * @description 截取字符串: 如果字符串的长度超过了num, 截取前面num长度部分, 并以...结束
  * @param  {string} str 目标字符串
  * @param  {number} num 字符串限定长度
  * @param  {string} truncate 超出的展示形式

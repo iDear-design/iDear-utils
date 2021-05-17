@@ -1,20 +1,20 @@
 /**
- * @desc 自定义消息订阅与发布
+ * @description 自定义消息订阅与发布
  */
 const pubSub: any = {}
 
 /**
- * @desc 保存所有回调的容器
+ * @description 保存所有回调的容器
  */
 let callbacksObj: object = {}
 
 /**
- * @desc 用于生成token的标记
+ * @description 用于生成token的标记
  */
 let id: number = 0
 
 /**
- * @desc 订阅消息
+ * @description 订阅消息
  * @param {String} msgName  订阅消息名称
  * @param {Function} callback 事件方法
  */
@@ -34,7 +34,7 @@ pubSub.subscribe = (msgName: string, callback: Function) => {
 }
 
 /**
- * @desc 发布异步的消息
+ * @description 发布异步的消息
  * @param {String} msgName  订阅消息名称
  * @param {Any} callback 事件方法
  */
@@ -53,7 +53,7 @@ pubSub.publish = (msgName: string, data: any) => {
 }
 
 /**
- * @desc 发布同步的消息
+ * @description 发布同步的消息
  * @param {String} msgName  订阅消息名称
  * @param {Any} callback 事件方法
  */
@@ -70,7 +70,7 @@ pubSub.publishSync = (msgName: string, data: any) => {
 }
 
 /**
- * @desc 取消消息订阅
+ * @description 取消消息订阅
  * @param {String | undefined} flag 订阅消息名称
  */
 pubSub.unsubscribe = (flag: any) => {

@@ -2,7 +2,7 @@ import {LOCAL, SESSION, WEBSQL} from "../config/cache";
 import {nav} from "../config/system";
 
 /**
- * @desc 判断是否支持localStorage
+ * @description 判断是否支持localStorage
  * @returns {boolean}
  * */
 export const isLocal = (): boolean => {
@@ -16,7 +16,7 @@ export const isLocal = (): boolean => {
 }
 
 /**
- * @desc 判断是否支持sessionStorage
+ * @description 判断是否支持sessionStorage
  * @returns {boolean}
  * */
 export const isSession = (): boolean => {
@@ -30,7 +30,7 @@ export const isSession = (): boolean => {
 }
 
 /**
- * @desc 判断是否支持WebSQL
+ * @description 判断是否支持WebSQL
  * @returns {boolean}
  * */
 export const isWebSQL = (): boolean => {
@@ -43,7 +43,7 @@ export const isWebSQL = (): boolean => {
 }
 
 /**
- * @desc 判断是否支持indexDB
+ * @description 判断是否支持indexDB
  * @returns {boolean}
  * */
 export const isIndexDB = () => {
@@ -60,7 +60,7 @@ export const isIndexDB = () => {
 }
 
 /**
- * @desc 获取IndexDB
+ * @description 获取IndexDB
  * @returns {boolean}
  * */
 const getIndexDB = () => {

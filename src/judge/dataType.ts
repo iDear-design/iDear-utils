@@ -1,7 +1,7 @@
 import {dataTypeArr} from "../config/dataType";
 
 /**
- * @desc 是否字符串
+ * @description 是否字符串
  * @param {string} str 目标值
  * @returns {boolean}
  */
@@ -10,7 +10,7 @@ export const isString = (str: string): boolean => {
 }
 
 /**
- * @desc 是否数组
+ * @description 是否数组
  * @param {string} arr 目标值
  * @returns {boolean}
  */
@@ -19,7 +19,7 @@ export const isArray = (arr: any[]): boolean => {
 }
 
 /**
- * @desc 是否对象
+ * @description 是否对象
  * @param {string} obj 目标值
  * @returns {boolean}
  */
@@ -28,7 +28,7 @@ export const isObject = (obj: boolean): boolean => {
 }
 
 /**
- * @desc 是否数字
+ * @description 是否数字
  * @param {string} num 目标值
  * @returns {boolean}
  */
@@ -37,7 +37,7 @@ export const isNumber = (num: number): boolean => {
 }
 
 /**
- * @desc 是否boolean
+ * @description 是否boolean
  * @param {string} bool 目标值
  * @returns {boolean}
  */
@@ -46,7 +46,7 @@ export const isBoolean = (bool: boolean): boolean => {
 }
 
 /**
- * @desc 是否时间
+ * @description 是否时间
  * @param {string} date 目标值
  * @returns {boolean}
  */
@@ -55,7 +55,7 @@ export const isDate = (date: Date): boolean => {
 }
 
 /**
- * @desc 是否函数
+ * @description 是否函数
  * @param {string} fun 目标值
  * @returns {boolean}
  */
@@ -64,7 +64,7 @@ export const isFunction = (fun: boolean): boolean => {
 }
 
 /**
- * @desc 是否undefined
+ * @description 是否undefined
  * @param {string} bool 目标值
  * @returns {boolean}
  */
@@ -73,7 +73,7 @@ export const isUndefined = (bool: boolean): boolean => {
 }
 
 /**
- * @desc 是否正则
+ * @description 是否正则
  * @param {string} rex 目标值
  * @returns {boolean}
  */
@@ -82,7 +82,7 @@ export const isRegExp = (rex: any): boolean => {
 }
 
 /**
- * @desc 是否错误对象
+ * @description 是否错误对象
  * @param {string} err 目标值
  * @returns {boolean}
  */
@@ -91,7 +91,7 @@ export const isError = (err: any): boolean => {
 }
 
 /**
- * @desc 是否Symbol函数
+ * @description 是否Symbol函数
  * @param {string} sym 目标值
  * @returns {boolean}
  */
@@ -100,7 +100,7 @@ export const isSymbol = (sym: any): boolean => {
 }
 
 /**
- * @desc 是否ArrayBuffer
+ * @description 是否ArrayBuffer
  * @param {string} sym 目标值
  * @returns {boolean}
  */
@@ -109,7 +109,7 @@ export const isArrayBuffer = (sym: any): boolean => {
 }
 
 /**
- * @desc 是否Promise对象
+ * @description 是否Promise对象
  * @param {string} proms 目标值
  * @returns {boolean}
  */
@@ -118,7 +118,7 @@ export const isPromise = (proms: any): boolean => {
 }
 
 /**
- * @desc 是否Set对象
+ * @description 是否Set对象
  * @param {string} set 目标值
  * @returns {boolean}
  */
@@ -127,7 +127,7 @@ export const isSet = (set: any): boolean => {
 }
 
 /**
- * @desc 是否Set对象
+ * @description 是否Set对象
  * @param {string} target 目标值
  * @returns {boolean}
  */
@@ -138,7 +138,7 @@ export const isFalse = (target: any): boolean => {
 
 
 /**
- * @desc 是否Set对象
+ * @description 是否Set对象
  * @param {string} target 目标值
  * @returns {boolean}
  */

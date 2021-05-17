@@ -1,5 +1,5 @@
 /**
- * @desc 节流函数
+ * @description 节流函数
  * @param {Function} fun 被节流的函数
  * @param {Function} delay 节流间隔时间，单位毫秒
  * @returns {any}

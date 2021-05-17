@@ -2,37 +2,37 @@ import {win, nav} from "../config/system";
 import {navUserAgent} from "./navigator";
 
 /**
- * @desc 浏览器高度
+ * @description 浏览器高度
  */
 export const outerHeight = win.outerHeight
 
 /**
- * @desc 浏览器宽度
+ * @description 浏览器宽度
  */
 export const outerWidth = win.outerWidth
 
 /**
- * @desc 浏览器内页面可用高度；此高度包含了水平滚动条的高度(若存在)。可表示为浏览器当前高度去除浏览器边框、工具条后的高度
+ * @description 浏览器内页面可用高度；此高度包含了水平滚动条的高度(若存在)。可表示为浏览器当前高度去除浏览器边框、工具条后的高度
  */
 export const innerHeight = win.innerHeight
 
 /**
- * @desc 浏览器内页面可用宽度；此宽度包含了垂直滚动条的宽度(若存在)。可表示为浏览器当前宽度去除浏览器边框后的宽度
+ * @description 浏览器内页面可用宽度；此宽度包含了垂直滚动条的宽度(若存在)。可表示为浏览器当前宽度去除浏览器边框后的宽度
  */
 export const innerWidth = win.innerWidth
 
 /**
- * @desc 任务栏宽度
+ * @description 任务栏宽度
  */
 export const taskbarWidth = outerWidth - innerWidth
 
 /**
- * @desc 任务栏高度
+ * @description 任务栏高度
  */
 export const taskbarHeight = outerHeight - innerHeight
 
 /**
- * @desc 获取浏览器的语言
+ * @description 获取浏览器的语言
  * @returns {boolean}
  */
 export const chromLanguage = (): number => {
@@ -40,7 +40,7 @@ export const chromLanguage = (): number => {
 }
 
 /**
- * @desc 获取浏览器的语言
+ * @description 获取浏览器的语言
  * @returns {boolean}
  */
 export const kwrnelVersion = (): object => {
@@ -62,7 +62,7 @@ export const kwrnelVersion = (): object => {
 }
 
 /**
- * @desc 获取到角度【横屏、竖屏】
+ * @description 获取到角度【横屏、竖屏】
  * @returns {boolean}
  */
 export const getAngle = (): number => {
@@ -71,7 +71,7 @@ export const getAngle = (): number => {
 
 
 /**
- * @desc 获取到对应的浏览器内核
+ * @description 获取到对应的浏览器内核
  * @returns {boolean}
  */
 export const getVersions = (): object => {
@@ -82,7 +82,7 @@ export const getVersions = (): object => {
 }
 
 /**
- * @desc 获取navigator常用信息
+ * @description 获取navigator常用信息
  * @return {Object}
  */
 export const getWinInfo = () => {

@@ -1,5 +1,5 @@
 /**
- * @desc 判断是否是内网ip
+ * @description 判断是否是内网ip
  * @param {string} ip ip地址
  * @returns {boolean}
  */

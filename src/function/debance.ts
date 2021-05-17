@@ -1,5 +1,5 @@
 /**
- * @desc 防抖函数
+ * @description 防抖函数
  * @param {Function} fun  被执行防抖操作的函数
  * @param {Function} delay 节流间隔时间，单位毫秒
  * @returns {any}

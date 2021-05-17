@@ -1,10 +1,10 @@
 /**
- * @desc api实例全局默认值
+ * @description api实例全局默认值
  * */
 const Attributes: any = {path: '/'}
 
 /**
- * @desc 默认转换器
+ * @description 默认转换器
  * */
 const converter = {
   read: function (value) {
@@ -19,7 +19,7 @@ const converter = {
 }
 
 /**
- * @desc assign处理arguments得到target
+ * @description assign处理arguments得到target
  * */
 const assign = function (...target) {
   for (let i = 1; i < arguments.length; i++) {
@@ -32,17 +32,17 @@ const assign = function (...target) {
 }
 
 /**
- * @desc 默认转换器
+ * @description 默认转换器
  * */
 let defaultConverter: any = converter
 
 /**
- * @desc api实例全局默认值
+ * @description api实例全局默认值
  * */
 let defaultAttributes: any = Attributes
 
 /**
- * @desc 设置cookie
+ * @description 设置cookie
  * @param {string} key 键名
  * @param {string} value 值
  * @param {string} attributes 方法
@@ -83,7 +83,7 @@ export function setCookie(key: string, value: any, attributes: any) {
 }
 
 /**
- * @desc 读取cookie
+ * @description 读取cookie
  * @param {string} key 键名
  * */
 export function getCookie(key: string) {
@@ -114,7 +114,7 @@ export function getCookie(key: string) {
 }
 
 /**
- * @desc 删除cookie
+ * @description 删除cookie
  * @param {string} key 键名
  * @param {string} attributes 方法
  * */
@@ -123,7 +123,7 @@ export function removeCookie(key: string, attributes: any) {
 }
 
 /**
- * @desc 清除cookie
+ * @description 清除cookie
  * */
 export function clearCookie() {
   let keys = cookieKey();
@@ -133,7 +133,7 @@ export function clearCookie() {
 }
 
 /**
- * @desc 获取所有cookie
+ * @description 获取所有cookie
  * */
 export function cookieKey() {
   let arr = document.cookie.split(";");
@@ -146,7 +146,7 @@ export function cookieKey() {
 }
 
 /**
- * @desc 获取所有cookie
+ * @description 获取所有cookie
  * */
 export function cookieLength() {
   let keys = cookieKey();
@@ -154,7 +154,7 @@ export function cookieLength() {
 }
 
 /**
- * @desc 设置默认值(创建api实例来全局设置)
+ * @description 设置默认值(创建api实例来全局设置)
  * */
 export function withAttributes(attributes: any) {
   defaultConverter = {value: Object.freeze(converter)}
@@ -162,7 +162,7 @@ export function withAttributes(attributes: any) {
 }
 
 /**
- * @desc 转换器(创建一个覆盖默认解码实现的api新实例)
+ * @description 转换器(创建一个覆盖默认解码实现的api新实例)
  * */
 export function withConverter(converter: any) {
   defaultConverter = assign({}, {value: Object.freeze(Attributes)}, converter)
@@ -170,7 +170,7 @@ export function withConverter(converter: any) {
 }
 
 /**
- * @desc cookie汇总
+ * @description cookie汇总
  * */
 const cookie = {
   set: setCookie,

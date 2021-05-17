@@ -1,7 +1,7 @@
 import {keyCodeConfig} from "../config/keycode";
 
 /**
- * @desc 根据keycode获得键名
+ * @description 根据keycode获得键名
  * @param  {Number} keycode
  * @return {String}
  */

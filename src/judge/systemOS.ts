@@ -4,7 +4,7 @@ import {navUserAgent} from "../systemOS/navigator";
 import mobileTypeData from "../config/mobileType";
 
 /**
- * @desc 是否android终端
+ * @description 是否android终端
  * @returns {boolean}
  */
 export const isAndroid = (): boolean => {
@@ -13,7 +13,7 @@ export const isAndroid = (): boolean => {
 }
 
 /**
- * @desc 是否iOS终端
+ * @description 是否iOS终端
  * @returns {boolean}
  */
 export const isIOS = (): boolean => {
@@ -22,7 +22,7 @@ export const isIOS = (): boolean => {
 }
 
 /**
- * @desc 是否移动端
+ * @description 是否移动端
  * @returns {boolean}
  */
 export const isMobile = (): boolean => {
@@ -31,7 +31,7 @@ export const isMobile = (): boolean => {
 }
 
 /**
- * @desc 是否移动端
+ * @description 是否移动端
  * @returns {boolean}
  */
 export const isWeb = (): boolean => {
@@ -40,7 +40,7 @@ export const isWeb = (): boolean => {
 }
 
 /**
- * @desc 是否横屏
+ * @description 是否横屏
  * @returns {boolean}
  */
 export const isTransverse = (): boolean => {
@@ -49,7 +49,7 @@ export const isTransverse = (): boolean => {
 }
 
 /**
- * @desc 是否竖屏
+ * @description 是否竖屏
  * @returns {boolean}
  */
 export const isVertical = (): boolean => {
@@ -58,7 +58,7 @@ export const isVertical = (): boolean => {
 }
 
 /**
- * @desc 是否Touch屏幕
+ * @description 是否Touch屏幕
  * @returns {boolean}
  */
 export const isTouch = (): boolean => {
@@ -66,7 +66,7 @@ export const isTouch = (): boolean => {
 }
 
 /**
- * @desc 是否webKit内核
+ * @description 是否webKit内核
  * @returns {boolean}
  */
 export const isWebKit = (): boolean => {
@@ -74,7 +74,7 @@ export const isWebKit = (): boolean => {
 }
 
 /**
- * @desc 是否IE内核
+ * @description 是否IE内核
  * @returns {boolean}
  */
 export const isIE = (): boolean => {
@@ -82,7 +82,7 @@ export const isIE = (): boolean => {
 }
 
 /**
- * @desc 是否支持webP格式图片
+ * @description 是否支持webP格式图片
  * @return {Boolean}
  */
 export const isSupportWebP = (): boolean => {

@@ -1,14 +1,14 @@
 import {doc, win} from "../config/system";
 
 /**
- * @desc 获取滚动条距顶部的距离
+ * @description 获取滚动条距顶部的距离
  */
 export const getScrollTop = (): number => {
   return (doc.documentElement && doc.documentElement.scrollTop) || doc.body.scrollTop;
 }
 
 /**
- * @desc 设置滚动条距顶部的距离
+ * @description 设置滚动条距顶部的距离
  * @param {Number} to 滚动的距离
  */
 export const setScrollTop = (to: number) => {
@@ -16,7 +16,7 @@ export const setScrollTop = (to: number) => {
 }
 
 /**
- * @desc 在${duration}时间内，滚动条平滑滚动到${to}指定位置
+ * @description 在${duration}时间内，滚动条平滑滚动到${to}指定位置
  * @param {Number} to 滚动的距离
  * @param {Number} duration 滚动的时间
  */
@@ -42,7 +42,7 @@ export const scrollTo = (to: number, duration: number = 0) => {
 }
 
 /**
- * @desc 获取一个元素的距离文档(document)的位置，类似jQ中的offset()
+ * @description 获取一个元素的距离文档(document)的位置，类似jQ中的offset()
  * @param {HTMLElement} ele
  * @returns { {left: number, top: number} }
  */

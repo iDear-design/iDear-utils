@@ -1,5 +1,5 @@
 /**
- * @desc 克隆对象
+ * @description 克隆对象
  * @param {string} obj 目标对象
  * @returns {object}
  */

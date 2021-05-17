@@ -1,7 +1,7 @@
 import {regExpConfig} from "../../types";
 
 /**
- * @desc 检验各种数据类型正则表达式
+ * @description 检验各种数据类型正则表达式
  * phone-手机号码
  * tel-座机
  * idCard-身份证

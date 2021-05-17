@@ -1,10 +1,10 @@
 /**
- * @desc 执行顺序生命
+ * @description 执行顺序生命
  */
 const reducer: any = (f: Function, g: Function) => (...args) => f(g(...args));
 
 /**
- * @desc 函数组合：从右向左执行
+ * @description 函数组合：从右向左执行
  * @param  {[Function,]}  fns
  */
 export const funCompose = (...fns: Array<Function>) => {
@@ -15,7 +15,7 @@ export const funCompose = (...fns: Array<Function>) => {
 }
 
 /**
- * @desc 函数管道：从左向右执行
+ * @description 函数管道：从左向右执行
  * @param  {[Function,]} fns
  */
 export const funPipe = (...fns: Array<Function>) => {

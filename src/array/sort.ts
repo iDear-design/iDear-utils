@@ -1,5 +1,5 @@
 /**
- * @desc 冒泡排序
+ * @description 冒泡排序
  * @param {Array<number>} arr 目标数组
  * @param {string} type asc:升序   desc:降序
  * @returns {Array<number>}
@@ -22,7 +22,7 @@ export const arrBubble = (arr: Array<number>, type: string = 'asc'): Array<numbe
 }
 
 /**
- * @desc 选择排序
+ * @description 选择排序
  * @param {Array<number>} arr 目标数组
  * @param {string} type asc:升序   desc:降序
  * @returns {Array<number>}
@@ -46,7 +46,7 @@ export const arrSelect = (arr: Array<number>, type: string = 'asc'): Array<numbe
 }
 
 /**
- * @desc 插入排序
+ * @description 插入排序
  * @param {Array<number>} arr 目标数组
  * @param {string} type asc:升序   desc:降序
  * @returns {Array<number>}

@@ -2,7 +2,7 @@ import {isSession} from "../judge/cache";
 import {SESSION} from "../config/cache";
 
 /**
- * @desc 设置sessionStorage
+ * @description 设置sessionStorage
  * @param {string} keyName 键名
  * @param {any} saveData 值
  * @param {number} expires 值
@@ -20,7 +20,7 @@ export const setSession = (keyName: string, saveData: any, expires?: number) => 
 }
 
 /**
- * @desc 读取sessionStorage
+ * @description 读取sessionStorage
  * @param {string} keyName 键名
  * */
 export const getSession = (keyName: string) => {
@@ -29,7 +29,7 @@ export const getSession = (keyName: string) => {
 }
 
 /**
- * @desc 删除sessionStorage
+ * @description 删除sessionStorage
  * @param {string} keyName 键名
  * */
 export const removeSession = (keyName: string) => {
@@ -38,7 +38,7 @@ export const removeSession = (keyName: string) => {
 }
 
 /**
- * @desc 清除sessionStorage
+ * @description 清除sessionStorage
  * */
 export const cleanSession = () => {
   if (!isSession()) return
@@ -46,7 +46,7 @@ export const cleanSession = () => {
 }
 
 /**
- * @desc 得到某个索引的key
+ * @description 得到某个索引的key
  * @param {string} keyIndex 索引值
  * */
 export const sessionKey = (keyIndex: number) => {
@@ -55,7 +55,7 @@ export const sessionKey = (keyIndex: number) => {
 }
 
 /**
- * @desc 得到sessionStorage的缓存数量
+ * @description 得到sessionStorage的缓存数量
  * */
 export const sessionLength = () => {
   if (!isSession()) return
@@ -63,7 +63,7 @@ export const sessionLength = () => {
 }
 
 /**
- * @desc sessionStorage汇总
+ * @description sessionStorage汇总
  * */
 const session = {
   set: setSession,

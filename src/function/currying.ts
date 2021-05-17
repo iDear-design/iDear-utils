@@ -1,5 +1,5 @@
 /**
- * @desc 函数柯里化
+ * @description 函数柯里化
  * @param {*} fn
  */
 

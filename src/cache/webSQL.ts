@@ -2,7 +2,7 @@ import {isWebSQL} from "../judge/cache";
 import {WEBSQL} from "../config/cache";
 
 /**
- * @desc 声明webSql数据类型
+ * @description 声明webSql数据类型
  * */
 interface WebSQLConfig {
   name: string, // 数据库名称
@@ -12,7 +12,7 @@ interface WebSQLConfig {
 }
 
 /**
- * @desc 默认的webSql库配置数据
+ * @description 默认的webSql库配置数据
  * */
 const defaultDatabase: any = {
   name: 'iDear-WebSQL', // 数据库名称
@@ -22,13 +22,13 @@ const defaultDatabase: any = {
 }
 
 /**
- * @desc webSql库
+ * @description webSql库
  * */
 export default class webSQL {
   public WEBSQLDB: any;
 
   /**
-   * @desc 构造函数，初始化
+   * @description 构造函数，初始化
    * @param {WebSQLConfig} config webSql库配置数据
    * */
   constructor(config: WebSQLConfig) {
@@ -67,7 +67,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 创建表
+   * @description 创建表
    * @param {string} tableName 表名称
    * @param {object} colParams 表头名称
    * @param {string} primaryKey 主键名称
@@ -99,7 +99,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 删除表
+   * @description 删除表
    * @param {string} tableName 表名称
    * */
   deleteTable(tableName: string) {
@@ -108,7 +108,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 执行SQL代码
+   * @description 执行SQL代码
    * @param {string} sql 索引值
    * @param {any[]} arr 索引值
    * @param {log} keyIndex 索引值
@@ -146,7 +146,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 新增数据
+   * @description 新增数据
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
@@ -166,7 +166,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 删除数据
+   * @description 删除数据
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
@@ -182,7 +182,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 更新数据
+   * @description 更新数据
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
@@ -203,7 +203,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 查找[指定]数据
+   * @description 查找[指定]数据
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
@@ -233,7 +233,7 @@ export default class webSQL {
   }
 
   /**
-   * @desc 查找[所有]数据
+   * @description 查找[所有]数据
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值
    * @param {string} keyIndex 索引值

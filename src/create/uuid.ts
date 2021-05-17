@@ -1,5 +1,5 @@
 /**
- * @desc 创建uuid
+ * @description 创建uuid
  * @param {String} hex: uuid用到的哪些字符串
  * @returns {String}
  */

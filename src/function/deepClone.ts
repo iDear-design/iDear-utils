@@ -1,5 +1,5 @@
 /**
- * @desc 深拷贝，支持常见类型
+ * @description 深拷贝，支持常见类型
  * @param {Any} values
  * @param {Any}
  */

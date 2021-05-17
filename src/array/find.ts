@@ -1,7 +1,7 @@
-/** @desc 数组的相关查找 */
+/** @description 数组的相关查找 */
 
 /**
- * @desc 返回数组第一个索引值
+ * @description 返回数组第一个索引值
  * @param arr 数组
  * @param val 值
  * @returns {number}
@@ -18,7 +18,7 @@ export const arrIndexOf = (arr: Array<any>, val: any): number => {
 }
 
 /**
- * @desc 从最后开始的索引值,返回数组第一个索引值
+ * @description 从最后开始的索引值,返回数组第一个索引值
  * @param list 数组
  * @param val 值
  */

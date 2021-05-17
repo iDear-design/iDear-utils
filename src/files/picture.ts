@@ -1,5 +1,5 @@
 /**
- * @desc 多张图片制作微信群聊组合头像
+ * @description 多张图片制作微信群聊组合头像
  * @param {Array} data 图片集合[]
  * @returns {any}
  */

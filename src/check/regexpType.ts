@@ -2,7 +2,7 @@ import regExp from "../config/regExp";
 import {regExpTypeConfig} from "../../types";
 
 /**
- * @desc 检验各种数据类型
+ * @description 检验各种数据类型
  * @param {string} str 检查的字符串
  * @param {string} type [
  *    phone-手机号码
@@ -67,7 +67,7 @@ export const checkRegexpType = (str: string, type: regExpTypeConfig): boolean =>
 }
 
 /**
- * @desc 阶乘
+ * @description 阶乘
  * @param {string} str 检查的字符串
  * @param {RegExp} regExp 检查的正则
  * @returns {number}

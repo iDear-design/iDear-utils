@@ -1,5 +1,5 @@
 /**
- * @desc 随机数
+ * @description 随机数
  * @return {Number}
  */
 export const random = (): number => {
@@ -7,7 +7,7 @@ export const random = (): number => {
 }
 
 /**
- * @desc 随机生成颜色
+ * @description 随机生成颜色
  * @return {String}
  */
 export const randomColor = (): string => {
@@ -15,7 +15,7 @@ export const randomColor = (): string => {
 }
 
 /**
- * @desc 生成指定范围[min, max]的随机数
+ * @description 生成指定范围[min, max]的随机数
  * @param  {Number} min
  * @param  {Number} max
  * @return {Number}

@@ -1,7 +1,7 @@
 import regExp from "../config/regExp";
 
 /**
- * @desc 检测密码强度
+ * @description 检测密码强度
  * @param {pwding} pwd 字符串
  * @returns {boolean}
  */

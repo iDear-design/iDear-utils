@@ -1,5 +1,5 @@
 /**
- * @desc 将数组拆分成多个 size 长度的区块，每个区块组成小数组,整体组成一个二维数组
+ * @description 将数组拆分成多个 size 长度的区块，每个区块组成小数组,整体组成一个二维数组
  * @param {Array<any>} arr 目标数组
  * @param {number} size 长度
  * @returns {Array<any>}
@@ -19,7 +19,7 @@ export const arrChunk = (arr: Array<any>, size: number): Array<any> => {
 }
 
 /**
- * @desc 数组差集
+ * @description 数组差集
  * @param {Array<any>} arr1 数组1
  * @param {Array<any>} arr2 数组2
  * @returns {Array<any>}
@@ -31,7 +31,7 @@ export const arrDiff = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
 }
 
 /**
- * @desc
+ * @description
  * @param {Array<any>} arr1 数组1
  * @param {Array<any>} arr2 数组2
  * @returns {Array<any>}
@@ -42,7 +42,7 @@ export const arrDiffWith = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
 }
 
 /**
- * @desc 得到arr1中所有不在arr2中的元素组成的数组(不改变原数组)
+ * @description 得到arr1中所有不在arr2中的元素组成的数组(不改变原数组)
  * @param {Array<any>} arr1 数组1
  * @param {Array<any>} arr2 数组2
  * @returns {Array<any>}
@@ -54,7 +54,7 @@ export const arrDiffFirst = (arr1: Array<any>, arr2: Array<any>): Array<any> => 
 }
 
 /**
- * @desc 得到数组过滤掉左边count个后剩余元素组成的数组
+ * @description 得到数组过滤掉左边count个后剩余元素组成的数组
  * @param {Array<any>} arr 数组1
  * @param {number} count 数组2
  * @returns {Array<any>}
@@ -66,7 +66,7 @@ export const arrDropLeft = (arr: Array<any>, count: number): Array<any> => {
 }
 
 /**
- * @desc 得到数组过滤掉右边count个后剩余元素组成的数组
+ * @description 得到数组过滤掉右边count个后剩余元素组成的数组
  * @param {Array<any>} arr 数组1
  * @param {number} count 数组2
  * @returns {Array<any>}
@@ -78,7 +78,7 @@ export const arrDropRight = (arr: Array<any>, count: number): Array<any> => {
 }
 
 /**
- * @desc 数组扁平化: 取出嵌套数组(多维)中的所有元素放到一个新数组(一维)中
+ * @description 数组扁平化: 取出嵌套数组(多维)中的所有元素放到一个新数组(一维)中
  * @param {Array<any>} array 数组
  * @returns {any[]} 如: [1, [3, [2, 4]]]  ==>  [1, 3, 2, 4]
  */
@@ -90,7 +90,7 @@ export const arrFlatten = (arr: Array<any>): Array<any> => {
 }
 
 /**
- * @desc 删除数组中与value相同的元素, 返回所有删除元素的数组
+ * @description 删除数组中与value相同的元素, 返回所有删除元素的数组
  * @param {Array<number | string>} arr 数组
  * @returns {any[]} 如: arrPull([1,3,5,3,7], 2, 7, 3, 7) ===> 数组变为[1, 5], 返回值为[3,3,7]
  */
@@ -110,7 +110,7 @@ export const arrPull = (arr: Array<number | string>, ...arr2: any) => {
 }
 
 /**
- * @desc 功能与pull一致, 只是参数变为数组
+ * @description 功能与pull一致, 只是参数变为数组
  * @param {Array<number | string>} arr  数组
  * @param {Array<number | string>} arr2  数组
  * @returns {any[]} arrPullAll([1,3,5,3,7], [2, 7, 3, 7]) ===> 数组变为[1, 5], 返回值为[3,3,7]
@@ -122,7 +122,7 @@ export const arrPullAll = (arr: Array<number | string>, arr2: Array<number | str
 
 
 /**
- * @desc 数组对象去重
+ * @description 数组对象去重
  * @param {Array<object>} arrObj 数组对象
  * @param {string} key 对象属性key
  * @returns {Array<any>}

@@ -1,5 +1,5 @@
 /**
- * @desc 设置全屏
+ * @description 设置全屏
  * @param {any} element 选择器
  * @returns {boolean}
  */
@@ -14,7 +14,7 @@ export function fullscreen(element: any) {
 }
 
 /**
- * @desc 退出全屏
+ * @description 退出全屏
  * @param {any} element 选择器
  * @returns {boolean}
  */

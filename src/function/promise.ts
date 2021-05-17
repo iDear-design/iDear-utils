@@ -1,20 +1,20 @@
 /**
- * @desc 初始未确定的状态
+ * @description 初始未确定的状态
  */
 const PENDING = 'pending'
 
 /**
- * @desc 成功的状态
+ * @description 成功的状态
  */
 const RESOLVED = 'resolved'
 
 /**
- * @desc 失败的状态
+ * @description 失败的状态
  */
 const REJECTED = 'rejected'
 
 /**
- * @desc Promise构造函数
+ * @description Promise构造函数
  * @param {String} excutor  订阅消息名称
  */
 function Promise(excutor: any) {
@@ -77,7 +77,7 @@ function Promise(excutor: any) {
 }
 
 /**
- * @desc 用来指定成功/失败回调函数的方法
+ * @description 用来指定成功/失败回调函数的方法
  *    1). 如果当前promise是resolved, 异步执行成功的回调函数onResolved
  *    2). 如果当前promise是rejected, 异步执行成功的回调函数onRejected
  *    3). 如果当前promise是pending, 保存回调函数
@@ -145,7 +145,7 @@ Promise.prototype.then = function (onResolved, onRejected) {
 }
 
 /**
- * @desc 用来指定失败回调函数的方法【catch是then的语法糖】
+ * @description 用来指定失败回调函数的方法【catch是then的语法糖】
  * @param {String} excutor  订阅消息名称
  */
 Promise.prototype.catch = function (onRejected) {
@@ -153,7 +153,7 @@ Promise.prototype.catch = function (onRejected) {
 }
 
 /**
- * @desc 用来返回一个指定vlaue的成功的promise【value可能是一个一般的值, 也可能是promise对象】
+ * @description 用来返回一个指定vlaue的成功的promise【value可能是一个一般的值, 也可能是promise对象】
  * @param {String} excutor  订阅消息名称
  */
 Promise.resolve = function (value) {
@@ -169,7 +169,7 @@ Promise.resolve = function (value) {
 }
 
 /**
- * @desc 用来返回一个指定reason的失败的promise
+ * @description 用来返回一个指定reason的失败的promise
  * @param {String} excutor  订阅消息名称
  */
 Promise.reject = function (reason) {
@@ -179,7 +179,7 @@ Promise.reject = function (reason) {
 }
 
 /**
- * @desc 返回一个promise, 只有当数组中所有promise都成功才成功, 否则失败
+ * @description 返回一个promise, 只有当数组中所有promise都成功才成功, 否则失败
  * @param {String} excutor  订阅消息名称
  */
 Promise.all = function (promises) {
@@ -204,7 +204,7 @@ Promise.all = function (promises) {
 }
 
 /**
- * @desc 返回一个promise, 由第一个完成promise决定
+ * @description 返回一个promise, 由第一个完成promise决定
  * @param {String} excutor  订阅消息名称
  */
 Promise.race = function (promises) {
@@ -218,7 +218,7 @@ Promise.race = function (promises) {
 }
 
 /**
- * @desc 返回一个延迟指定时间才成功(也可能失败)的promise
+ * @description 返回一个延迟指定时间才成功(也可能失败)的promise
  * @param {String} excutor  订阅消息名称
  */
 Promise.resolveDelay = function (value, time) {
@@ -236,7 +236,7 @@ Promise.resolveDelay = function (value, time) {
 }
 
 /**
- * @desc 返回一个延迟指定时间才失败的promise
+ * @description 返回一个延迟指定时间才失败的promise
  * @param {String} excutor  订阅消息名称
  */
 Promise.rejectDelay = function (reason, time) {

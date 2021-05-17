@@ -1,7 +1,7 @@
 import {isHasClass} from "../judge/element";
 
 /**
- * @desc 为元素添加class
+ * @description 为元素添加class
  * @param {HTMLElement} ele
  * @param {String} cls
  */
@@ -12,7 +12,7 @@ export const addClass = (ele: HTMLElement, cls: string) => {
 }
 
 /**
- * @desc 为元素移除class
+ * @description 为元素移除class
  * @param {HTMLElement} ele
  * @param {String} cls
  */

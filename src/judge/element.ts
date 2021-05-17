@@ -1,5 +1,5 @@
 /**
- * @desc 判断元素是否有某个class
+ * @description 判断元素是否有某个class
  * @param {HTMLElement} ele
  * @param {String} cls
  * @return {Boolean}

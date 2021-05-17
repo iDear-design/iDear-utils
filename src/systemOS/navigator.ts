@@ -1,17 +1,17 @@
 import {nav} from "../config/system";
 
 /**
- * @desc navigator中的userAgent
+ * @description navigator中的userAgent
  */
 export const navUserAgent: any = nav.userAgent
 
 /**
- * @desc navigator中的userAgent
+ * @description navigator中的userAgent
  */
 export const navAppVersion: any = nav.appVersion
 
 /**
- * @desc 获取操作系统类型
+ * @description 获取操作系统类型
  * @return {String}
  */
 export const getNavType = () => {
@@ -29,7 +29,7 @@ export const getNavType = () => {
 }
 
 /**
- * @desc 判断是手机吗
+ * @description 判断是手机吗
  * @return {String}
  */
 export const getWebType = () => {
@@ -38,7 +38,7 @@ export const getWebType = () => {
 }
 
 /**
- * @desc 判断手机类型
+ * @description 判断手机类型
  * @return {String}
  */
 export const getMobileType = () => {
@@ -49,7 +49,7 @@ export const getMobileType = () => {
 }
 
 /**
- * @desc 获取navigator常用信息
+ * @description 获取navigator常用信息
  * @return {Object}
  */
 export const getNavInfo = () => {

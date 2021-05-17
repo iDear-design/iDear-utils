@@ -2,7 +2,7 @@ import {dataTypeString} from "../config/dataType";
 
 
 /**
- * @desc 给隐私信息标记号加密为*
+ * @description 给隐私信息标记号加密为*
  * @param {String} personInfo
  * @param {Number} left
  * @param {Number} right

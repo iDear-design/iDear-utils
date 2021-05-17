@@ -2,7 +2,7 @@ import {isIdCard} from "../judge/idCard";
 import idCardCityData from "../config/idCard";
 
 /**
- * @desc 身份证城市
+ * @description 身份证城市
  * @param {string} idCard 目标值
  * @returns {string}
  */
@@ -20,7 +20,7 @@ export const idCardCity = (idCard: string): string => {
 
 
 /**
- * @desc 身份证出生日期验证
+ * @description 身份证出生日期验证
  * @param {string} idCard 目标值
  * @returns {string}
  */
