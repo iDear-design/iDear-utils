@@ -73,6 +73,15 @@ export const isUndefined = (bool: boolean): boolean => {
 }
 
 /**
+ * @description 是否null
+ * @param {string} bool 目标值
+ * @returns {boolean}
+ */
+export const isnull = (bool: boolean): boolean => {
+  return dataTypeArr(bool) === '[object Unll]'
+}
+
+/**
  * @description 是否正则
  * @param {string} rex 目标值
  * @returns {boolean}
@@ -127,12 +136,12 @@ export const isSet = (set: any): boolean => {
 }
 
 /**
- * @description 是否Set对象
+ * @description 是否False
  * @param {string} target 目标值
  * @returns {boolean}
  */
 export const isFalse = (target: any): boolean => {
-  if (!target || target === 'null' || target === 'undefined' || target === 'false' || target === 'NaN') return true
+  if (!target || target === 'null' || target === 'undefined' || target === 'false' || target === 'NaN' || target === 0) return true
   return false
 }
 
