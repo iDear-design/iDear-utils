@@ -1,4 +1,4 @@
-import regExp from "../config/regExp";
+import regExp from "../../libs/config/regExp";
 import {regExpTypeConfig} from "../../types";
 
 /**
@@ -25,7 +25,7 @@ import {regExpTypeConfig} from "../../types";
  * ]
  * @returns {boolean}
  */
-export const checkRegexpType = (str: string, type: regExpTypeConfig): boolean => {
+export const regexpType = (str: string, type: regExpTypeConfig): boolean => {
   switch (type) {
     case 'phone':   //手机号码
       return regExp.phone.test(str);
@@ -72,6 +72,6 @@ export const checkRegexpType = (str: string, type: regExpTypeConfig): boolean =>
  * @param {RegExp} regExp 检查的正则
  * @returns {number}
  */
-export const checkRegexp = (str: string, regExp: RegExp): boolean => {
+export const regexpCheck = (str: string, regExp: RegExp): boolean => {
   return regExp.test(str)
 }

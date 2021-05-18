@@ -1,4 +1,4 @@
-import {win, nav} from "../config/system";
+import {win, nav} from "../../libs/config/system";
 import {navUserAgent} from "./navigator";
 
 /**

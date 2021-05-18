@@ -1,4 +1,4 @@
-import {win} from "../config/system";
+import {win} from "../../libs/config/system";
 
 /**
  * @description H5软键盘缩回、弹起回调【当软件键盘弹起会改变当前 window.innerHeight，监听这个值变化】，即窗口监听

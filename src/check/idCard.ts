@@ -1,5 +1,5 @@
 import {isIdCard} from "../judge/idCard";
-import idCardCityData from "../config/idCard";
+import idCardCityData from "../../libs/config/idCard";
 
 /**
  * @description 身份证城市

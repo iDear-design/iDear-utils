@@ -1,5 +1,5 @@
 import {isWebSQL} from "../judge/cache";
-import {WEBSQL} from "../config/cache";
+import {WEBSQL} from "../../libs/config/cache";
 
 /**
  * @description 声明webSql数据类型

@@ -1,4 +1,4 @@
-import regExp from "../config/regExp";
+import regExp from "../../libs/config/regExp";
 
 /**
  * @description 检测密码强度

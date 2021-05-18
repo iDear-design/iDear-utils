@@ -1,7 +1,7 @@
-import {win, doc} from "../config/system";
+import {win, doc} from "../../libs/config/system";
 import {getAngle} from "../systemOS/window";
 import {navUserAgent} from "../systemOS/navigator";
-import mobileTypeData from "../config/mobileType";
+import mobileTypeData from "../../libs/config/mobileType";
 
 /**
  * @description 是否android终端

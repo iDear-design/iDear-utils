@@ -1,4 +1,4 @@
-import {LOCAL} from "../config/cache";
+import {LOCAL} from "../../libs/config/cache";
 import {isLocal} from "../judge/cache";
 
 /**

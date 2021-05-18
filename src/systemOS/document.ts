@@ -1,4 +1,4 @@
-import {doc} from "../config/system";
+import {doc} from "../../libs/config/system";
 
 /**
  * @description 获取body的信息
