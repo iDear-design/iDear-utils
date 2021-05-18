@@ -24,12 +24,12 @@ export const innerWidth = win.innerWidth
 /**
  * @description 任务栏宽度
  */
-export const taskbarWidth = outerWidth - innerWidth
+export const taskWidth = outerWidth - innerWidth
 
 /**
  * @description 任务栏高度
  */
-export const taskbarHeight = outerHeight - innerHeight
+export const taskHeight = outerHeight - innerHeight
 
 /**
  * @description 获取浏览器的语言
@@ -94,8 +94,8 @@ export const getWinInfo = () => {
     outerWidth: outerWidth,
     innerHeight: innerHeight,
     innerWidth: innerWidth,
-    taskbarWidth: taskbarWidth,
-    taskbarHeight: taskbarHeight
+    taskbarWidth: taskWidth,
+    taskbarHeight: taskHeight
   }
   return winInfo
 }

@@ -46,7 +46,7 @@ export const scrollTo = (to: number, duration: number = 0) => {
  * @param {HTMLElement} ele
  * @returns { {left: number, top: number} }
  */
-export const offset = (ele: HTMLElement) => {
+export const scrollOffset = (ele: HTMLElement) => {
   let pos = {
     left: 0,
     top: 0

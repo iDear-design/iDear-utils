@@ -7,7 +7,7 @@ import {doc, win} from "../../libs/config/system";
  * @param {string} target: 窗口位置（默认新开窗口）
  * @returns {any}
  */
-export function urlDownload(url: string, fileName: string = 'urlFile', target: string = '_blank') {
+export const urlDownload = (url: string, fileName: string = 'urlFile', target: string = '_blank') => {
   let link = doc.createElement('a')
   link.style.display = 'none';
   link.href = url

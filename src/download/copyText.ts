@@ -27,7 +27,7 @@ const handleText = (content: string | number) => {
  * @description 复制内容到剪贴板
  * @param {String} content 复制的内容
  */
-const copyText = (content: string | number): boolean => {
+export const copyText = (content: string | number): boolean => {
   let result = false
   try {
     handleText(content)
@@ -40,4 +40,6 @@ const copyText = (content: string | number): boolean => {
   return result
 }
 
-export default copyText
+const copyTexts: Function = copyText
+
+export default copyTexts

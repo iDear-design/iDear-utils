@@ -5,7 +5,7 @@ import {numPowe} from "../number/reckon";
  * @param {Object} size
  * @param {Object} fixed 保留几位小数
  */
-export function countFileSize(size: number, fixed: number = 2): string {
+export const countFileSize = (size: number, fixed: number = 2): string => {
   let fileSize: string = '0B';
   if (fixed < 0) {
     console.error('fixed必须为正整数！')

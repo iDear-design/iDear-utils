@@ -3,7 +3,7 @@
  * @param {any} element 选择器
  * @returns {boolean}
  */
-export function fullscreen(element: any) {
+export const fullscreen = (element: any) => {
   if (element.requestFullScreen) {
     element.requestFullScreen()
   } else if (element.webkitRequestFullScreen) {
@@ -18,7 +18,7 @@ export function fullscreen(element: any) {
  * @param {any} element 选择器
  * @returns {boolean}
  */
-export function exitFullscreen(element: any) {
+export const exitFullscreen = (element: any) => {
   if (element.exitFullscreen) {
     element.exitFullscreen()
   } else if (element.mozCancelFullScreen) {

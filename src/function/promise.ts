@@ -14,11 +14,11 @@ const RESOLVED = 'resolved'
 const REJECTED = 'rejected'
 
 /**
- * @description Promise构造函数
+ * @description idearPromise构造函数
  * @param {String} excutor  订阅消息名称
  */
-function Promise(excutor: any) {
-  // Promise的实例对象
+function idearPromise(excutor: any) {
+  // idearPromise的实例对象
   const self = this
   // 状态属性, 初始值为pending, 代表初始未确定的状态
   self.status = PENDING
@@ -27,7 +27,7 @@ function Promise(excutor: any) {
   // {onResolved(){}, onRejected(){}}
   self.callbacks = []
 
-  /** 将promise的状态改为成功, 指定成功的value */
+  /** 将idearPromise的状态改为成功, 指定成功的value */
   function resolve(value) {
     // 如果当前不是pending, 直接结束
     if (self.status !== PENDING) return
@@ -46,7 +46,7 @@ function Promise(excutor: any) {
     }
   }
 
-  /** 将promise的状态改为失败, 指定失败的reason */
+  /** 将idearPromise的状态改为失败, 指定失败的reason */
   function reject(reason) {
     // 如果当前不是pending, 直接结束
     if (self.status !== PENDING) return
@@ -69,7 +69,7 @@ function Promise(excutor: any) {
   try {
     excutor(resolve, reject)
   } catch (error) {
-    // 执行器执行出错, 当前promise变为失败
+    // 执行器执行出错, 当前idearPromise变为失败
     console.error('ERROR：' + error)
     reject(error)
   }
@@ -78,17 +78,17 @@ function Promise(excutor: any) {
 
 /**
  * @description 用来指定成功/失败回调函数的方法
- *    1). 如果当前promise是resolved, 异步执行成功的回调函数onResolved
- *    2). 如果当前promise是rejected, 异步执行成功的回调函数onRejected
- *    3). 如果当前promise是pending, 保存回调函数
- *    返回一个新的promise对象,它的结果状态由onResolved或者onRejected执行的结果决定
+ *    1). 如果当前idearPromise是resolved, 异步执行成功的回调函数onResolved
+ *    2). 如果当前idearPromise是rejected, 异步执行成功的回调函数onRejected
+ *    3). 如果当前idearPromise是pending, 保存回调函数
+ *    返回一个新的idearPromise对象,它的结果状态由onResolved或者onRejected执行的结果决定
  *        2.1). 抛出error ==> 变为rejected, 结果值为error
- *        2.2). 返回值不是promise   ==> 变为resolved, 结果值为返回值
- *        2.3). 返回值是promise    ===> 由这个promise的决定新的promise的结果(成功/失败)
+ *        2.2). 返回值不是idearPromise   ==> 变为resolved, 结果值为返回值
+ *        2.3). 返回值是idearPromise    ===> 由这个idearPromise的决定新的idearPromise的结果(成功/失败)
  * @param {Function} onResolved
  * @param {Function} onRejected
  */
-Promise.prototype.then = function (onResolved, onRejected) {
+idearPromise.prototype.then = function (onResolved, onRejected) {
   const self = this
   // 将reason向下传递
   onResolved = typeof onResolved === 'function' ? onResolved : value => value // 将value向下传递
@@ -96,19 +96,19 @@ Promise.prototype.then = function (onResolved, onRejected) {
     throw reason
   }
   // 什么时候改变它的状态
-  return new Promise((resolve, reject) => {
+  return new idearPromise((resolve, reject) => {
     /**
      * 1. 调用指定的回调函数
-     * 2. 根据回调执行结果来更新返回promise的状态
+     * 2. 根据回调执行结果来更新返回idearPromise的状态
      */
     function handle(callback) {
       try {
         const result: any = callback(self.data)
-        //  2.2). 返回值不是promise   ==> 变为resolved, 结果值为返回值
-        if (!(result instanceof Promise)) {
+        //  2.2). 返回值不是idearPromise   ==> 变为resolved, 结果值为返回值
+        if (!(result instanceof idearPromise)) {
           resolve(result)
         }
-        // 2.3). 返回值是promise    ===> 由这个promise的决定新的promise的结果(成功/失败)
+        // 2.3). 返回值是idearPromise    ===> 由这个idearPromise的决定新的idearPromise的结果(成功/失败)
         else {
           // @ts-ignore
           result.then(
@@ -148,52 +148,52 @@ Promise.prototype.then = function (onResolved, onRejected) {
  * @description 用来指定失败回调函数的方法【catch是then的语法糖】
  * @param {String} excutor  订阅消息名称
  */
-Promise.prototype.catch = function (onRejected) {
+idearPromise.prototype.catch = function (onRejected) {
   return this.then(undefined, onRejected)
 }
 
 /**
- * @description 用来返回一个指定vlaue的成功的promise【value可能是一个一般的值, 也可能是promise对象】
+ * @description 用来返回一个指定vlaue的成功的idearPromise【value可能是一个一般的值, 也可能是idearPromise对象】
  * @param {String} excutor  订阅消息名称
  */
-Promise.resolve = function (value) {
-  return new Promise((resolve, reject) => {
-    // 如果value是一个promise, 最终返回的promise的结果由value决定
-    if (value instanceof Promise) {
+idearPromise.resolve = function (value) {
+  return new idearPromise((resolve, reject) => {
+    // 如果value是一个idearPromise, 最终返回的idearPromise的结果由value决定
+    if (value instanceof idearPromise) {
       // @ts-ignore
       value.then(resolve, reject)
-    } else { // value不是promise, 返回的是成功的promise, 成功的值就是value
+    } else { // value不是idearPromise, 返回的是成功的idearPromise, 成功的值就是value
       resolve(value)
     }
   })
 }
 
 /**
- * @description 用来返回一个指定reason的失败的promise
+ * @description 用来返回一个指定reason的失败的idearPromise
  * @param {String} excutor  订阅消息名称
  */
-Promise.reject = function (reason) {
-  return new Promise((_resolve, reject) => {
+idearPromise.reject = function (reason) {
+  return new idearPromise((_resolve, reject) => {
     reject(reason)
   })
 }
 
 /**
- * @description 返回一个promise, 只有当数组中所有promise都成功才成功, 否则失败
+ * @description 返回一个idearPromise, 只有当数组中所有idearPromise都成功才成功, 否则失败
  * @param {String} excutor  订阅消息名称
  */
-Promise.all = function (promises) {
-  return new Promise((resolve, reject) => {
+idearPromise.all = function (idearPromises) {
+  return new idearPromise((resolve, reject) => {
 
     let resolvedCount = 0 // 已经成功的数量
-    const values = new Array(promises.length) // 用来保存成功promise的value值
-    // 遍历所有promise, 取其对应的结果
-    promises.forEach((p, index) => {
+    const values = new Array(idearPromises.length) // 用来保存成功idearPromise的value值
+    // 遍历所有idearPromise, 取其对应的结果
+    idearPromises.forEach((p, index) => {
       p.then(
         value => {
           resolvedCount++
           values[index] = value
-          if (resolvedCount === promises.length) { // 都成功了
+          if (resolvedCount === idearPromises.length) { // 都成功了
             resolve(values)
           }
         },
@@ -204,31 +204,31 @@ Promise.all = function (promises) {
 }
 
 /**
- * @description 返回一个promise, 由第一个完成promise决定
+ * @description 返回一个idearPromise, 由第一个完成idearPromise决定
  * @param {String} excutor  订阅消息名称
  */
-Promise.race = function (promises) {
-  return new Promise((resolve, reject) => {
-    // 遍历所有promise, 取其对应的结果
-    promises.forEach(p => {
-      // 返回的promise由第一个完成p来决定其结果
+idearPromise.race = function (idearPromises) {
+  return new idearPromise((resolve, reject) => {
+    // 遍历所有idearPromise, 取其对应的结果
+    idearPromises.forEach(p => {
+      // 返回的idearPromise由第一个完成p来决定其结果
       p.then(resolve, reject)
     })
   })
 }
 
 /**
- * @description 返回一个延迟指定时间才成功(也可能失败)的promise
+ * @description 返回一个延迟指定时间才成功(也可能失败)的idearPromise
  * @param {String} excutor  订阅消息名称
  */
-Promise.resolveDelay = function (value, time) {
-  return new Promise((resolve, reject) => {
+idearPromise.resolveDelay = function (value, time) {
+  return new idearPromise((resolve, reject) => {
     setTimeout(() => {
-      // 如果value是一个promise, 最终返回的promise的结果由value决定
-      if (value instanceof Promise) {
+      // 如果value是一个idearPromise, 最终返回的idearPromise的结果由value决定
+      if (value instanceof idearPromise) {
         // @ts-ignore
         value.then(resolve, reject)
-      } else { // value不是promise, 返回的是成功的promise, 成功的值就是value
+      } else { // value不是idearPromise, 返回的是成功的idearPromise, 成功的值就是value
         resolve(value)
       }
     }, time)
@@ -236,15 +236,15 @@ Promise.resolveDelay = function (value, time) {
 }
 
 /**
- * @description 返回一个延迟指定时间才失败的promise
+ * @description 返回一个延迟指定时间才失败的idearPromise
  * @param {String} excutor  订阅消息名称
  */
-Promise.rejectDelay = function (reason, time) {
-  return new Promise((_resolve, reject) => {
+idearPromise.rejectDelay = function (reason, time) {
+  return new idearPromise((_resolve, reject) => {
     setTimeout(() => {
       reject(reason)
     }, time)
   })
 }
 
-export default Promise
+export default idearPromise

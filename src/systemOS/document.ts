@@ -28,12 +28,12 @@ export const clientHeight = bodyInfo.clientHeight
 /**
  * @description 任务栏宽度
  */
-export const taskbarWidth = offsetWidth - clientWidth
+export const barWidth = offsetWidth - clientWidth
 
 /**
  * @description 任务栏高度
  */
-export const taskbarHeight = offsetHeight - clientHeight
+export const barHeight = offsetHeight - clientHeight
 
 /**
  * @description 获取document常用信息
@@ -45,8 +45,8 @@ export const getDocInfo = () => {
     offsetHeight: offsetHeight,
     clientWidth: clientWidth,
     clientHeight: clientHeight,
-    taskbarWidth: taskbarWidth,
-    taskbarHeight: taskbarHeight
+    taskbarWidth: barWidth,
+    taskbarHeight: barHeight
   }
   return docInfo
 }

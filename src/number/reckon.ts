@@ -21,7 +21,7 @@ export const numPowe = (num: number, num2: number): number => {
  * @param {number} num 目标数字
  * @returns {number}
  */
-export const factorial = (num: number): number => {
+export const numFactorial = (num: number): number => {
   let count = 1
   for (let i = 1; i <= num; i++) {
     count *= i
@@ -34,7 +34,7 @@ export const factorial = (num: number): number => {
  * @param {number} num 目标数字
  * @returns {number}
  */
-export const cumsum = (rest: number[]): number => {
+export const numCumsum = (rest: number[]): number => {
   let sum = 0
   for (let i = 0; i < rest.length; i++) {
     sum += rest[i]

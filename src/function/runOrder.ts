@@ -1,7 +1,9 @@
 /**
  * @description 执行顺序生命
+ * @param  {Function}  fun
+ * @param  {Function}  gun
  */
-const reducer: any = (f: Function, g: Function) => (...args) => f(g(...args));
+const reducer: any = (fun: Function, gun: Function) => (...args) => fun(gun(...args));
 
 /**
  * @description 函数组合：从右向左执行

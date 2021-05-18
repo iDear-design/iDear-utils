@@ -47,7 +47,7 @@ let defaultAttributes: any = Attributes
  * @param {string} value 值
  * @param {string} attributes 方法
  * */
-export function setCookie(key: string, value: any, attributes: any) {
+export const setCookie = function (key: string, value: any, attributes: any) {
   if (typeof (document as any) === 'undefined') return
 
   attributes = assign({}, defaultAttributes, attributes)
@@ -86,7 +86,7 @@ export function setCookie(key: string, value: any, attributes: any) {
  * @description 读取cookie
  * @param {string} key 键名
  * */
-export function getCookie(key: string) {
+export const getCookie = function (key: string) {
   if (typeof (document as any) === 'undefined' || (arguments.length && !key)) {
     return
   }
@@ -118,14 +118,14 @@ export function getCookie(key: string) {
  * @param {string} key 键名
  * @param {string} attributes 方法
  * */
-export function removeCookie(key: string, attributes: any) {
+export const removeCookie = function (key: string, attributes: any) {
   setCookie(key, '', assign({}, attributes, {expires: -1}))
 }
 
 /**
  * @description 清除cookie
  * */
-export function clearCookie() {
+export const clearCookie = function () {
   let keys = cookieKey();
   keys.forEach(element => {
     setCookie(element, "", -24);
@@ -135,7 +135,7 @@ export function clearCookie() {
 /**
  * @description 获取所有cookie
  * */
-export function cookieKey() {
+export const cookieKey = function () {
   let arr = document.cookie.split(";");
   let keys = [];
   for (let i = 0; i < arr.length; i++) {
@@ -148,7 +148,7 @@ export function cookieKey() {
 /**
  * @description 获取所有cookie
  * */
-export function cookieLength() {
+export const cookieLength = function () {
   let keys = cookieKey();
   return keys.length
 }
@@ -156,7 +156,7 @@ export function cookieLength() {
 /**
  * @description 设置默认值(创建api实例来全局设置)
  * */
-export function withAttributes(attributes: any) {
+export const withAttributes = function (attributes: any) {
   defaultConverter = {value: Object.freeze(converter)}
   defaultAttributes = assign({}, {value: Object.freeze(Attributes)}, attributes)
 }
@@ -164,7 +164,7 @@ export function withAttributes(attributes: any) {
 /**
  * @description 转换器(创建一个覆盖默认解码实现的api新实例)
  * */
-export function withConverter(converter: any) {
+export const withConverter = function (converter: any) {
   defaultConverter = assign({}, {value: Object.freeze(Attributes)}, converter)
   defaultAttributes = {value: Object.freeze(Attributes)}
 }

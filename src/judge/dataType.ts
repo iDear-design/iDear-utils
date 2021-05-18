@@ -77,7 +77,7 @@ export const isUndefined = (bool: boolean): boolean => {
  * @param {string} bool 目标值
  * @returns {boolean}
  */
-export const isnull = (bool: boolean): boolean => {
+export const isUnll = (bool: boolean): boolean => {
   return dataTypeArr(bool) === '[object Unll]'
 }
 

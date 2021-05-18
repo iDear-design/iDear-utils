@@ -7,7 +7,7 @@
  * @param {string} numType 超过目标数字显示的字符
  * @returns {string | number}
  */
-export const filter = (num: number = 0, maxNum: number = 0, numType: string = '+'): string | number => {
+export const numFilter = (num: number = 0, maxNum: number = 0, numType: string = '+'): string | number => {
   if (num > maxNum) {
     return maxNum + numType
   } else {
@@ -21,7 +21,7 @@ export const filter = (num: number = 0, maxNum: number = 0, numType: string = '+
  * @param  {Number} 现金额
  * @return {String}
  */
-export const uppercase = (num: number): string => {
+export const numUppercase = (num: number): string => {
   let fraction = ['角', '分'];
   let digit = [
     '零', '壹', '贰', '叁', '肆',
