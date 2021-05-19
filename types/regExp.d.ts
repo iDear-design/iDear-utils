@@ -1,7 +1,7 @@
 /**
  * 声明存在的正则验证
  * */
-export type regExpConfig = {
+export interface regExpConfig  {
   phone: RegExp
   tel: RegExp
   idCard: RegExp

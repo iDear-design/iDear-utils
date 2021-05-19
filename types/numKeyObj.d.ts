@@ -1,3 +1,3 @@
-export type numKeyObjConfig = {
+export interface numKeyObjConfig {
   [index: number]: string
 }
