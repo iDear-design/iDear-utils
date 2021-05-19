@@ -1,4 +1,4 @@
-import {doc, win} from "../../libs/config/system";
+import {doc, win} from "../_libs/config/system";
 
 /**
  * @description 获取滚动条距顶部的距离

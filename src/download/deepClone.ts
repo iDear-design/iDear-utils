@@ -5,7 +5,7 @@
  */
 export const deepClone = (data: any): any => {
   let copy: any;
-  // the 3 simple types, and null or undefined
+  // the 3 simple _types, and null or undefined
   if (null == data || "object" != typeof data) return data;
   // Date
   if (data instanceof Date) {

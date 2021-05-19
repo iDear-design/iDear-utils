@@ -1,4 +1,4 @@
-import {dataTypeString} from "../../libs/config/dataType";
+import {dataTypeString} from "../_libs/config/dataType";
 
 
 /**

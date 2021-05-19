@@ -34,9 +34,9 @@
     "allowJs": false
   },
   "include": [
-    "src/index.ts",
-    "libs/**/*.ts",
-    "src/types/**/*.ts"
+    "index.ts",
+    "src/_libs/**/*.ts",
+    "src/**/*.ts"
   ],
   // 要打包的文件
   "exclude": [

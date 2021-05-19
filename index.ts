@@ -1,6 +1,6 @@
 /** array---数组 */
-import {arrLength} from "./array/attribute";
-import {arrIndexOf, arrLastIndexOf} from "./array/find";
+import {arrLength} from "./src/array/attribute";
+import {arrIndexOf, arrLastIndexOf} from "./src/array/find";
 import {
   arrChunk,
   arrDiff,
@@ -12,9 +12,9 @@ import {
   arrPull,
   arrPullAll,
   arrUnique
-} from "./array/format";
-import {arrStaNum} from "./array/reckon";
-import {arrBubble, arrSelect, arrInsert} from "./array/sort";
+} from "./src/array/format";
+import {arrStaNum} from "./src/array/reckon";
+import {arrBubble, arrSelect, arrInsert} from "./src/array/sort";
 
 const arrMethod = {
   arrLength,
@@ -46,7 +46,7 @@ import {
   cookieLength,
   withAttributes,
   withConverter
-} from "./cache/cookie";
+} from "./src/cache/cookie";
 import {
   setLocal,
   getLocal,
@@ -54,7 +54,7 @@ import {
   cleanLocal,
   localKey,
   localLength
-} from "./cache/localStorage";
+} from "./src/cache/localStorage";
 import {
   setSession,
   getSession,
@@ -62,7 +62,7 @@ import {
   cleanSession,
   sessionKey,
   sessionLength
-} from "./cache/sessionStorage";
+} from "./src/cache/sessionStorage";
 
 const cacheMethod = {
   setCookie,
@@ -88,34 +88,34 @@ const cacheMethod = {
 }
 
 /** check---获取、检查 */
-import {idCardCity, idCardBirthday} from "./check/idCard";
-import {pwdStrength} from "./check/password";
-import {regexpType, regexpCheck} from "./check/regexpType";
+import {idCardCity, idCardBirthday} from "./src/check/idCard";
+import {pwdStrength} from "./src/check/password";
+import {regexpType, regexpCheck} from "./src/check/regexpType";
 
 const checkMethod = {
   idCardCity, idCardBirthday, pwdStrength, regexpType, regexpCheck
 }
 
 /** create---创建、生成 */
-import {createUuid} from "./create/uuid";
-import {randomColor, randomNum} from "./create/random";
+import {createUuid} from "./src/create/uuid";
+import {randomColor, randomNum} from "./src/create/random";
 
 const createMethod = {
   createUuid, randomColor, randomNum
 }
 
 /** download---下载、导出、复制、克隆 */
-import {copyText} from "./download/copyText";
-import {deepClone} from "./download/deepClone";
-import {urlDownload, filesDownload} from "./download/downLoad";
+import {copyText} from "./src/download/copyText";
+import {deepClone} from "./src/download/deepClone";
+import {urlDownload, filesDownload} from "./src/download/downLoad";
 
 const downloadMethod = {
   copyText, deepClone, urlDownload, filesDownload
 }
 
 /** element---element相关 */
-import {addClass, removeClass} from "./element/class";
-import {getScrollTop, setScrollTop, scrollTo, scrollOffset} from "./element/scroll";
+import {addClass, removeClass} from "./src/element/class";
+import {getScrollTop, setScrollTop, scrollTo, scrollOffset} from "./src/element/scroll";
 
 const elementMethod = {
   addClass, removeClass, getScrollTop, setScrollTop, scrollTo, scrollOffset
@@ -123,23 +123,23 @@ const elementMethod = {
 
 
 /** files---文件相关 */
-import {secretInfo} from "./encrypt/secretInfo";
+import {secretInfo} from "./src/encrypt/secretInfo";
 
 const encryptMethod = {
   secretInfo
 }
 
 /** files---文件相关 */
-import {groupPicture} from "./files/picture";
-import {countFileSize} from "./files/format";
+import {groupPicture} from "./src/files/picture";
+import {countFileSize} from "./src/files/format";
 
 const filesMethod = {
   groupPicture, countFileSize
 }
 
 /** format---相关的格式化 */
-import {filterTree, filterTreeWith} from "./format/filterTree";
-import {getQuery, setQuery} from "./format/urlQuery";
+import {filterTree, filterTreeWith} from "./src/format/filterTree";
+import {getQuery, setQuery} from "./src/format/urlQuery";
 
 const formatMethod = {
   filterTree, filterTreeWith,
@@ -147,16 +147,16 @@ const formatMethod = {
 }
 
 /** function---函数、方法 */
-import {funCompose, funPipe} from "./function/runOrder";
+import {funCompose, funPipe} from "./src/function/runOrder";
 
 const functionMethod = {
   funCompose, funPipe
 }
 
 /** judge---判断 */
-import {isLocal, isSession, isWebSQL, isIndexDB} from "./judge/cache";
-import {isObjEmpty, isArrEmpty} from "./judge/dataEmpty";
-import {isArrEqual} from "./judge/dataEqual";
+import {isLocal, isSession, isWebSQL, isIndexDB} from "./src/judge/cache";
+import {isObjEmpty, isArrEmpty} from "./src/judge/dataEmpty";
+import {isArrEqual} from "./src/judge/dataEqual";
 import {
   isString,
   isArray,
@@ -175,11 +175,11 @@ import {
   isSet,
   isFalse,
   isTrue
-} from "./judge/dataType";
-import {isHasClass} from "./judge/element";
-import {isIdCard} from "./judge/idCard";
-import {isLAN} from "./judge/network";
-import {isFullscreen} from "./judge/screen";
+} from "./src/judge/dataType";
+import {isHasClass} from "./src/judge/element";
+import {isIdCard} from "./src/judge/idCard";
+import {isLAN} from "./src/judge/network";
+import {isFullscreen} from "./src/judge/screen";
 import {
   isAndroid,
   isIOS,
@@ -191,7 +191,7 @@ import {
   isWebKit,
   isIE,
   isSupportWebP
-} from "./judge/systemOS";
+} from "./src/judge/systemOS";
 
 const judgeMethod = {
   isLocal, isSession, isWebSQL, isIndexDB,
@@ -216,7 +216,7 @@ const judgeMethod = {
 }
 
 /** listener---监听事件 */
-import {winResize} from "./listener/winResize";
+import {winResize} from "./src/listener/winResize";
 
 const listenerMethod = {
   winResize
@@ -227,17 +227,17 @@ const listenerMethod = {
 const notifyMethod = {}
 
 /** number---数字 */
-import {numRandom} from "./number/attribute";
-import {numFilter, numUppercase} from "./number/format";
-import {numPowe, numFactorial, numCumsum} from "./number/reckon";
+import {numRandom} from "./src/number/attribute";
+import {numFilter, numUppercase} from "./src/number/format";
+import {numPowe, numFactorial, numCumsum} from "./src/number/reckon";
 
 const numberMethod = {
   numRandom, numFilter, numUppercase, numPowe, numFactorial, numCumsum
 }
 
 /** object---对象 */
-import {objKeys, objValues, objLength} from "./object/attribute";
-import {objClone} from "./object/clone";
+import {objKeys, objValues, objLength} from "./src/object/attribute";
+import {objClone} from "./src/object/clone";
 
 const objectMethod = {
   objKeys, objValues, objLength,
@@ -245,8 +245,8 @@ const objectMethod = {
 }
 
 /** string---字符串 */
-import {strLength} from "./string/attribute";
-import {strTrim, strChangeCase, strReverse, strPalindrome, strTruncate} from "./string/formart";
+import {strLength} from "./src/string/attribute";
+import {strTrim, strChangeCase, strReverse, strPalindrome, strTruncate} from "./src/string/formart";
 
 const stringMethod = {
   strLength,
@@ -254,9 +254,9 @@ const stringMethod = {
 }
 
 /** systemOS---系统、环境相关的 */
-import {fullscreen, exitFullscreen} from "./systemOS/fullscreen";
-import {getKeyName} from "./systemOS/keycode";
-import {getNavInfo, getNavType, getWebType, getMobileType} from "./systemOS/navigator";
+import {fullscreen, exitFullscreen} from "./src/systemOS/fullscreen";
+import {getKeyName} from "./src/systemOS/keycode";
+import {getNavInfo, getNavType, getWebType, getMobileType} from "./src/systemOS/navigator";
 import {
   getDocInfo,
   offsetWidth,
@@ -265,10 +265,10 @@ import {
   clientHeight,
   barWidth,
   barHeight
-} from "./systemOS/document";
+} from "./src/systemOS/document";
 import {
   getWinInfo, outerWidth, outerHeight, innerWidth, innerHeight, taskWidth, taskHeight
-} from "./systemOS/window";
+} from "./src/systemOS/window";
 
 const systemOSMethod = {
   fullscreen, exitFullscreen, getKeyName, getNavInfo, getNavType, getWebType, getMobileType,
@@ -278,20 +278,20 @@ const systemOSMethod = {
 
 /** idear-utils导出[直接抛出原方法] */
 // cache
-export {default as cookie} from "./cache/cookie";
-export {default as local} from "./cache/localStorage";
-export {default as session} from "./cache/sessionStorage";
-export {default as webSQL} from "./cache/webSQL";
+export {default as cookie} from "./src/cache/cookie";
+export {default as local} from "./src/cache/localStorage";
+export {default as session} from "./src/cache/sessionStorage";
+export {default as webSQL} from "./src/cache/webSQL";
 // download
-export {default as copyTexts} from "./download/copyText";
+export {default as copyTexts} from "./src/download/copyText";
 // function
-export {default as idearPromise} from "./function/promise";
+export {default as idearPromise} from "./src/function/promise";
 // listener
-export {default as eventBus} from "./listener/eventBus";
-export {default as pubSub} from "./listener/pubsub";
+export {default as eventBus} from "./src/listener/eventBus";
+export {default as pubSub} from "./src/listener/pubsub";
 // notify
-export {default as browserNotify} from "./notify/browserNotify";
-export {default as toast} from "./notify/toast";
+export {default as browserNotify} from "./src/notify/browserNotify";
+export {default as toast} from "./src/notify/toast";
 // systemOS
 
 /** idear-utils导出[iUitls.xxx] */

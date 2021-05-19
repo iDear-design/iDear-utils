@@ -1,4 +1,4 @@
-import {isArray} from "../../src/judge/dataType";
+import {isArray} from "../../judge/dataType";
 
 export default function createAudio(url) {
   const audioElm = document.createElement('audio');
