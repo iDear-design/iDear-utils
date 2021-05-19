@@ -13,11 +13,11 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',// 打包出的js文件是否生成map文件（方便浏览器调试）
   entry: {
-    'idear-utils': './src/index.ts',
+    'idear-utils': './dist/src/index.js',
   },
   output: {
     filename: '[name].js',// 生成的fiename需要与package.json中的main一致
-    path: path.resolve(__dirname, './'),
+    path: path.resolve(__dirname, './dist/min'),
     libraryTarget: 'commonjs',
   },
   resolve: {

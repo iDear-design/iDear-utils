@@ -16,7 +16,7 @@ import {
 import {arrStaNum} from "./array/reckon";
 import {arrBubble, arrSelect, arrInsert} from "./array/sort";
 
-const arrMethod: any = {
+const arrMethod = {
   arrLength,
   arrIndexOf,
   arrLastIndexOf,
@@ -64,7 +64,7 @@ import {
   sessionLength
 } from "./cache/sessionStorage";
 
-const cacheMethod: any = {
+const cacheMethod = {
   setCookie,
   getCookie,
   removeCookie,
@@ -92,7 +92,7 @@ import {idCardCity, idCardBirthday} from "./check/idCard";
 import {pwdStrength} from "./check/password";
 import {regexpType, regexpCheck} from "./check/regexpType";
 
-const checkMethod: any = {
+const checkMethod = {
   idCardCity, idCardBirthday, pwdStrength, regexpType, regexpCheck
 }
 
@@ -100,7 +100,7 @@ const checkMethod: any = {
 import {createUuid} from "./create/uuid";
 import {randomColor, randomNum} from "./create/random";
 
-const createMethod: any = {
+const createMethod = {
   createUuid, randomColor, randomNum
 }
 
@@ -109,7 +109,7 @@ import {copyText} from "./download/copyText";
 import {deepClone} from "./download/deepClone";
 import {urlDownload, filesDownload} from "./download/downLoad";
 
-const downloadMethod: any = {
+const downloadMethod = {
   copyText, deepClone, urlDownload, filesDownload
 }
 
@@ -117,7 +117,7 @@ const downloadMethod: any = {
 import {addClass, removeClass} from "./element/class";
 import {getScrollTop, setScrollTop, scrollTo, scrollOffset} from "./element/scroll";
 
-const elementMethod: any = {
+const elementMethod = {
   addClass, removeClass, getScrollTop, setScrollTop, scrollTo, scrollOffset
 }
 
@@ -125,7 +125,7 @@ const elementMethod: any = {
 /** files---文件相关 */
 import {secretInfo} from "./encrypt/secretInfo";
 
-const encryptMethod: any = {
+const encryptMethod = {
   secretInfo
 }
 
@@ -133,7 +133,7 @@ const encryptMethod: any = {
 import {groupPicture} from "./files/picture";
 import {countFileSize} from "./files/format";
 
-const filesMethod: any = {
+const filesMethod = {
   groupPicture, countFileSize
 }
 
@@ -141,7 +141,7 @@ const filesMethod: any = {
 import {filterTree, filterTreeWith} from "./format/filterTree";
 import {getQuery, setQuery} from "./format/urlQuery";
 
-const formatMethod: any = {
+const formatMethod = {
   filterTree, filterTreeWith,
   getQuery, setQuery
 }
@@ -149,7 +149,7 @@ const formatMethod: any = {
 /** function---函数、方法 */
 import {funCompose, funPipe} from "./function/runOrder";
 
-const functionMethod: any = {
+const functionMethod = {
   funCompose, funPipe
 }
 
@@ -193,7 +193,7 @@ import {
   isSupportWebP
 } from "./judge/systemOS";
 
-const judgeMethod: any = {
+const judgeMethod = {
   isLocal, isSession, isWebSQL, isIndexDB,
   isObjEmpty, isArrEmpty, isArrEqual, isString,
   isArray,
@@ -218,20 +218,20 @@ const judgeMethod: any = {
 /** listener---监听事件 */
 import {winResize} from "./listener/winResize";
 
-const listenerMethod: any = {
+const listenerMethod = {
   winResize
 }
 
 /** notify---提示、弹窗 */
 
-const notifyMethod: any = {}
+const notifyMethod = {}
 
 /** number---数字 */
 import {numRandom} from "./number/attribute";
 import {numFilter, numUppercase} from "./number/format";
 import {numPowe, numFactorial, numCumsum} from "./number/reckon";
 
-const numberMethod: any = {
+const numberMethod = {
   numRandom, numFilter, numUppercase, numPowe, numFactorial, numCumsum
 }
 
@@ -239,7 +239,7 @@ const numberMethod: any = {
 import {objKeys, objValues, objLength} from "./object/attribute";
 import {objClone} from "./object/clone";
 
-const objectMethod: any = {
+const objectMethod = {
   objKeys, objValues, objLength,
   objClone
 }
@@ -248,7 +248,7 @@ const objectMethod: any = {
 import {strLength} from "./string/attribute";
 import {strTrim, strChangeCase, strReverse, strPalindrome, strTruncate} from "./string/formart";
 
-const stringMethod: any = {
+const stringMethod = {
   strLength,
   strTrim, strChangeCase, strReverse, strPalindrome, strTruncate
 }
@@ -270,7 +270,7 @@ import {
   getWinInfo, outerWidth, outerHeight, innerWidth, innerHeight, taskWidth, taskHeight
 } from "./systemOS/window";
 
-const systemOSMethod: any = {
+const systemOSMethod = {
   fullscreen, exitFullscreen, getKeyName, getNavInfo, getNavType, getWebType, getMobileType,
   getDocInfo, offsetWidth, offsetHeight, clientWidth, clientHeight, barWidth, barHeight,
   getWinInfo, outerWidth, outerHeight, innerWidth, innerHeight, taskWidth, taskHeight
@@ -295,7 +295,7 @@ export {default as toast} from "./notify/toast";
 // systemOS
 
 /** idear-utils导出[iUitls.xxx] */
-const iUitls: any = {
+const iUitls = {
   ...arrMethod,
   ...cacheMethod,
   ...checkMethod,

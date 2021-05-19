@@ -1,5 +1,5 @@
 /** @description 字符串的格式化 */
-import {changeCaseConfig, trimStringConfig} from "../../types/numType";
+import {changeCaseConfig,trimStringConfig} from "../../types";
 
 /**
  * ## 去除空格
