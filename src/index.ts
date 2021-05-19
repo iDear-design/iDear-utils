@@ -288,7 +288,7 @@ export {default as copyTexts} from "./download/copyText";
 export {default as idearPromise} from "./function/promise";
 // listener
 export {default as eventBus} from "./listener/eventBus";
-export {default as pubSub} from "./listener/pubSub";
+export {default as pubSub} from "./listener/pubsub";
 // notify
 export {default as browserNotify} from "./notify/browserNotify";
 export {default as toast} from "./notify/toast";

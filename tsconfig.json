@@ -34,7 +34,7 @@
     "allowJs": false
   },
   "include": [
-    "index.ts",
+    "src/index.ts",
     "libs/**/*.ts",
     "utils/**/*.ts"
   ],
