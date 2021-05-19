@@ -1,5 +1,5 @@
 import regExp from "../../libs/config/regExp";
-import {regExpTypeConfig} from "../../types";
+import {regExpTypeConfig} from "../types";
 
 /**
  * @description 检验各种数据类型

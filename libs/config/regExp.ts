@@ -1,4 +1,4 @@
-import {regExpConfig} from "../../types";
+import {regExpConfig} from "../../src/types";
 
 /**
  * @description 检验各种数据类型正则表达式

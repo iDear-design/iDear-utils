@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 /**
  * 需要清除的文件
  * */
-let pathsToClean = ['type'];
+let pathsToClean = ['types'];
 
 let cleanOptions = {
   root: path.resolve(__dirname),

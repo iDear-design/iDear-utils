@@ -9,10 +9,11 @@
   "publisher": "maxiaoqu@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "test": "jest",
+    "tsc": "tsc",
+    "webpack": "webpack",
+    "publish": "idear-package rewrite --outdir=dist",
     "gulp": "gulp build",
-    "publish": "webpack"
+    "test": "jest"
   },
   "repository": {
     "type": "",

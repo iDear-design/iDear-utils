@@ -1,4 +1,4 @@
-import {numKeyObjConfig} from "../../types";
+import {numKeyObjConfig} from "../../src/types";
 
 /**
  * @description 身份证地址的数据
