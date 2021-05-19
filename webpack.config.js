@@ -1,7 +1,10 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-let pathsToClean = ['types', 'date'];
+/**
+ * 需要清除的文件
+ * */
+let pathsToClean = ['type'];
 
 let cleanOptions = {
   root: path.resolve(__dirname),
@@ -17,7 +20,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',// 生成的fiename需要与package.json中的main一致
-    path: path.resolve(__dirname, './dist/min'),
+    path: path.resolve(__dirname, './dist/dist'),
     libraryTarget: 'commonjs',
   },
   resolve: {
