@@ -2,9 +2,10 @@
  * @description 树结构的删选、过虑：不包含父节点
  * @param {any} tree  要过滤的树结构
  * @param {any} filter 过滤条件，符合条件的节点保留 如：item => item.name.indexOf(filterText) !== -1
+ * @param {any} filter
  * @returns {any[]}
  */
-export const filterTree = (tree: any[], filter: Function): any[] => {
+export const filterTree = (tree: any[], filter: Function,): any[] => {
   if (!(tree && tree.length)) return []
   let newChildren: any[] = []
   for (const item of tree) {
