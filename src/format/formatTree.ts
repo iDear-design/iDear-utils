@@ -13,26 +13,20 @@ const defultReplaceField: replaceFieldConfig = {
 /**
  * @description 数组转换成树结构
  * @param {Array<any>} arr---要过滤的树结构
+ * @param {string|number} parentId---要过滤的树结构
  * @param {replaceFieldConfig} replaceField---过滤的名称
  * @returns {Array<any>}
  */
-export const ArrayToTree = (arr: Array<any>, replaceField: replaceFieldConfig = defultReplaceField): Array<any> => {
+export const ArrayToTree = (arr: Array<any>, parentId: string | number, replaceField: replaceFieldConfig = defultReplaceField): Array<any> => {
   let treeData = []
-  let mapObj = {}
-  if (!Array.isArray(arr)) {
-    return []
-  }
-  arr.forEach(item => {
-    mapObj[item[replaceField.id]] = item
-  })
-  arr.forEach(item => {
-    let parent = mapObj[item[replaceField.pid]]
-    if (parent) {
-      (parent[replaceField.children] || (parent[replaceField.children] = [])).push(item)
-    } else {
-      treeData.push(item)
+  for (let i = 0; i < arr.length; i++) {
+    let node = arr[i]
+    if (node[replaceField.pid] === parentId) {
+      let newNode = {...node};
+      newNode[replaceField.children] = ArrayToTree(arr, node[replaceField.id])
+      treeData.push(newNode)
     }
-  })
+  }
   return treeData
 }
 
