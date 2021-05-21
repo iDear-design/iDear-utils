@@ -2,21 +2,18 @@
  * @description 树结构的删选、过虑：不包含父节点
  * @param {any} tree  要过滤的树结构
  * @param {any} filter 过滤条件，符合条件的节点保留 如：item => item.name.indexOf(filterText) !== -1
- * @param {any} filter
+ * @param {any} replaceField---子节点的名称
  * @returns {any[]}
  */
-export const filterTree = (tree: any[], filter: Function,): any[] => {
+export const filterTree = (tree: any[], filter: Function, replaceField: string = 'children'): any[] => {
   if (!(tree && tree.length)) return []
   let newChildren: any[] = []
   for (const item of tree) {
     if (filter(item)) {
-      // 如果节点符合条件，直接加入新的节点集
       newChildren.push(item)
-      if (item.children) item.children = filterTree(item.children, filter)
+      if (item[replaceField]) item[replaceField] = filterTree(item[replaceField], filter, replaceField)
     } else {
-      // 如果当前节点不符合条件，递归过滤子节点，
-      // 把符合条件的子节点提升上来，并入新节点集
-      if (item.children) newChildren.push(...filterTree(item.children, filter))
+      if (item[replaceField]) newChildren.push(...filterTree(item[replaceField], filter, replaceField))
     }
   }
   return newChildren
@@ -26,18 +23,16 @@ export const filterTree = (tree: any[], filter: Function,): any[] => {
  * @description 树结构的删选、过虑：包含父节点
  * @param {any} tree 要过滤的树结构
  * @param {any} filter 过滤条件，符合条件的节点保留 如：item => item.name.indexOf(filterText) !== -1
+ * @param {any} replaceField---子节点的名称
  * @returns {any[]}
  */
-export const filterTreeWith = (tree: any[], filter: Function): any[] => {
+export const filterTreeWith = (tree: any[], filter: Function, replaceField: string = 'children'): any[] => {
   if (!(tree && tree.length)) return []
   let newChildren: any[] = []
   for (const item of tree) {
-    const children = filterTreeWith(item.children, filter);
-    // 以下两个条件任何一个成立，当前节点都应该加入到新子节点集中
-    // 1. 子孙节点中存在符合条件的，即 children 数组中有值
-    // 2. 自己本身符合条件
+    const children = filterTreeWith(item[replaceField], filter, replaceField);
     if ((children && children.length) || filter(item)) {
-      item.children = children;
+      item[replaceField] = children;
       newChildren.push(item);
     }
   }
