@@ -23,7 +23,7 @@ export const ArrayToTree = (arr: Array<any>, parentId: string | number, replaceF
     let node = arr[i]
     if (node[replaceField.pid] === parentId) {
       let newNode = {...node};
-      newNode[replaceField.children] = ArrayToTree(arr, node[replaceField.id])
+      newNode[replaceField.children] = ArrayToTree(arr, node[replaceField.id], replaceField)
       treeData.push(newNode)
     }
   }
