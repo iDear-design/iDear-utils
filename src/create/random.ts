@@ -15,8 +15,8 @@ export const randomColor = (): string => {
  * @return {Number}
  */
 export const randomNum = (): number => {
-  let num: number = Math.random();
-  return num
+  let rdNum: number = Math.random();
+  return rdNum
 }
 
 /**

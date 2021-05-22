@@ -5,7 +5,7 @@ import {randomNum} from "../create/random";
  * @param {Array<any>} arr 目标数组
  * @returns {Array<nuanymber>}
  */
-export const arrRandom = (arr: Array<any>): Array<any> => {
+export const arrRandomSort = (arr: Array<any>): Array<any> => {
   for (let i = 0, l = arr.length; i < l; i++) {
     let rc = randomNum() * l
     const empty = arr[i]
@@ -21,7 +21,7 @@ export const arrRandom = (arr: Array<any>): Array<any> => {
  * @param {string} type asc:升序   desc:降序
  * @returns {Array<number>}
  */
-export const arrBubble = (arr: Array<number>, type: string = 'asc'): Array<number> => {
+export const arrBubbleSort = (arr: Array<number>, type: string = 'asc'): Array<number> => {
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
       if (type === 'asc' && (arr[j] > arr[j + 1])) {
@@ -44,7 +44,7 @@ export const arrBubble = (arr: Array<number>, type: string = 'asc'): Array<numbe
  * @param {string} type asc:升序   desc:降序
  * @returns {Array<number>}
  */
-export const arrSelect = (arr: Array<number>, type: string = 'asc'): Array<number> => {
+export const arrSelectSort = (arr: Array<number>, type: string = 'asc'): Array<number> => {
   let minIndex, temp;
   for (let i = 0; i < arr.length - 1; i++) {
     minIndex = i
@@ -68,7 +68,7 @@ export const arrSelect = (arr: Array<number>, type: string = 'asc'): Array<numbe
  * @param {string} type asc:升序   desc:降序
  * @returns {Array<number>}
  */
-export const arrInsert = (arr: Array<number>, type: string = 'asc'): Array<number> => {
+export const arrInsertSort = (arr: Array<number>, type: string = 'asc'): Array<number> => {
   let current, preIndex;
   for (let i = 1; i < arr.length; i++) {
     current = arr[i]
@@ -87,4 +87,25 @@ export const arrInsert = (arr: Array<number>, type: string = 'asc'): Array<numbe
     arr[preIndex + 1] = current
   }
   return arr
+}
+
+/**
+ * @description 二分法排序
+ * @param {Array<number>} arr 目标数组
+ * @returns {Array<number>}
+ */
+const arrQuickSort = (arr: Array<number>): Array<number> => {
+  if (arr.length <= 1) return arr
+  let leftArr = []
+  let rightArr = []
+  let pivot = randomNum()
+  let baseNum: any = arr.splice(pivot, 1)
+  arr.forEach((num: number) => {
+    if (num < baseNum) {
+      leftArr.push(num)
+    } else {
+      rightArr.push(num)
+    }
+  })
+  return arrQuickSort(leftArr).concat(baseNum, arrQuickSort(rightArr))
 }
