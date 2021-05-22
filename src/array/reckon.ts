@@ -14,3 +14,16 @@ export const arrStaNum = (arr: Array<number | string>): object => {
   }
   return obj
 }
+
+/**
+ * @description 数组累加
+ * @param {number} num 目标数字
+ * @returns {number}
+ */
+export const arrCumsum = (rest: number[]): number => {
+  let sum = 0
+  for (let i = 0; i < rest.length; i++) {
+    sum += rest[i]
+  }
+  return sum
+}
