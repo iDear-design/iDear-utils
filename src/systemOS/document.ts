@@ -1,9 +1,9 @@
-import {doc} from "../_libs/config/system";
+import {DOC} from "../_libs/config/system";
 
 /**
  * @description 获取body的信息
  */
-const bodyInfo: any = (doc.compatMode && doc.compatMode == 'CSS1Compat') ? doc.documentElement : doc.body;
+const bodyInfo: any = (DOC.compatMode && DOC.compatMode == 'CSS1Compat') ? DOC.documentElement : DOC.body;
 
 /**
  * @description body总宽

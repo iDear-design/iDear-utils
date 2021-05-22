@@ -1,10 +1,10 @@
-import {doc, WIN} from "../_libs/config/system";
+import {DOC, WIN} from "../_libs/config/system";
 
 /**
  * @description 获取滚动条距顶部的距离
  */
 export const getScrollTop = (): number => {
-  return (doc.documentElement && doc.documentElement.scrollTop) || doc.body.scrollTop;
+  return (DOC.documentElement && DOC.documentElement.scrollTop) || DOC.body.scrollTop;
 }
 
 /**

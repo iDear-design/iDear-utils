@@ -1,4 +1,4 @@
-import {WIN, doc} from "../_libs/config/system";
+import {WIN, DOC} from "../_libs/config/system";
 import {getAngle} from "../systemOS/window";
 import {navUserAgent} from "../systemOS/navigator";
 import mobileTypeData from "../_libs/config/mobileType";
@@ -86,5 +86,5 @@ export const isIE = (): boolean => {
  * @return {Boolean}
  */
 export const isSupportWebP = (): boolean => {
-  return !![].map && doc.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  return !![].map && DOC.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') === 0;
 }

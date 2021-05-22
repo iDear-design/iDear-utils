@@ -1,4 +1,4 @@
-import {doc, WIN} from "../_libs/config/system";
+import {DOC, WIN} from "../_libs/config/system";
 
 /**
  * @description 根据地址下载文件
@@ -8,14 +8,14 @@ import {doc, WIN} from "../_libs/config/system";
  * @returns {any}
  */
 export const urlDownload = (url: string, fileName: string = 'urlFile', target: string = '_blank') => {
-  let link = doc.createElement('a')
+  let link = DOC.createElement('a')
   link.style.display = 'none';
   link.href = url
   link.download = fileName;
   link.target = target;
-  doc.body.appendChild(link)
+  DOC.body.appendChild(link)
   link.click()
-  doc.body.removeChild(link)
+  DOC.body.removeChild(link)
 }
 
 
@@ -27,12 +27,12 @@ export const urlDownload = (url: string, fileName: string = 'urlFile', target: s
  * @returns {any}
  */
 export const filesDownload = (data: Blob, fileName: string, target: string = '_blank') => {
-  const link = doc.createElement('a');
+  const link = DOC.createElement('a');
   link.style.display = 'none';
   link.href = WIN.URL.createObjectURL(data);
   link.download = fileName;
   link.target = target;
-  doc.body.appendChild(link)
+  DOC.body.appendChild(link)
   link.click();
-  doc.body.removeChild(link);
+  DOC.body.removeChild(link);
 }

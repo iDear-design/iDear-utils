@@ -1,4 +1,4 @@
-import {doc} from "../_libs/config/system";
+import {DOC} from "../_libs/config/system";
 
 /**
  * @description 是否支持全屏
@@ -6,9 +6,9 @@ import {doc} from "../_libs/config/system";
  */
 export const isFullscreen = (): boolean => {
   return (
-    doc.fullscreenEnabled ||
-    doc.mozFullScreenEnabled ||
-    doc.webkitFullscreenEnabled ||
-    doc.msFullscreenEnabled
+    DOC.fullscreenEnabled ||
+    DOC.mozFullScreenEnabled ||
+    DOC.webkitFullscreenEnabled ||
+    DOC.msFullscreenEnabled
   )
 }

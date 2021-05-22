@@ -1,4 +1,4 @@
-import {doc} from "../_libs/config/system";
+import {DOC} from "../_libs/config/system";
 
 var copyElem: HTMLTextAreaElement
 
@@ -8,7 +8,7 @@ var copyElem: HTMLTextAreaElement
  */
 const handleText = (content: string | number) => {
   if (!copyElem) {
-    copyElem = doc.createElement('textarea')
+    copyElem = DOC.createElement('textarea')
     copyElem.id = '$iDearCopy'
     let styles = copyElem.style
     styles.width = '48px'
@@ -17,7 +17,7 @@ const handleText = (content: string | number) => {
     styles.zIndex = '0'
     styles.left = '-500px'
     styles.top = '-500px'
-    doc.body.appendChild(copyElem)
+    DOC.body.appendChild(copyElem)
   }
   copyElem.value = content === null || content === undefined ? '' : ('' + content)
 }
@@ -33,7 +33,7 @@ export const copyText = (content: string | number): boolean => {
     handleText(content)
     copyElem.select()
     copyElem.setSelectionRange(0, copyElem.value.length)
-    result = doc.execCommand('copy')
+    result = DOC.execCommand('copy')
   } catch (err: any) {
     console.error('复制内容失败【浏览器不支持】:' + err)
   }
