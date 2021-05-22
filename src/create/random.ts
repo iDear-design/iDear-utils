@@ -9,11 +9,22 @@ export const randomColor = (): string => {
 }
 
 /**
+ * @description 生成随机数
+ * @param  {Number} min
+ * @param  {Number} max
+ * @return {Number}
+ */
+export const randomNum = (): number => {
+  let num: number = Math.random();
+  return num
+}
+
+/**
  * @description 生成指定范围[min, max]的随机数
  * @param  {Number} min
  * @param  {Number} max
  * @return {Number}
  */
-export const randomNum = (min: number, max: number): number => {
+export const randomNumRange = (min: number, max: number): number => {
   return Math.floor(numRandom() * (max - min + 1)) + min;
 }

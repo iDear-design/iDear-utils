@@ -1,3 +1,20 @@
+import {randomNum} from "../create/random";
+
+/**
+ * @description 随机排序
+ * @param {Array<any>} arr 目标数组
+ * @returns {Array<nuanymber>}
+ */
+export const arrRandom = (arr: Array<any>): Array<any> => {
+  for (let i = 0, l = arr.length; i < l; i++) {
+    let rc = randomNum() * l
+    const empty = arr[i]
+    arr[i] = arr[rc]
+    arr[rc] = empty
+  }
+  return arr
+}
+
 /**
  * @description 冒泡排序
  * @param {Array<number>} arr 目标数组
