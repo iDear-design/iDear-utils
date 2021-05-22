@@ -1,7 +1,7 @@
 /**
  * @description 导出window
  * */
-export const win: Window | any = window || (window as any)
+export const WIN: Window | any = window || (window as any)
 
 /**
  * @description 导出document

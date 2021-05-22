@@ -1,4 +1,4 @@
-import {doc, win} from "../_libs/config/system";
+import {doc, WIN} from "../_libs/config/system";
 
 /**
  * @description 获取滚动条距顶部的距离
@@ -12,7 +12,7 @@ export const getScrollTop = (): number => {
  * @param {Number} to 滚动的距离
  */
 export const setScrollTop = (to: number) => {
-  win.scrollTo(0, to);
+  WIN.scrollTo(0, to);
 }
 
 /**

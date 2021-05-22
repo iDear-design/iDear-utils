@@ -1,4 +1,4 @@
-import {win, doc} from "../_libs/config/system";
+import {WIN, doc} from "../_libs/config/system";
 import {getAngle} from "../systemOS/window";
 import {navUserAgent} from "../systemOS/navigator";
 import mobileTypeData from "../_libs/config/mobileType";
@@ -62,7 +62,7 @@ export const isVertical = (): boolean => {
  * @returns {boolean}
  */
 export const isTouch = (): boolean => {
-  return ('ontouchstart' in win) || win.DocumentTouch
+  return ('ontouchstart' in WIN) || WIN.DocumentTouch
 }
 
 /**

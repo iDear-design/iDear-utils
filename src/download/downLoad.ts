@@ -1,4 +1,4 @@
-import {doc, win} from "../_libs/config/system";
+import {doc, WIN} from "../_libs/config/system";
 
 /**
  * @description 根据地址下载文件
@@ -29,7 +29,7 @@ export const urlDownload = (url: string, fileName: string = 'urlFile', target: s
 export const filesDownload = (data: Blob, fileName: string, target: string = '_blank') => {
   const link = doc.createElement('a');
   link.style.display = 'none';
-  link.href = win.URL.createObjectURL(data);
+  link.href = WIN.URL.createObjectURL(data);
   link.download = fileName;
   link.target = target;
   doc.body.appendChild(link)

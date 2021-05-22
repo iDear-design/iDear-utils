@@ -1,4 +1,4 @@
-import {win} from "../_libs/config/system";
+import {WIN} from "../_libs/config/system";
 
 /**
  * @description H5软键盘缩回、弹起回调【当软件键盘弹起会改变当前 window.innerHeight，监听这个值变化】，即窗口监听
@@ -6,13 +6,13 @@ import {win} from "../_libs/config/system";
  * @param {Function} upCb 当软键盘弹起的回调
  */
 export const winResize = (downCb: Function, upCb: Function) => {
-  const clientHeight = win.innerHeight;
+  const clientHeight = WIN.innerHeight;
   downCb = typeof downCb === 'function' ? downCb : function () {
   }
   upCb = typeof upCb === 'function' ? upCb : function () {
   }
-  win.addEventListener('resize', () => {
-    let height = win.innerHeight;
+  WIN.addEventListener('resize', () => {
+    let height = WIN.innerHeight;
     if (height === clientHeight) downCb();
     if (height < clientHeight) upCb();
   });

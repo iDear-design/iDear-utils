@@ -1,25 +1,25 @@
-import {win, nav} from "../_libs/config/system";
+import {WIN, nav} from "../_libs/config/system";
 import {navUserAgent} from "./navigator";
 
 /**
  * @description 浏览器高度
  */
-export const outerHeight = win.outerHeight
+export const outerHeight = WIN.outerHeight
 
 /**
  * @description 浏览器宽度
  */
-export const outerWidth = win.outerWidth
+export const outerWidth = WIN.outerWidth
 
 /**
  * @description 浏览器内页面可用高度；此高度包含了水平滚动条的高度(若存在)。可表示为浏览器当前高度去除浏览器边框、工具条后的高度
  */
-export const innerHeight = win.innerHeight
+export const innerHeight = WIN.innerHeight
 
 /**
  * @description 浏览器内页面可用宽度；此宽度包含了垂直滚动条的宽度(若存在)。可表示为浏览器当前宽度去除浏览器边框后的宽度
  */
-export const innerWidth = win.innerWidth
+export const innerWidth = WIN.innerWidth
 
 /**
  * @description 任务栏宽度
@@ -66,7 +66,7 @@ export const kwrnelVersion = (): object => {
  * @returns {boolean}
  */
 export const getAngle = (): number => {
-  return win.orientation || 0
+  return WIN.orientation || 0
 }
 
 
