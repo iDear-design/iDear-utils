@@ -1,23 +1,23 @@
-import {nav} from "../_libs/config/system";
+import {NAV} from "../_libs/config/system";
 
 /**
  * @description navigator中的userAgent
  */
-export const navUserAgent: any = nav.userAgent
+export const navUserAgent: any = NAV.userAgent
 
 /**
  * @description navigator中的userAgent
  */
-export const navAppVersion: any = nav.appVersion
+export const navAppVersion: any = NAV.appVersion
 
 /**
  * @description 获取操作系统类型
  * @return {String}
  */
 export const getNavType = () => {
-  let userAgent = 'navigator' in window && 'userAgent' in nav && navUserAgent.toLowerCase() || '';
-  let appVersion = 'navigator' in window && 'appVersion' in nav && navAppVersion.toLowerCase() || '';
-  // let vendor = 'navigator' in window && 'vendor' in nav && nav.vendor.toLowerCase() || '';
+  let userAgent = 'navigator' in window && 'userAgent' in NAV && navUserAgent.toLowerCase() || '';
+  let appVersion = 'navigator' in window && 'appVersion' in NAV && navAppVersion.toLowerCase() || '';
+  // let vendor = 'navigator' in window && 'vendor' in NAV && NAV.vendor.toLowerCase() || '';
 
   if (/mac/i.test(appVersion)) return 'MacOSX'
   if (/win/i.test(appVersion)) return 'windows'

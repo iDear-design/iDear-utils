@@ -11,4 +11,4 @@ export const DOC: Document | any = document || (document as any)
 /**
  * @description 导出Navigator
  * */
-export const nav: Navigator | any = navigator || (navigator as any)
+export const NAV: Navigator | any = navigator || (navigator as any)

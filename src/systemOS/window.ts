@@ -1,4 +1,4 @@
-import {WIN, nav} from "../_libs/config/system";
+import {WIN, NAV} from "../_libs/config/system";
 import {navUserAgent} from "./navigator";
 
 /**
@@ -36,7 +36,7 @@ export const taskHeight = outerHeight - innerHeight
  * @returns {boolean}
  */
 export const chromLanguage = (): number => {
-  return (nav.browserLanguage || nav.language).toLowerCase()
+  return (NAV.browserLanguage || NAV.language).toLowerCase()
 }
 
 /**

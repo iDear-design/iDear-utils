@@ -1,5 +1,5 @@
 import {LOCAL, SESSION, WEBSQL} from "../_libs/config/cache";
-import {nav} from "../_libs/config/system";
+import {NAV} from "../_libs/config/system";
 
 /**
  * @description 判断是否支持localStorage
@@ -50,7 +50,7 @@ export const isIndexDB = () => {
   try {
     if (!getIndexDB() || !getIndexDB().open) return false;
     // @ts-ignore
-    let isSafari = typeof openDatabase !== 'undefined' && /(Safari|iPhone|iPad|iPod)/.test(nav.userAgent) && !/Chrome/.test(nav.userAgent) && !/BlackBerry/.test(nav.platform)
+    let isSafari = typeof openDatabase !== 'undefined' && /(Safari|iPhone|iPad|iPod)/.test(NAV.userAgent) && !/Chrome/.test(NAV.userAgent) && !/BlackBerry/.test(NAV.platform)
     let hasFetch = typeof fetch === 'function' && fetch.toString().indexOf('[native code') !== -1
     return ((!isSafari || hasFetch) && typeof indexedDB !== 'undefined' && typeof IDBKeyRange !== 'undefined')
   } catch (e) {
