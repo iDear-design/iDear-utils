@@ -31,7 +31,7 @@ export const arrDiff = (arr1: Array<any>, arr2: Array<any>): Array<any> => {
 }
 
 /**
- * @description
+ * @description 数组交集
  * @param {Array<any>} arr1 数组1
  * @param {Array<any>} arr2 数组2
  * @returns {Array<any>}
@@ -120,7 +120,6 @@ export const arrPullAll = (arr: Array<number | string>, arr2: Array<number | str
   return arrPull(arr, ...arr2)
 }
 
-
 /**
  * @description 数组对象去重
  * @param {Array<object>} arrObj 数组对象
@@ -139,4 +138,31 @@ export const arrUnique = (arrObj: Array<object>, key: string): Array<any> => {
     arr.push(item)
   }
   return arr
+}
+
+/**
+ * @description 删除指定的数组元素
+ * @param {Array<number | string>} arr 数组
+ * @param {string} key 对象属性key
+ * @returns {Array<number | string>}
+ */
+export const arrRemove = (arr: Array<number | string>, key: number | string): Array<number | string> => {
+  let index = arr.indexOf(key);
+  index > -1 ? arr.splice(index, 1) : [];
+  return arr;
+}
+
+/**
+ * @description 删除指定的数组中对象元素
+ * @param {Array<object>} arrObj 数组对象
+ * @param {string} key 对象属性key
+ * @returns {Array<object>}
+ */
+export const arrObjRemove = (arrObj: Array<object>, key: string, value: string | number): Array<object> => {
+  for (let i = 0; i < arrObj.length; i++) {
+    if (arrObj[i][key] === value) {
+      arrObj.splice(i, 1);
+    }
+  }
+  return arrObj;
 }
