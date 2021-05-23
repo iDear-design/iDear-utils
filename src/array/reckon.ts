@@ -17,13 +17,24 @@ export const arrStaNum = (arr: Array<number | string>): object => {
 
 /**
  * @description 数组累加
- * @param {number} num 目标数字
+ * @param {Array<number>} num 目标数组
  * @returns {number}
  */
-export const arrCumsum = (rest: number[]): number => {
+export const arrCumsum = (arr: Array<number>): number => {
   let sum = 0
-  for (let i = 0; i < rest.length; i++) {
-    sum += rest[i]
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
   return sum
+}
+
+
+/**
+ * @description 数组平均值
+ * @param {Array<number>} num 目标数组
+ * @returns {number}
+ */
+export const arrAverage = (arr: Array<number>): number => {
+  let average = arrCumsum(arr) / arr.length;
+  return average
 }
