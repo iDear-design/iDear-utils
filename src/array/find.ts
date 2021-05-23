@@ -33,3 +33,13 @@ export const arrLastIndexOf = (arr: Array<any>, val: any): number => {
   }
   return -1
 }
+
+/**
+ * @description 数组元素最大值|最小值
+ * @param {Array<number>} arr---目标数组
+ * @param {string} type---最大：max、最小: min
+ * @param val 值
+ */
+export const arrFindMaxOrMin = (arr: Array<number>, type: string = 'max'): number => {
+  return Math[type].apply(null, arr);
+}
