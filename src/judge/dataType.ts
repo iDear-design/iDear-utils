@@ -136,6 +136,24 @@ export const isSet = (set: any): boolean => {
 }
 
 /**
+ * @description 判断是否是整数
+ * @param {number} target 目标值
+ * @returns {boolean}
+ */
+export const isInteger = (target: number): boolean => {
+  return Math.floor(target) === target;
+}
+
+/**
+ * @description 判断是否是小数
+ * @param {number} target 目标值
+ * @returns {boolean}
+ */
+export const isFloat = (target: number): boolean => {
+  return !isInteger(target);
+}
+
+/**
  * @description 是否False
  * @param {string} target 目标值
  * @returns {boolean}
