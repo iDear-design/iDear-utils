@@ -1,4 +1,4 @@
-import {DOC} from "../_libs/config/system";
+import {DOC} from "../_base/system";
 
 /**
  * @description 是否支持全屏

@@ -1,5 +1,5 @@
-import {LOCAL, SESSION, WEBSQL} from "../_libs/config/cache";
-import {NAV} from "../_libs/config/system";
+import {LOCAL, SESSION, WEBSQL} from "../_base/cache";
+import {NAV} from "../_base/system";
 
 /**
  * @description 判断是否支持localStorage

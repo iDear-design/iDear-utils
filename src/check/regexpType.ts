@@ -1,4 +1,4 @@
-import regExp from "../_libs/config/regExp";
+import regExp from "../_base/regExp";
 import {regExpTypeConfig} from "../_types";
 
 /**

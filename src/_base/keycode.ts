@@ -1,4 +1,4 @@
-import {numKeyObjConfig} from "../../_types";
+import {numKeyObjConfig} from "../_types";
 
 /**
  * @description 键盘代码对应的键盘值

@@ -1,4 +1,4 @@
-import {DOC, WIN} from "../_libs/config/system";
+import {DOC, WIN} from "../_base/system";
 
 /**
  * @description 根据地址下载文件

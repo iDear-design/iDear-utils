@@ -1,4 +1,4 @@
-import {dataTypeArr} from "../_libs/config/dataType";
+import {dataTypeArr} from "../_base/dataType";
 
 /**
  * @description 是否字符串

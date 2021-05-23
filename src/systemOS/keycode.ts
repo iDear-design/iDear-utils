@@ -1,4 +1,4 @@
-import {keyCodeConfig} from "../_libs/config/keycode";
+import {keyCodeConfig} from "../_base/keycode";
 
 /**
  * @description 根据keycode获得键名

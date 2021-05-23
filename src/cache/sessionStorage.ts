@@ -1,5 +1,5 @@
 import {isSession} from "../judge/cache";
-import {SESSION} from "../_libs/config/cache";
+import {SESSION} from "../_base/cache";
 
 /**
  * @description 设置sessionStorage

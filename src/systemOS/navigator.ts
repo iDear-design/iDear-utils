@@ -1,4 +1,4 @@
-import {NAV} from "../_libs/config/system";
+import {NAV} from "../_base/system";
 
 /**
  * @description navigator中的userAgent
