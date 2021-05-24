@@ -1,5 +1,4 @@
-import {WIN, NAV} from "../_base/system";
-import {navUserAgent} from "./navigator";
+import {WIN} from "../_base/system";
 
 /**
  * @description 浏览器高度
@@ -32,53 +31,11 @@ export const taskWidth = outerWidth - innerWidth
 export const taskHeight = outerHeight - innerHeight
 
 /**
- * @description 获取浏览器的语言
- * @returns {boolean}
- */
-export const chromLanguage = (): number => {
-  return (NAV.browserLanguage || NAV.language).toLowerCase()
-}
-
-/**
- * @description 获取浏览器的语言
- * @returns {boolean}
- */
-export const kwrnelVersion = (): object => {
-  let versions: object = {
-    trident: navUserAgent.indexOf('Trident') > -1, // IE内核
-    presto: navUserAgent.indexOf('Presto') > -1, // opera内核
-    webKit: navUserAgent.indexOf('AppleWebKit') > -1, // 苹果、谷歌内核
-    // gecko: navUserAgent.indexOf('Gecko') > -1 && navUserAgent.indexOf('KHTML') == -1,// 火狐内核
-    // mobile: !!navUserAgent.match(/AppleWebKit.*Mobile.*/), // 是否为移动终端
-    // ios: !!navUserAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), // ios终端
-    // android: navUserAgent.indexOf('Android') > -1 || navUserAgent.indexOf('Adr') > -1, // android终端
-    // iPhone: navUserAgent.indexOf('iPhone') > -1, // 是否为iPhone或者QQHD浏览器
-    // iPad: navUserAgent.indexOf('iPad') > -1, // 是否iPad
-    // webApp: navUserAgent.indexOf('Safari') == -1, // 是否web应该程序，没有头部与底部
-    // weixin: navUserAgent.indexOf('MicroMessenger') > -1, // 是否微信 （2015-01-22新增）
-    // qq: navUserAgent.match(/\sQQ/i) == " qq" // 是否QQ
-  };
-  return versions
-}
-
-/**
  * @description 获取到角度【横屏、竖屏】
  * @returns {boolean}
  */
 export const getAngle = (): number => {
   return WIN.orientation || 0
-}
-
-
-/**
- * @description 获取到对应的浏览器内核
- * @returns {boolean}
- */
-export const getVersions = (): object => {
-  let versions: any = kwrnelVersion()
-  if (versions.trident) return {version: 'trident', name: 'IE内核'}
-  else if (versions.presto) return {version: 'Presto', name: 'opera内核'}
-  else if (versions.webKit) return {version: 'AppleWebKit', name: 'IE内核'}
 }
 
 /**
@@ -87,9 +44,7 @@ export const getVersions = (): object => {
  */
 export const getWinInfo = () => {
   let winInfo: any = {
-    language: chromLanguage(),
     angle: getAngle(),
-    version: getVersions(),
     outerHeight: outerHeight,
     outerWidth: outerWidth,
     innerHeight: innerHeight,

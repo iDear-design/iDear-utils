@@ -3,3 +3,8 @@ export interface replaceFieldConfig {
   pid: string,
   children: string
 }
+
+export interface browserConfig {
+  name: string,
+  version: string
+}
