@@ -1,5 +1,5 @@
 import {NAV} from "../_base/system";
-import {browserConfig} from "../_types/defaultType";
+import {browserConfig} from "../_types";
 
 /**
  * @description navigator中的userAgent
@@ -18,7 +18,6 @@ export const navAppVersion: any = NAV.appVersion
 export const getNavType = () => {
   let userAgent = 'navigator' in window && 'userAgent' in NAV && navUserAgent.toLowerCase() || '';
   let appVersion = 'navigator' in window && 'appVersion' in NAV && navAppVersion.toLowerCase() || '';
-  // let vendor = 'navigator' in window && 'vendor' in NAV && NAV.vendor.toLowerCase() || '';
 
   if (/mac/i.test(appVersion)) return 'MacOSX'
   if (/win/i.test(appVersion)) return 'windows'
@@ -26,7 +25,6 @@ export const getNavType = () => {
   if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) return 'ios'
   if (/android/i.test(userAgent)) return 'android'
   if (/win/i.test(appVersion) && /phone/i.test(userAgent)) return 'windowsPhone'
-
 }
 
 /**

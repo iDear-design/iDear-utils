@@ -1,4 +1,5 @@
 import {numRandom} from "../number/attribute";
+import {numTypeConfig} from "../_types";
 
 /**
  * @description 随机生成颜色
@@ -10,12 +11,11 @@ export const randomColor = (): string => {
 
 /**
  * @description 生成随机数
- * @param  {Number} min
- * @param  {Number} max
+ * @param  {numTypeConfig} type
  * @return {Number}
  */
-export const randomNum = (): number => {
-  let rdNum: number = Math.random();
+export const randomNum = (type: numTypeConfig = 'float'): number => {
+  let rdNum: number = type === 'float' ? Math.random() : Math.ceil(Math.random());
   return rdNum
 }
 
