@@ -10,6 +10,20 @@ export const randomColor = (): string => {
 }
 
 /**
+ * @description 随机生成颜色数组
+ * @param  {number} length 数组长度
+ * @return {Array<string>}
+ */
+export const randomColorArr = (length: number): Array<string> => {
+  let colorArr: Array<string> = []
+  if (length <= 0) return []
+  for (let i = 0; i <= length; i++) {
+    colorArr.push(randomColor())
+  }
+  return colorArr
+}
+
+/**
  * @description 生成随机数
  * @param  {numTypeConfig} type
  * @return {Number}

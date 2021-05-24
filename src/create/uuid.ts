@@ -5,7 +5,7 @@
  */
 export const createUuid = (hex: string): string => {
   let s = []
-  let hexDigits = hex || '0123456789abcdef'
+  let hexDigits = hex || '0123456789abcdefghijklmnopqrstuvwxyz'
   for (let i = 0; i < 36; i++) {
     s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1)
   }
