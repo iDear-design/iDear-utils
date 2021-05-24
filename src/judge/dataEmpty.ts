@@ -21,7 +21,7 @@ export const isEmpty = (target: any): boolean => {
  * @return {Boolean}
  */
 export const isStrEmpty = (str: string): boolean => {
-  return str.length === 0
+  return str.length === 0 && str === ''
 }
 
 /**

@@ -1,5 +1,7 @@
+import {changeCaseConfig, trimStringConfig} from "../_types";
+import {isStrEmpty} from "../judge/dataEmpty";
+
 /** @description 字符串的格式化 */
-import {changeCaseConfig,trimStringConfig} from "../_types";
 
 /**
  * ## 去除空格
@@ -86,8 +88,79 @@ export const strPalindrome = (str: string): boolean => {
  * @param  {string} str 目标字符串
  * @param  {number} num 字符串限定长度
  * @param  {string} truncate 超出的展示形式
- * @returns {boolean}
+ * @returns {string}
  */
 export const strTruncate = (str: string, num: number, truncate: string = '...'): string => {
   return str.length > num ? str.slice(0, num) + truncate : str
 }
+
+/**
+ * @description 替换字符串中所有指定字符
+ * @param {string} str 内容
+ * @param {string} beforeStr 需要替换字符
+ * @param {string} afterStr 替换成的字符
+ * @returns {(string)}
+ */
+export const strReplaceAll = (str: string, beforeStr: string, afterStr: string = '...'): string => {
+  return str.replace(new RegExp(beforeStr, 'gm'), afterStr);
+}
+
+/**
+ * @description 过滤html操作符(防XSS)
+ * @param {string} str 目标字符串
+ * @returns {string}
+ */
+export const strFilterHtmlCode = (str: string): string => {
+  const temp = {
+    '<': '&lt;',
+    '>': '&gt',
+    '&': '&amp;',
+    '(': '&#40;',
+    ')': '&#41;',
+    ' ': '&nbsp;',
+    '"': '&quot;',
+    '\'': "&#39;"
+  };
+  return str.replace(/[<>&|() '"]/g, (chr: string) => {
+    return temp[chr];
+  });
+};
+
+/**
+ * @description 压缩相同且连续的字母字符
+ * @param {string} str 目标字符串
+ * @param {boolean} ignoreCase 是否区分大小写
+ * @returns {string} bbbssss => 3b4s
+ */
+export const strCompressRepeatedStr = (str: string, ignoreCase: boolean = true): string => {
+  let regex = new RegExp("([a-z])\\1+", ignoreCase ? "gi" : "g");
+  return str.replace(regex, function (strs: string, group: string) {
+    return strs.length + group;
+  });
+};
+
+/**
+ * @description 中文转Unicode码
+ * @param {string} str
+ * @returns {string}
+ */
+export const strToUnicode = (str: string): string => {
+  if (!isStrEmpty(str)) {
+    return escape(str).toLocaleLowerCase().replace(/%u/gi, '\\u');
+  } else {
+    return str;
+  }
+};
+
+/**
+ * @description Unicode码转中文
+ * @param {string} str
+ * @returns {string}
+ */
+export const strToGB2312 = (str: string): string => {
+  if (!isStrEmpty(str)) {
+    return unescape(str.replace(/\\u/gi, '%u'));
+  } else {
+    return str;
+  }
+};
