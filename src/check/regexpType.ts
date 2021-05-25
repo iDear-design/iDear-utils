@@ -61,6 +61,8 @@ export const regexpType = (str: string, type: regExpTypeConfig): boolean => {
       return regExp.upper.test(str);
     case 'HTML':    //HTML标记
       return regExp.HTML.test(str);
+    case 'bankCard'://16位或19位银行卡或信用卡号(先把空格replace为空串),
+      return regExp.bankCard.test(str);
     default:
       return true;
   }

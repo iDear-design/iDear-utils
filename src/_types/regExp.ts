@@ -1,7 +1,7 @@
 /**
  * 声明存在的正则验证
  * */
-export interface regExpConfig  {
+export interface regExpConfig {
   phone: RegExp
   tel: RegExp
   idCard: RegExp
@@ -20,6 +20,7 @@ export interface regExpConfig  {
   lower: RegExp
   upper: RegExp
   HTML: RegExp
+  bankCard: RegExp
   symbols: RegExp
   color: RegExp
 }
@@ -52,5 +53,6 @@ export type regExpTypeConfig =
   | 'lower'
   | 'upper'
   | 'HTML'
+  | 'bankCard'
   | 'symbols'
   | 'color'

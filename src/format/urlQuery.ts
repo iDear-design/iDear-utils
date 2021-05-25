@@ -1,14 +1,26 @@
+import {WIN} from "../_base/system";
+
 /**
  * @description url参数转对象
  * @param {string} url 地址，默认：window.location.href
  * @returns {object}
  */
-export const getQuery = (url: string): object => {
-  url = url == null ? window.location.href : url
+export const getQuery = (url?: string): object => {
+  url = url == null ? WIN.location.href : url
   let search = url.substring(url.lastIndexOf('?') + 1)
   if (!search) return {}
   let query: object = JSON.parse('{"' + decodeURIComponent(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}') || {}
   return query
+}
+
+/**
+ * @description 获取Url里的某个参数
+ * @param {string} url 地址，默认：window.location.href
+ * @returns {object}
+ */
+export const getQueryKey = (key: string, url?: string): string => {
+  const query = url ? getQuery(url) : getQuery();
+  return query[key];
 }
 
 /**
