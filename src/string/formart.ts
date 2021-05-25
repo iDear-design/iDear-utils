@@ -9,8 +9,7 @@ import {isStrEmpty} from "../judge/dataEmpty";
  * @param {number} type 1-所有空格  2-前后空格  3-前空格 4-后空格
  * @returns {string}
  */
-
-export const strTrim = (str: string, type?: trimStringConfig): string => {
+export const strTrimType = (str: string, type?: trimStringConfig): string => {
   type = type || 1;
   switch (type) {
     case 1:
@@ -26,6 +25,15 @@ export const strTrim = (str: string, type?: trimStringConfig): string => {
   }
 }
 
+/**
+ * ## 去除前后空格
+ * @param {string} str 目标字符串
+ * @returns {string}
+ */
+
+export const strTrim = (str: string): string => {
+  return str.replace(/(^\s*)|(\s*$)/g, "");
+}
 /**
  * @description 提还字母大小写
  * @param  {string} str 目标字符串

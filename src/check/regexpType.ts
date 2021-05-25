@@ -56,7 +56,7 @@ export const regexpType = (str: string, type: regExpTypeConfig): boolean => {
     case 'chinese': //中文
       return regExp.chinese.test(str);
     case 'lower':   //小写
-      return regExp.phone.test(str);
+      return regExp.lower.test(str);
     case 'upper':   //大写
       return regExp.upper.test(str);
     case 'HTML':    //HTML标记

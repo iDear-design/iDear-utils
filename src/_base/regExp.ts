@@ -36,7 +36,7 @@ export const regExp: regExpConfig = {
   date2: /^(\d{4})\-(\d{2})\-(\d{2})$/,
   number: /^[0-9]$/,
   english: /^[a-zA-Z]+$/,
-  chinese: /^[\u4E00-\u9FA5]+$/,
+  chinese: /^([\u4e00-\u9fa5]|[\ufe30-\uffA0])*$/,
   lower: /^[a-z]+$/,
   upper: /^[A-Z]+$/,
   HTML: /<("[^"]*"|'[^']*'|[^'">])*>/,
