@@ -1,4 +1,4 @@
-import {regExpConfig} from "../_types";
+import {regExpConfig, fileRegExpConfig} from "../_types";
 
 /**
  * @description 检验各种数据类型正则表达式
@@ -21,7 +21,7 @@ import {regExpConfig} from "../_types";
  * HTML-HTML标记
  */
 
-const regExp: regExpConfig = {
+export const regExp: regExpConfig = {
   phone: /^(13[0-9]|14[579]|15[0-3,5-9]|16[567]|17[0135678]|18[0-9]|19[189])\d{8}$/,
   tel: /^(0\d{2,3}-\d{7,8})(-\d{1,4})?$/,
   idCard: /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/,
@@ -44,4 +44,9 @@ const regExp: regExpConfig = {
   color: /^(#([0-9a-fA-F]{3}){1,2}|[rR][gG][Bb](\((\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*,){2}\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*\)|[Aa]\((\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*,){3}\s*([01]|0\.\d+)\s*\)))$/
 }
 
-export default regExp
+export const fileRegExp: fileRegExpConfig = {
+  img: /(gif|jpg|jpeg|png|GIF|JPG|PNG)$/ig,
+  video: /(mp4|mp3|flv|wav)$/ig,
+  document: /(doc|docx|xls|xlsx|pdf|txt|ppt|pptx|rar|zip|html|jsp|sql|h|shtml|xml)$/ig,
+  office: /(doc|docx|xls|xlsx|pdf|txt|ppt|pptx)$/ig
+}

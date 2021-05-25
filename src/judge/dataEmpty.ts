@@ -11,6 +11,7 @@ export const isEmpty = (target: any): boolean => {
   if (dataTypeString(target) === 'String') return isStrEmpty(target)
   if (dataTypeString(target) === 'Array') return isArrEmpty(target)
   if (target === null || target === undefined || target === NaN) empty = true
+  if (!/[^(^\s*)|(\s*$)]/.test(target) || target?.length === 0) empty = true
   return empty
 }
 

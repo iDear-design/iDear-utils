@@ -24,6 +24,13 @@ export interface regExpConfig  {
   color: RegExp
 }
 
+export interface fileRegExpConfig {
+  img: RegExp,
+  video: RegExp,
+  document: RegExp,
+  office: RegExp
+}
+
 /**
  * 声明检验各种数据类型的数据类型
  * */

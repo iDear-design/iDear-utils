@@ -1,4 +1,4 @@
-import regExp from "../_base/regExp";
+import {regExp} from "../_base/regExp";
 
 /**
  * @description 判断元素是否有某个class
