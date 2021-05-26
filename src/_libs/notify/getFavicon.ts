@@ -1,5 +1,7 @@
+import {DOC} from "../../_base/system";
+
 export function getFavicon(setting) {
-  let ic: any = document.querySelectorAll('link[rel~=shortcut]')[0];
+  let ic: Element = DOC.querySelectorAll('link[rel~=shortcut]')[0];
   if (!ic) {
     ic = changeFavicon('O', setting);
   }
@@ -7,9 +9,9 @@ export function getFavicon(setting) {
 }
 
 export function changeFavicon(num, settings) {
-  const head: any = document.getElementsByTagName('head')[0];
-  const linkTag: any = document.createElement('link');
-  const canvas: any = document.createElement('canvas');
+  const head: Element = DOC.getElementsByTagName('head')[0];
+  const linkTag: Element = DOC.createElement('link');
+  const canvas: any = DOC.createElement('canvas');
   let ctx: any = null;
 
   canvas.height = 32;

@@ -1,5 +1,7 @@
+import {WIN} from "../../_base/system";
+
 export function isNotification(): Boolean {
-  let Notification = (window as any).Notification
+  let Notification = WIN.Notification
   if (!Notification) {
     console.error("对不起，您的浏览器不支持通知功能！")
   }
@@ -7,7 +9,7 @@ export function isNotification(): Boolean {
 }
 
 export function isPermission() {
-  let permissionName = (window as any).Notification.permission
+  let permissionName = WIN.Notification.permission
   let Permission = true
   if (permissionName === "denied") {
     Permission = false
